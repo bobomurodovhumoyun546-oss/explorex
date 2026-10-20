@@ -9,7 +9,7 @@ import Astronomy from "./pages/Astronomy";
 import Geography from "./pages/Geography";
 import WorldMap from "./pages/WorldMap";
 
-import Navbar from "./components/Navbar";
+import Navbar from "./components/NavBar";
 
 import {
   SettingsProvider,
