@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 import {
     Orbit,
-    Globe,
+    Globe2,
     Home,
     Menu,
     X,
