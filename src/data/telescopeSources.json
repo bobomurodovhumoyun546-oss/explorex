@@ -1,0 +1,38 @@
+[
+  {
+    "id": "webb-cliffs",
+    "sourceUrl": "https://science.nasa.gov/asset/webb/cosmic-cliffs-in-the-carina-nebula-nircam-image/",
+    "remoteImage": "https://assets.science.nasa.gov/content/dam/science/missions/webb/science/2022/07/STScI-01GA6KKWG229B16K4Q38CH3BXS.png/jcr:content/renditions/cq5dam.web.1280.1280.png",
+    "image": "/telescope/webb-cliffs.png"
+  },
+  {
+    "id": "webb-pillars",
+    "sourceUrl": "https://science.nasa.gov/asset/webb/pillars-of-creation-nircam-image/",
+    "remoteImage": "https://assets.science.nasa.gov/content/dam/science/missions/webb/science/2022/10/STScI-01GGF8H15VZ09MET9HFBRQX4S3.png/jcr:content/renditions/cq5dam.web.1280.1280.png",
+    "image": "/telescope/webb-pillars.png"
+  },
+  {
+    "id": "webb-quintet",
+    "sourceUrl": "https://science.nasa.gov/asset/webb/stephans-quintet-nircam-and-miri-composite-image/",
+    "remoteImage": "https://assets.science.nasa.gov/content/dam/science/missions/webb/science/2022/07/STScI-01G8H49RQ0E48YDM8WKW9PP5XS.png/jcr:content/renditions/cq5dam.web.1280.1280.png",
+    "image": "/telescope/webb-quintet.png"
+  },
+  {
+    "id": "webb-ring",
+    "sourceUrl": "https://science.nasa.gov/asset/webb/southern-ring-nebula-nircam-image/",
+    "remoteImage": "https://assets.science.nasa.gov/content/dam/science/missions/webb/science/2022/07/STScI-01G8GZQ3ZFJRD8YF8YZWMAXCE3.png/jcr:content/renditions/cq5dam.web.1280.1280.png",
+    "image": "/telescope/webb-ring.png"
+  },
+  {
+    "id": "hubble-m51",
+    "sourceUrl": "https://science.nasa.gov/asset/hubble/the-whirlpool-galaxy-m51/",
+    "remoteImage": "https://assets.science.nasa.gov/content/dam/science/missions/hubble/releases/1996/04/STScI-01EVTAPW3CHJF1XCHXVW16CB1F.tif/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
+    "image": "/telescope/hubble-m51.jpg"
+  },
+  {
+    "id": "hubble-pillars",
+    "sourceUrl": "https://science.nasa.gov/missions/hubble/hubble-goes-high-definition-to-revisit-iconic-pillars-of-creation/",
+    "remoteImage": "https://science.nasa.gov/wp-content/uploads/2023/04/p1501ay-jpg.webp",
+    "image": "/telescope/hubble-pillars.jpg"
+  }
+]

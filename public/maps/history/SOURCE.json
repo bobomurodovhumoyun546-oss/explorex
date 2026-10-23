@@ -1,0 +1,57 @@
+{
+  "author": "Andre Ourednik and contributors",
+  "repository": "https://github.com/aourednik/historical-basemaps",
+  "commit": "da7a4b735ecef70aebdc9c73e409d8a2500d50f3",
+  "license": "GPL-3.0",
+  "processing": "JSON compacted; geometries and properties unchanged.",
+  "maps": [
+    {
+      "year": 1700,
+      "source": "https://raw.githubusercontent.com/aourednik/historical-basemaps/da7a4b735ecef70aebdc9c73e409d8a2500d50f3/geojson/world_1700.geojson",
+      "sourceSha256": "eb73d6b00e98205fb2082de050c35e4d698224b17849628d82584610186b88a4",
+      "features": 782
+    },
+    {
+      "year": 1800,
+      "source": "https://raw.githubusercontent.com/aourednik/historical-basemaps/da7a4b735ecef70aebdc9c73e409d8a2500d50f3/geojson/world_1800.geojson",
+      "sourceSha256": "51fcb6b1f1c361956a3fc24a9c646844ff88754842aa113780428fb4abcd5f2c",
+      "features": 627
+    },
+    {
+      "year": 1900,
+      "source": "https://raw.githubusercontent.com/aourednik/historical-basemaps/da7a4b735ecef70aebdc9c73e409d8a2500d50f3/geojson/world_1900.geojson",
+      "sourceSha256": "9c9221c851eaba4948e11b2a0b078e89239231f8c74df0dc321750ae234f10b5",
+      "features": 270
+    },
+    {
+      "year": 1914,
+      "source": "https://raw.githubusercontent.com/aourednik/historical-basemaps/da7a4b735ecef70aebdc9c73e409d8a2500d50f3/geojson/world_1914.geojson",
+      "sourceSha256": "a99425f9486e2243835fdc75ad7d82e6ddf3c72fcef87a63429f3313d830cf19",
+      "features": 177
+    },
+    {
+      "year": 1945,
+      "source": "https://raw.githubusercontent.com/aourednik/historical-basemaps/da7a4b735ecef70aebdc9c73e409d8a2500d50f3/geojson/world_1945.geojson",
+      "sourceSha256": "3005839db7bcc5256d511b3abb01f1140c0cce245189bc5c28e7d557a47bc775",
+      "features": 227
+    },
+    {
+      "year": 1960,
+      "source": "https://raw.githubusercontent.com/aourednik/historical-basemaps/da7a4b735ecef70aebdc9c73e409d8a2500d50f3/geojson/world_1960.geojson",
+      "sourceSha256": "6067386755f8fc120a4fca44f198952a18da89cd062aa8013d5a0d08cbad8988",
+      "features": 197
+    },
+    {
+      "year": 1994,
+      "source": "https://raw.githubusercontent.com/aourednik/historical-basemaps/da7a4b735ecef70aebdc9c73e409d8a2500d50f3/geojson/world_1994.geojson",
+      "sourceSha256": "5369249d6b9d37d1cb799a87eb7f48783587f6c3b9e6d24de35ff58a4935c216",
+      "features": 240
+    },
+    {
+      "year": 2010,
+      "source": "https://raw.githubusercontent.com/aourednik/historical-basemaps/da7a4b735ecef70aebdc9c73e409d8a2500d50f3/geojson/world_2010.geojson",
+      "sourceSha256": "d18dcbe41df5e68ec174e5f3887578142bf70fba72f56e204c9de5a8571ae0f4",
+      "features": 240
+    }
+  ]
+}

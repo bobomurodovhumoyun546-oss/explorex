@@ -1,5 +1,5 @@
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import {
     ComposableMap,
@@ -12,7 +12,6 @@ import {
     ArrowRight,
     CheckCircle2,
     Clock3,
-    Globe2,
     RotateCcw,
     Trophy,
     XCircle,
@@ -20,9 +19,9 @@ import {
     ZoomOut,
 } from "lucide-react";
 
-// Dunyo davlatlarining chegaralari
-const MAP_URL =
-    "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
+import worldMap from "../data/worldCountries.json";
+// Natural Earth / world-atlas, bundled locally so the game needs no CDN.
+const mapCountryIds = new Set(worldMap.objects.countries.geometries.map(geo => String(geo.id).padStart(3, '0')));
 
 // Davlat IDlari — ISO 3166-1 numeric
 const countries = [
@@ -202,31 +201,31 @@ export default function GeographyChallenge() {
     const [center, setCenter] = useState([0, 10]);
     const [zoom, setZoom] = useState(1);
 
+    const deadlineRef = useRef(0);
+    const answerLockedRef = useRef(false);
+    const startedAtRef = useRef(0);
+    const [elapsed, setElapsed] = useState(0);
     const current = questions[index];
 
     const regionInfo = regions.find((r) => r.id === region);
 
     const availableCountries = useMemo(() => {
-        return region === "world"
-            ? countries
-            : countries.filter((c) => c.region === region);
+        return countries.filter(c => mapCountryIds.has(c.id) && (region === 'world' || c.region === region));
     }, [region]);
 
-    // Har savol uchun 30 soniya
+    // Absolute deadline: switching tabs cannot grant extra answer time.
     useEffect(() => {
-        if (stage !== "game" || answer || !current) return;
-
-        if (timeLeft <= 0) {
-            setAnswer({ correct: false, timeout: true });
-            return;
-        }
-
-        const timer = setTimeout(() => {
-            setTimeLeft((t) => t - 1);
-        }, 1000);
-
-        return () => clearTimeout(timer);
-    }, [stage, answer, current, timeLeft]);
+        if (stage !== 'game' || answer || !current) return;
+        const timer = setInterval(() => {
+            const remaining = Math.max(0, Math.ceil((deadlineRef.current - Date.now()) / 1000));
+            setTimeLeft(remaining);
+            if (remaining === 0 && !answerLockedRef.current) {
+                answerLockedRef.current = true;
+                setAnswer({ correct: false, timeout: true });
+            }
+        }, 100);
+        return () => clearInterval(timer);
+    }, [stage, answer, current]);
 
     function chooseRegion(id) {
         setRegion(id);
@@ -234,12 +233,18 @@ export default function GeographyChallenge() {
     }
 
     function startGame(questionCount) {
-        const pool = region === "world"
-            ? countries
-            : countries.filter((c) => c.region === region);
+        const pool = availableCountries;
+        if (pool.length < questionCount) return;
 
         const selected = shuffle(pool).slice(0, questionCount);
 
+        // These handlers run on clicks; the compiler treats nested map/render-prop callbacks as render paths.
+        // eslint-disable-next-line react-hooks/purity
+        const now = Date.now();
+        deadlineRef.current = now + 30000;
+        startedAtRef.current = now;
+        answerLockedRef.current = false;
+        setElapsed(0);
         setCount(questionCount);
         setQuestions(selected);
         setIndex(0);
@@ -255,11 +260,21 @@ export default function GeographyChallenge() {
     }
 
     function handleCountryClick(geo) {
-        if (stage !== "game" || answer || !current) return;
+        if (stage !== "game" || answerLockedRef.current || !current) return;
+        // Called only by geography click/keyboard handlers, never while rendering.
+        // eslint-disable-next-line react-hooks/purity
+        const now = Date.now();
+        if (now >= deadlineRef.current) {
+            answerLockedRef.current = true;
+            setTimeLeft(0);
+            setAnswer({ correct: false, timeout: true });
+            return;
+        }
 
         const selectedId = String(geo.id).padStart(3, "0");
 
         if (selectedId === current.id) {
+            answerLockedRef.current = true;
             setScore((s) => s + 1);
             setAnswer({ correct: true, timeout: false });
         } else {
@@ -272,11 +287,15 @@ export default function GeographyChallenge() {
     }
 
     function nextQuestion() {
+        if (!answer) return;
         if (index + 1 >= questions.length) {
+            setElapsed(Math.round((Date.now() - startedAtRef.current) / 1000));
             setStage("result");
             return;
         }
 
+        deadlineRef.current = Date.now() + 30000;
+        answerLockedRef.current = false;
         setIndex((i) => i + 1);
         setTimeLeft(30);
         setAnswer(null);
@@ -296,27 +315,26 @@ export default function GeographyChallenge() {
     }
 
     return (
-        <main className="min-h-screen bg-[#050b19] px-4 pb-12 pt-28 text-white md:px-8">
+        <main className="min-h-screen bg-page px-4 pb-12 pt-28 text-main md:px-8">
             <div className="mx-auto max-w-7xl">
                 <Link
                     to="/geography"
-                    className="mb-7 inline-flex items-center gap-2 text-sm text-slate-400 transition hover:text-white"
+                    className="mb-7 inline-flex items-center gap-2 text-sm text-subtle transition hover:text-main"
                 >
                     <ArrowLeft size={17} />
                     Geografiyaga qaytish
                 </Link>
 
                 <div className="mb-9">
-                    <p className="mb-2 text-xs font-bold tracking-[0.3em] text-emerald-400">
+                    <p className="mb-2 text-xs font-bold tracking-[0.3em] text-emerald-700 dark:text-emerald-400">
                         EXPLOREX GEOGRAPHY
                     </p>
 
                     <h1 className="text-3xl font-black md:text-5xl">
-                        Geography{" "}
-                        <span className="text-emerald-400">Challenge</span>
+                        Davlatni <span className="text-emerald-700 dark:text-emerald-400">top!</span>
                     </h1>
 
-                    <p className="mt-4 text-slate-400">
+                    <p className="mt-4 text-subtle">
                         Davlatlarni xaritadan toping va bilimingizni sinang!
                     </p>
                 </div>
@@ -333,7 +351,7 @@ export default function GeographyChallenge() {
                                 <button
                                     key={item.id}
                                     onClick={() => chooseRegion(item.id)}
-                                    className="group rounded-3xl border border-white/10 bg-[#101b31] p-8 text-left transition hover:-translate-y-1 hover:border-emerald-400/50 hover:bg-[#14243b]"
+                                    className="group rounded-3xl border border-line bg-panel p-8 text-left transition hover:-translate-y-1 hover:border-emerald-400/50 hover:bg-hover"
                                 >
                                     <div className="mb-7 text-5xl">
                                         {item.emoji}
@@ -343,11 +361,11 @@ export default function GeographyChallenge() {
                                         {item.name}
                                     </h3>
 
-                                    <p className="mt-3 text-sm text-slate-400">
+                                    <p className="mt-3 text-sm text-subtle">
                                         {item.description}
                                     </p>
 
-                                    <span className="mt-7 inline-flex items-center gap-2 font-semibold text-emerald-400">
+                                    <span className="mt-7 inline-flex items-center gap-2 font-semibold text-emerald-700 dark:text-emerald-400">
                                         Tanlash
                                         <ArrowRight size={18} />
                                     </span>
@@ -362,7 +380,7 @@ export default function GeographyChallenge() {
                     <div className="mx-auto max-w-3xl">
                         <button
                             onClick={() => setStage("region")}
-                            className="mb-7 text-sm text-slate-400 hover:text-white"
+                            className="mb-7 text-sm text-subtle hover:text-main"
                         >
                             ← Hududlarga qaytish
                         </button>
@@ -376,13 +394,13 @@ export default function GeographyChallenge() {
                                 {regionInfo?.name}
                             </h2>
 
-                            <p className="mt-3 text-slate-400">
+                            <p className="mt-3 text-subtle">
                                 Savollar sonini tanlang
                             </p>
                         </div>
 
                         <div className="grid gap-5 sm:grid-cols-2">
-                            {[10, 20].map((number) => {
+                            {[5, 10, 20].map((number) => {
                                 const disabled = availableCountries.length < number;
 
                                 return (
@@ -390,27 +408,27 @@ export default function GeographyChallenge() {
                                         key={number}
                                         disabled={disabled}
                                         onClick={() => startGame(number)}
-                                        className="rounded-3xl border border-white/10 bg-[#101b31] p-9 text-left transition hover:border-emerald-400/50 hover:bg-[#14243b] disabled:cursor-not-allowed disabled:opacity-40"
+                                        className="rounded-3xl border border-line bg-panel p-9 text-left transition hover:border-emerald-400/50 hover:bg-hover disabled:cursor-not-allowed disabled:opacity-40"
                                     >
                                         <Trophy
                                             size={35}
-                                            className="text-emerald-400"
+                                            className="text-emerald-700 dark:text-emerald-400"
                                         />
 
                                         <h3 className="mt-7 text-4xl font-black">
                                             {number} ta
                                         </h3>
 
-                                        <p className="mt-3 text-slate-400">
+                                        <p className="mt-3 text-subtle">
                                             Tasodifiy savollar
                                         </p>
 
-                                        <p className="mt-5 text-sm text-emerald-300">
+                                        <p className="mt-5 text-sm text-emerald-700 dark:text-emerald-300">
                                             Har bir savolga 30 soniya
                                         </p>
 
                                         {disabled && (
-                                            <p className="mt-3 text-xs text-rose-300">
+                                            <p className="mt-3 text-xs text-rose-700 dark:text-rose-300">
                                                 Bu hududda yetarli davlat yo‘q
                                             </p>
                                         )}
@@ -425,14 +443,14 @@ export default function GeographyChallenge() {
                 {stage === "game" && current && (
                     <div className="grid gap-6 lg:grid-cols-[1fr_330px]">
                         {/* XARITA */}
-                        <div className="overflow-hidden rounded-3xl border border-white/10 bg-[#0c1b32]">
-                            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 px-5 py-4">
+                        <div className="overflow-hidden rounded-3xl border border-line bg-panel">
+                            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-line px-5 py-4">
                                 <div>
                                     <h2 className="font-bold">
                                         {regionInfo?.name} xaritasi
                                     </h2>
 
-                                    <p className="mt-1 text-xs text-slate-400">
+                                    <p className="mt-1 text-xs text-subtle">
                                         Davlatni xaritadan bosing
                                     </p>
                                 </div>
@@ -440,7 +458,7 @@ export default function GeographyChallenge() {
                                 <div className="flex gap-2">
                                     <button
                                         onClick={() => setZoom((z) => Math.min(z * 1.5, 8))}
-                                        className="rounded-lg bg-white/10 p-2 hover:bg-white/20"
+                                        className="rounded-lg bg-inset p-2 hover:bg-hover"
                                         aria-label="Yaqinlashtirish"
                                     >
                                         <ZoomIn size={19} />
@@ -448,7 +466,7 @@ export default function GeographyChallenge() {
 
                                     <button
                                         onClick={() => setZoom((z) => Math.max(z / 1.5, 1))}
-                                        className="rounded-lg bg-white/10 p-2 hover:bg-white/20"
+                                        className="rounded-lg bg-inset p-2 hover:bg-hover"
                                         aria-label="Uzoqlashtirish"
                                     >
                                         <ZoomOut size={19} />
@@ -479,7 +497,7 @@ export default function GeographyChallenge() {
                                         setZoom(nextZoom);
                                     }}
                                 >
-                                    <Geographies geography={MAP_URL}>
+                                    <Geographies geography={worldMap}>
                                         {({ geographies }) =>
                                             geographies.map((geo) => {
                                                 const id = String(geo.id).padStart(3, "0");
@@ -499,6 +517,15 @@ export default function GeographyChallenge() {
                                                         key={geo.rsmKey}
                                                         geography={geo}
                                                         onClick={() => handleCountryClick(geo)}
+                                                        tabIndex={0}
+                                                        role="button"
+                                                        aria-label={geo.properties.name}
+                                                        onKeyDown={event => {
+                                                            if (event.key === 'Enter' || event.key === ' ') {
+                                                                event.preventDefault();
+                                                                handleCountryClick(geo);
+                                                            }
+                                                        }}
                                                         fill={fill}
                                                         stroke="#081525"
                                                         strokeWidth={0.6 / zoom}
@@ -530,24 +557,24 @@ export default function GeographyChallenge() {
                                 </ZoomableGroup>
                             </ComposableMap>
 
-                            <p className="px-5 pb-5 text-center text-xs text-slate-500">
+                            <p className="px-5 pb-5 text-center text-xs text-subtle">
                                 Xaritani surish va kattalashtirish mumkin.
                             </p>
                         </div>
 
                         {/* SAVOL PANELI */}
-                        <div className="flex flex-col rounded-3xl border border-white/10 bg-[#101b31] p-6">
+                        <div className="flex flex-col rounded-3xl border border-line bg-panel p-6">
                             <div className="flex items-center justify-between">
-                                <span className="text-xs font-bold tracking-widest text-emerald-400">
+                                <span className="text-xs font-bold tracking-widest text-emerald-700 dark:text-emerald-400">
                                     SAVOL {index + 1}
                                 </span>
 
-                                <span className="text-sm text-slate-400">
+                                <span className="text-sm text-subtle">
                                     {index + 1}/{questions.length}
                                 </span>
                             </div>
 
-                            <div className="mt-4 h-2 overflow-hidden rounded-full bg-white/10">
+                            <div className="mt-4 h-2 overflow-hidden rounded-full bg-inset">
                                 <div
                                     className="h-full rounded-full bg-emerald-400 transition-all"
                                     style={{
@@ -568,8 +595,8 @@ export default function GeographyChallenge() {
                                         size={21}
                                         className={
                                             timeLeft <= 10
-                                                ? "text-rose-400"
-                                                : "text-cyan-400"
+                                                ? "text-rose-700 dark:text-rose-400"
+                                                : "text-cyan-700 dark:text-cyan-400"
                                         }
                                     />
                                     <span className="text-sm font-semibold">
@@ -579,8 +606,8 @@ export default function GeographyChallenge() {
 
                                 <span
                                     className={`text-3xl font-black ${timeLeft <= 10
-                                            ? "text-rose-400"
-                                            : "text-white"
+                                            ? "text-rose-700 dark:text-rose-400"
+                                            : "text-main"
                                         }`}
                                 >
                                     00:{String(timeLeft).padStart(2, "0")}
@@ -589,7 +616,7 @@ export default function GeographyChallenge() {
 
                             {/* SAVOL */}
                             <div className="mt-9">
-                                <p className="text-sm text-slate-400">
+                                <p className="text-sm text-subtle">
                                     Xaritadan ushbu davlatni toping:
                                 </p>
 
@@ -597,7 +624,7 @@ export default function GeographyChallenge() {
                                     {current.name}
                                 </h2>
 
-                                <p className="mt-4 text-sm leading-6 text-slate-400">
+                                <p className="mt-4 text-sm leading-6 text-subtle">
                                     Davlat joylashgan hududni bosing.
                                 </p>
                             </div>
@@ -614,12 +641,12 @@ export default function GeographyChallenge() {
                                         {answer.correct ? (
                                             <CheckCircle2
                                                 size={22}
-                                                className="text-emerald-400"
+                                                className="text-emerald-700 dark:text-emerald-400"
                                             />
                                         ) : (
                                             <XCircle
                                                 size={22}
-                                                className="text-rose-400"
+                                                className="text-rose-700 dark:text-rose-400"
                                             />
                                         )}
 
@@ -640,7 +667,7 @@ export default function GeographyChallenge() {
                                                 {current.name}
                                             </p>
 
-                                            <p className="mt-1 text-sm text-slate-300">
+                                            <p className="mt-1 text-sm text-muted">
                                                 Poytaxti: {current.capital}
                                             </p>
                                         </div>
@@ -649,11 +676,11 @@ export default function GeographyChallenge() {
                             )}
 
                             <div className="mt-auto pt-8">
-                                <div className="mb-5 flex items-center justify-between rounded-xl bg-white/5 px-4 py-3">
-                                    <span className="text-sm text-slate-400">
+                                <div className="mb-5 flex items-center justify-between rounded-xl bg-inset px-4 py-3">
+                                    <span className="text-sm text-subtle">
                                         To‘plangan ball
                                     </span>
-                                    <span className="text-xl font-black text-emerald-400">
+                                    <span className="text-xl font-black text-emerald-700 dark:text-emerald-400">
                                         {score}
                                     </span>
                                 </div>
@@ -672,7 +699,7 @@ export default function GeographyChallenge() {
 
                                 <button
                                     onClick={reset}
-                                    className="mt-5 w-full text-sm text-slate-500 hover:text-white"
+                                    className="mt-5 w-full text-sm text-subtle hover:text-main"
                                 >
                                     Challenge'dan chiqish
                                 </button>
@@ -683,25 +710,25 @@ export default function GeographyChallenge() {
 
                 {/* 4. YAKUNIY NATIJA */}
                 {stage === "result" && (
-                    <div className="mx-auto max-w-xl rounded-3xl border border-white/10 bg-[#101b31] p-9 text-center">
+                    <div className="mx-auto max-w-xl rounded-3xl border border-line bg-panel p-9 text-center">
                         <Trophy
                             size={70}
-                            className="mx-auto text-yellow-400"
+                            className="mx-auto text-yellow-700 dark:text-yellow-400"
                         />
 
                         <h2 className="mt-7 text-3xl font-black">
                             Challenge yakunlandi!
                         </h2>
 
-                        <p className="mt-4 text-slate-400">
-                            {regionInfo?.name} — {count} ta savol
+                        <p className="mt-4 text-subtle">
+                            {regionInfo?.name} — {count} ta savol · {elapsed} soniya
                         </p>
 
-                        <div className="mt-8 text-6xl font-black text-emerald-400">
+                        <div className="mt-8 text-6xl font-black text-emerald-700 dark:text-emerald-400">
                             {score}/{questions.length}
                         </div>
 
-                        <p className="mt-5 text-lg text-slate-300">
+                        <p className="mt-5 text-lg text-muted">
                             To‘g‘ri javoblar:{" "}
                             {Math.round((score / questions.length) * 100)}%
                         </p>
@@ -717,7 +744,7 @@ export default function GeographyChallenge() {
 
                             <button
                                 onClick={reset}
-                                className="rounded-xl border border-white/10 px-6 py-4 font-semibold hover:bg-white/5"
+                                className="rounded-xl border border-line px-6 py-4 font-semibold hover:bg-hover"
                             >
                                 Boshqa hududni tanlash
                             </button>

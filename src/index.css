@@ -1,1 +1,51 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --color-page: var(--site-page);
+  --color-panel: var(--site-panel);
+  --color-inset: var(--site-inset);
+  --color-hover: var(--site-hover);
+  --color-main: var(--site-text);
+  --color-muted: var(--site-muted);
+  --color-subtle: var(--site-subtle);
+  --color-line: var(--site-line);
+}
+
+:root {
+  color-scheme: light;
+  --site-page: #ffffff;
+  --site-panel: #ffffff;
+  --site-inset: #f1f5f9;
+  --site-hover: #e2e8f0;
+  --site-text: #0f172a;
+  --site-muted: #475569;
+  --site-subtle: #64748b;
+  --site-line: #dbe3ed;
+}
+
+:root.dark {
+  color-scheme: dark;
+  --site-page: #06101f;
+  --site-panel: #101b31;
+  --site-inset: #18243a;
+  --site-hover: #24334b;
+  --site-text: #f8fafc;
+  --site-muted: #cbd5e1;
+  --site-subtle: #94a3b8;
+  --site-line: #29364b;
+}
+
+body {
+  margin: 0;
+  background: var(--site-page);
+  color: var(--site-text);
+}
+
+/* Hide interactive galaxy labels while only the map is shown. */
+
+
+[data-map-only="true"] .space-map-canvas button {
+  display: none !important;
+}

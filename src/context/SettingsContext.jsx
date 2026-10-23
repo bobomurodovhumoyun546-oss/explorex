@@ -44,6 +44,7 @@ const translations = {
 };
 
 export function SettingsProvider({ children }) {
+  const [mapOnly, setMapOnly] = useState(false);
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem("explorex-theme") || "dark";
   });
@@ -79,6 +80,8 @@ export function SettingsProvider({ children }) {
   return (
     <SettingsContext.Provider
       value={{
+        mapOnly,
+        setMapOnly,
         theme,
         setTheme,
         toggleTheme,

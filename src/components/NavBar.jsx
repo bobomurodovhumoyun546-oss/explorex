@@ -30,6 +30,7 @@ export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const {
+        mapOnly,
         theme,
         toggleTheme,
         language,
@@ -54,6 +55,10 @@ export default function Navbar() {
     const controlStyle = isDark
         ? "border-white/10 bg-white/5 text-white hover:bg-white/10"
         : "border-slate-200 bg-slate-100 text-slate-800 hover:bg-slate-200";
+
+
+
+    if (mapOnly) return null;
 
     return (
         <header className="fixed left-0 top-0 z-50 w-full px-3 pt-3 sm:px-6">

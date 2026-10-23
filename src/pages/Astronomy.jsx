@@ -1,4 +1,5 @@
-import { Suspense, useMemo, useRef, useState } from "react";
+import { Suspense, useEffect, useMemo, useRef, useState } from "react";
+import { useSettings } from "../context/SettingsContext";
 import { starsData } from "../data/universeData";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import {
@@ -6,6 +7,7 @@ import {
   Stars,
   Html,
   useTexture,
+  Line,
 } from "@react-three/drei";
 import * as THREE from "three";
 
@@ -18,14 +20,56 @@ import {
   Sparkles,
   Orbit,
   ChevronRight,
+  ZoomIn,
+  ZoomOut,
+  Maximize,
+  Eye,
 } from "lucide-react";
 
 import { Link } from "react-router-dom";
 import SpaceInfo from "../components/SpaceInfo";
+import AsteroidBelt from "../components/AsteroidBelt";
+import DeepSpace from "../components/DeepSpace";
+import { COSMIC_FAR, COSMIC_MAX_DISTANCE, cosmicViews, deepSpaceData } from "../data/deepSpaceData";
+import AstronomyLab from "../components/AstronomyLab";
+import { advanceTime, DAY, J2000, MAX_TIME, MIN_TIME, orbitalPosition } from "../data/orbitalMath";
 import { spaceData } from "../data/spaceData";
 
 // O'lchamlar va orbitalar ko'rgazmali.
 // Haqiqiy astronomik masshtab emas.
+
+
+// UI translations; canonical Uzbek object names remain stable for data lookups.
+const uiTranslations = {
+  uz: {
+    solar: "Quyosh tizimi", stars: "Yulduzlar", back: "Orqaga",
+    title: "Koinotni kashf et", subtitle: "Interaktiv 3D astronomiya laboratoriyasi",
+    placeholder: "Sayyora yoki obyekt...", search: "Qidirish",
+    notFound: "Bunday astronomik obyekt topilmadi.", objects: "Obyektlar",
+    all: "Barchasi", planets: "Sayyoralar", dwarfs: "Mitti",
+    pause: "To‘xtatish", play: "Davom ettirish", reset: "Qaytish",
+    names: { "Quyosh":"Quyosh", "Merkuriy":"Merkuriy", "Venera":"Venera", "Yer":"Yer", "Mars":"Mars", "Serera":"Serera", "Yupiter":"Yupiter", "Saturn":"Saturn", "Uran":"Uran", "Neptun":"Neptun", "Pluton":"Pluton", "Haumea":"Haumea", "Makemake":"Makemake", "Erida":"Erida", "Oy":"Oy", "Fobos":"Fobos", "Deymos":"Deymos", "Yevropa":"Yevropa", "Ganimed":"Ganimed", "Kallisto":"Kallisto", "Titan":"Titan", "Enselad":"Enselad", "Reya":"Reya", "Yapet":"Yapet", "Titaniya":"Titaniya", "Triton":"Triton" }
+  },
+  en: {
+    solar: "Solar System", stars: "Stars", back: "Back",
+    title: "Explore the Universe", subtitle: "Interactive 3D astronomy laboratory",
+    placeholder: "Planet or celestial object...", search: "Search",
+    notFound: "No matching celestial object found.", objects: "Objects",
+    all: "All", planets: "Planets", dwarfs: "Dwarf planets",
+    pause: "Pause", play: "Resume", reset: "Reset view",
+    names: { "Quyosh":"Sun", "Merkuriy":"Mercury", "Venera":"Venus", "Yer":"Earth", "Mars":"Mars", "Serera":"Ceres", "Yupiter":"Jupiter", "Saturn":"Saturn", "Uran":"Uranus", "Neptun":"Neptune", "Pluton":"Pluto", "Haumea":"Haumea", "Makemake":"Makemake", "Erida":"Eris", "Oy":"Moon", "Fobos":"Phobos", "Deymos":"Deimos", "Yevropa":"Europa", "Ganimed":"Ganymede", "Kallisto":"Callisto", "Titan":"Titan", "Enselad":"Enceladus", "Reya":"Rhea", "Yapet":"Iapetus", "Titaniya":"Titania", "Triton":"Triton" }
+  },
+  ru: {
+    solar: "Солнечная система", stars: "Звёзды", back: "Назад",
+    title: "Исследуйте Вселенную", subtitle: "Интерактивная 3D-лаборатория астрономии",
+    placeholder: "Планета или небесный объект...", search: "Поиск",
+    notFound: "Небесный объект не найден.", objects: "Объекты",
+    all: "Все", planets: "Планеты", dwarfs: "Карликовые",
+    pause: "Пауза", play: "Продолжить", reset: "Сбросить вид",
+    names: { "Quyosh":"Солнце", "Merkuriy":"Меркурий", "Venera":"Венера", "Yer":"Земля", "Mars":"Марс", "Serera":"Церера", "Yupiter":"Юпитер", "Saturn":"Сатурн", "Uran":"Уран", "Neptun":"Нептун", "Pluton":"Плутон", "Haumea":"Хаумеа", "Makemake":"Макемаке", "Erida":"Эрида", "Oy":"Луна", "Fobos":"Фобос", "Deymos":"Деймос", "Yevropa":"Европа", "Ganimed":"Ганимед", "Kallisto":"Каллисто", "Titan":"Титан", "Enselad":"Энцелад", "Reya":"Рея", "Yapet":"Япет", "Titaniya":"Титания", "Triton":"Тритон" }
+  },
+};
+const localizedName = (name, t) => t.names[name] || name;
 
 const objects = [
   {
@@ -106,7 +150,7 @@ const objects = [
     distance: 23,
     speed: 0.04,
     color: "#b9c4ce",
-    texture:"public/textures/2k_haumea_fictional.jpg"
+    texture:"/textures/2k_haumea_fictional.jpg"
   },
   {
     name: "Makemake",
@@ -114,7 +158,7 @@ const objects = [
     distance: 25,
     speed: 0.035,
     color: "#a77a65",
-texture:"public/textures/2k_makemake_fictional.jpg"
+texture:"/textures/2k_makemake_fictional.jpg"
   },
   {
     name: "Erida",
@@ -122,7 +166,7 @@ texture:"public/textures/2k_makemake_fictional.jpg"
     distance: 28,
     speed: 0.025,
     color: "#d4d0c8",
-    texture:"public/textures/2k_eris_fictional.jpg"
+    texture:"/textures/2k_eris_fictional.jpg"
 
   },
 ];
@@ -242,24 +286,30 @@ const moons = {
 const sun = {
   name: "Quyosh",
   size: 1.6,
-  texture: "public/textures/2k_sun.jpg",
+  texture: "/textures/2k_sun.jpg",
 };
 
-function OrbitLine({ radius }) {
-  return (
-    <mesh rotation={[-Math.PI / 2, 0, 0]}>
-      <ringGeometry
-        args={[radius - 0.008, radius + 0.008, 180]}
-      />
-      <meshBasicMaterial
-        color="#64748b"
-        transparent
-        opacity={0.25}
-        side={THREE.DoubleSide}
-        depthWrite={false}
-      />
-    </mesh>
-  );
+function OrbitLine({ object }) {
+  const points = useMemo(() => Array.from({ length: 181 }, (_, i) => {
+    const angle = i / 180 * Math.PI * 2;
+    return orbitalPosition(object.name, J2000, object.distance, angle)
+      || [Math.cos(angle) * object.distance, 0, Math.sin(angle) * object.distance];
+  }), [object]);
+  return <Line points={points} color="#64748b" transparent opacity={0.25} />;
+}
+
+function SimulationClock({ simulationTimeRef, running, speed, onTick }) {
+  const sinceUpdate = useRef(0);
+  useFrame((_, delta) => {
+    if (!running) return;
+    simulationTimeRef.current = advanceTime(simulationTimeRef.current, Math.min(delta, .1), speed);
+    sinceUpdate.current += delta;
+    if (sinceUpdate.current >= .2) {
+      onTick(simulationTimeRef.current);
+      sinceUpdate.current = 0;
+    }
+  }, -2);
+  return null;
 }
 
 function TexturedSphere({ object, isSun = false }) {
@@ -295,17 +345,15 @@ function ColoredSphere({ object }) {
 
 
 
-function Moon({ moon, running, onSelect, parentRef, positions }) {
+function Moon({ moon, simulationTimeRef, onSelect, parentRef, positionsRef, t }) {
   const moonRef = useRef();
-  const angle = useRef(Math.random() * Math.PI * 2);
 
-  useFrame((_, delta) => {
-    if (running) {
-      angle.current += delta * moon.speed;
-    }
 
-    const x = Math.cos(angle.current) * moon.distance;
-    const z = Math.sin(angle.current) * moon.distance;
+  useFrame(() => {
+    // Date-linked educational moon motion (not an ephemeris).
+    const angle = (simulationTimeRef.current - J2000) / DAY * moon.speed * .1;
+    const x = Math.cos(angle) * moon.distance;
+    const z = Math.sin(angle) * moon.distance;
 
     if (moonRef.current) {
       moonRef.current.position.set(x, 0, z);
@@ -315,7 +363,7 @@ function Moon({ moon, running, onSelect, parentRef, positions }) {
 
         moonRef.current.getWorldPosition(worldPosition);
 
-        positions.current[moon.name] = worldPosition;
+        positionsRef.current[moon.name] = worldPosition;
       }
     }
   });
@@ -342,8 +390,8 @@ function Moon({ moon, running, onSelect, parentRef, positions }) {
         distanceFactor={10}
         style={{ pointerEvents: "none" }}
       >
-        <span className="whitespace-nowrap rounded-md bg-black/70 px-2 py-1 text-[10px] text-cyan-200">
-          {moon.name}
+        <span className="whitespace-nowrap rounded-md bg-black/75 px-2 py-1 text-[10px] text-cyan-200">
+          {localizedName(moon.name, t)}
         </span>
       </Html>
     </group>
@@ -352,27 +400,15 @@ function Moon({ moon, running, onSelect, parentRef, positions }) {
 
 
 
-function Planet({ object, running, onSelect, positions }) {
+function Planet({ object, simulationTimeRef, onSelect, positionsRef, t }) {
   const group = useRef();
-  const angle = useRef(Math.random() * Math.PI * 2);
-
-  useFrame((_, delta) => {
-    if (running) {
-      angle.current += delta * object.speed * 0.25;
-    }
-
-    const x = Math.cos(angle.current) * object.distance;
-    const z = Math.sin(angle.current) * object.distance;
-
-    if (group.current) {
-      group.current.position.set(x, 0, z);
-    }
-
-    positions.current[object.name] = new THREE.Vector3(
-      x,
-      0,
-      z
-    );
+  useFrame(() => {
+    const time = simulationTimeRef.current;
+    const angle = (time - J2000) / DAY * object.speed * .025;
+    const point = orbitalPosition(object.name, time, object.distance)
+      || [Math.cos(angle) * object.distance, 0, Math.sin(angle) * object.distance];
+    if (group.current) group.current.position.set(...point);
+    positionsRef.current[object.name] = new THREE.Vector3(...point);
   });
   
 
@@ -411,18 +447,19 @@ function Planet({ object, running, onSelect, positions }) {
         style={{ pointerEvents: "none" }}
       >
         <span className="whitespace-nowrap rounded-lg border border-white/10 bg-black/75 px-2 py-1 text-xs font-semibold text-white">
-          {object.name}
+          {localizedName(object.name, t)}
         </span>
       </Html>
       
 {(moons[object.name] || []).map((moon) => (
   <Moon
-    key={moon.name}
+    key={localizedName(moon.name, t)}
     moon={moon}
-    running={running}
+    simulationTimeRef={simulationTimeRef}
     onSelect={onSelect}
     parentRef={group}
-    positions={positions}
+    positionsRef={positionsRef}
+    t={t}
   />
 ))}
 
@@ -430,7 +467,7 @@ function Planet({ object, running, onSelect, positions }) {
   );
 }
 
-function SunObject({ onSelect }) {
+function SunObject({ onSelect, t }) {
   return (
     <group
       onClick={(event) => {
@@ -452,7 +489,7 @@ function SunObject({ onSelect }) {
         style={{ pointerEvents: "none" }}
       >
         <span className="rounded-lg bg-orange-500/20 px-3 py-1 text-sm font-bold text-orange-300">
-          Quyosh
+          {localizedName("Quyosh", t)}
         </span>
       </Html>
     </group>
@@ -460,15 +497,29 @@ function SunObject({ onSelect }) {
 }
 
 
-function CameraController({ selected, positions, resetSignal }) {
+function CameraController({ selected, positionsRef, resetSignal, viewRequest }) {
   const { camera, controls } = useThree();
 
   const previousReset = useRef(resetSignal);
+  const previousView = useRef(viewRequest);
   const previousSelection = useRef(null);
   const isFlying = useRef(false);
 
   useFrame((_, delta) => {
     if (!controls) return;
+
+    if (previousView.current !== viewRequest) {
+      previousView.current = viewRequest;
+      isFlying.current = false;
+      previousSelection.current = selected?.name ?? null;
+      const direction = camera.position.clone().sub(controls.target).normalize();
+      if (direction.lengthSq() === 0) direction.set(0, .5, 1).normalize();
+      const distance = THREE.MathUtils.clamp(viewRequest.distance ?? camera.position.distanceTo(controls.target) * viewRequest.factor, 2, COSMIC_MAX_DISTANCE);
+      if (viewRequest.distance) controls.target.set(0, 0, 0);
+      camera.position.copy(controls.target).addScaledVector(direction, distance);
+      controls.update();
+      return;
+    }
 
     // Kamera boshlang‘ich holatga qaytishi
     if (previousReset.current !== resetSignal) {
@@ -492,7 +543,7 @@ function CameraController({ selected, positions, resetSignal }) {
 
     if (!selected || !isFlying.current) return;
 
-    const target = positions.current[selected.name];
+    const target = positionsRef.current[selected.name];
     if (!target) return;
 
     // Haqiqiy radius emas, 3D model radiusi!
@@ -531,11 +582,13 @@ function CameraController({ selected, positions, resetSignal }) {
 
 
 function SolarSystem({
-  running,
+  t,
+  simulationTimeRef,
   selected,
   onSelect,
-  positions,
+  positionsRef,
   resetView,
+  viewRequest,
 }) {
   const controlsRef = useRef();
 
@@ -546,51 +599,56 @@ function SolarSystem({
       <ambientLight intensity={0.5} />
 
       <Stars
-        radius={150}
-        depth={80}
+        radius={70000}
+        depth={15000}
         count={6000}
         factor={4}
         saturation={0}
       />
 
       <Suspense fallback={null}>
-        <SunObject onSelect={onSelect} />
+        <SunObject onSelect={onSelect} t={t} />
+        <AsteroidBelt simulationTimeRef={simulationTimeRef} />
 
         {objects.map((object) => (
           <group key={object.name}>
-            <OrbitLine radius={object.distance} />
+            <OrbitLine object={object} />
 
             <Planet
               object={object}
-              running={running}
+              simulationTimeRef={simulationTimeRef}
               onSelect={onSelect}
-              positions={positions}
+              positionsRef={positionsRef}
+              t={t}
             />
           </group>
         ))}
       </Suspense>
+
+      <UniverseStars onSelect={onSelect} positionsRef={positionsRef} />
+      <DeepSpace onSelect={onSelect} positionsRef={positionsRef} />
 
       <OrbitControls
         ref={controlsRef}
         makeDefault
         enableDamping
         minDistance={2}
-        maxDistance={120}
+        maxDistance={COSMIC_MAX_DISTANCE}
+        zoomSpeed={1.5}
       />
 
       <CameraController
         selected={selected}
-        positions={positions}
+        positionsRef={positionsRef}
         controlsRef={controlsRef}
-        resetView={resetView}
+        resetSignal={resetView}
+        viewRequest={viewRequest}
       />
     </>
   );
 }
 
-function UniverseStars({ onSelect, positions }) {
-  const stars = useMemo(() => {
-    return starsData
+const universeStars = starsData
       .filter((star) => star.id !== "sun")
       .map((star, index) => {
         const angle = index * 2.39996;
@@ -609,17 +667,21 @@ function UniverseStars({ onSelect, positions }) {
           ),
         };
       });
-  }, []);
+
+const mapObjects = [sun, ...objects, ...universeStars, ...deepSpaceData];
+
+function UniverseStars({ onSelect, positionsRef }) {
+
 
   return (
     <group>
-      {stars.map((star) => (
+      {universeStars.map((star) => (
         <group
           key={star.id}
           position={star.position}
           ref={(element) => {
             if (element) {
-              positions.current[star.name] =
+              positionsRef.current[star.name] =
                 new THREE.Vector3(...star.position);
             }
           }}
@@ -646,7 +708,7 @@ function UniverseStars({ onSelect, positions }) {
             distanceFactor={35}
             style={{ pointerEvents: "none" }}
           >
-            <div className="whitespace-nowrap rounded-lg border border-white/10 bg-black/70 px-3 py-1 text-xs text-white">
+            <div className="whitespace-nowrap rounded-lg border border-white/10 bg-black/75 px-3 py-1 text-xs text-white">
               {star.name}
             </div>
           </Html>
@@ -658,16 +720,53 @@ function UniverseStars({ onSelect, positions }) {
 
 
 export default function Astronomy() {
+  const { language, theme, mapOnly, setMapOnly } = useSettings();
+  const t = uiTranslations[language] || uiTranslations.uz;
+  const isDark = theme === "dark";
   const [selected, setSelected] = useState(null);
   const [running, setRunning] = useState(true);
   const [search, setSearch] = useState("");
-  const [resetView, setResetView] = useState(false);
+  const [resetView, setResetView] = useState(0);
   const [category, setCategory] = useState("all");
   const [error, setError] = useState("");
-const [spaceMode, setSpaceMode] = useState("solar");
 
 
-  const positions = useRef({});
+
+  const positionsRef = useRef({ Quyosh: new THREE.Vector3(0, 0, 0) });
+  const [initialTime] = useState(() => Math.min(MAX_TIME, Math.max(MIN_TIME, Date.now())));
+  const simulationTimeRef = useRef(initialTime);
+  const [clockTime, setClockTime] = useState(initialTime);
+  const [speed, setSpeed] = useState(10);
+  const [labOpen, setLabOpen] = useState(false);
+  const [viewRequest, setViewRequest] = useState({ distance: 55 });
+  useEffect(() => () => setMapOnly(false), [setMapOnly]);
+  useEffect(() => {
+    if (!mapOnly) return;
+    function handleKeyDown(event) {
+      if (event.key === "Escape") setMapOnly(false);
+    }
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [mapOnly, setMapOnly]);
+  function toggleMapOnly() {
+    setLabOpen(false);
+    setSelected(null);
+    setMapOnly(value => !value);
+  }
+
+
+
+
+
+
+
+  function changeDate(value) {
+    const time = Date.parse(`${value}T00:00:00Z`);
+    if (!Number.isFinite(time) || time < MIN_TIME || time > MAX_TIME) return;
+    simulationTimeRef.current = time;
+    setClockTime(time);
+    setRunning(false);
+  }
 
   function selectObject(object) {
     const details = spaceData.find(
@@ -675,12 +774,13 @@ const [spaceMode, setSpaceMode] = useState("solar");
     );
 
     // 3D o'lchamni saqlagan holda ma'lumotlarni qo'shamiz.
+    setLabOpen(false);
     setSelected({
       ...object,
       ...details,
     });
 
-    setResetView(false);
+
     setError("");
   }
 
@@ -689,27 +789,33 @@ const [spaceMode, setSpaceMode] = useState("solar");
 
     if (!query) return;
 
-    const found = [sun, ...objects].find((object) =>
-      object.name.toLowerCase().includes(query)
+    const found = mapObjects.find((object) =>
+      (object.name.toLowerCase().includes(query) || localizedName(object.name, t).toLowerCase().includes(query) || object.aliases?.some(alias => alias.toLowerCase().includes(query)))
     );
 
     if (found) {
       selectObject(found);
     } else {
-      setError("Bunday astronomik obyekt topilmadi.");
+      setError(t.notFound);
     }
   }
 
   function resetCamera() {
     setSelected(null);
-    setResetView(true);
+    setResetView((n) => n + 1);
     setError("");
   }
 
-  const filteredObjects = objects.filter((object) => {
+  const filteredObjects = mapObjects.filter((object) => {
     const data = spaceData.find(
       (item) => item.name === object.name
     );
+
+    if (["galaxies", "blackholes"].includes(category)) return object.kind === category;
+
+    if (category === "stars") {
+      return object.name === sun.name || universeStars.some((star) => star.id === object.id);
+    }
 
     if (category === "planets") {
       return data?.type === "Sayyora";
@@ -723,70 +829,70 @@ const [spaceMode, setSpaceMode] = useState("solar");
   });
 
   return (
-    <div className="relative h-screen w-full overflow-hidden bg-[#02040e] text-white">
+    <div data-map-only={mapOnly} className={`relative h-dvh w-full overflow-hidden transition-colors duration-300 ${isDark ? "bg-page text-main" : "bg-[#dce8f3] text-slate-900"}`}>
       {/* 3D KOINOT */}
       <Canvas
+        className="space-map-canvas"
         camera={{
           position: [0, 35, 45],
           fov: 55,
-          far: 1000,
+          far: COSMIC_FAR,
         }}
       >
-        
-<UniverseStars
-  onSelect={setSelected}
-  positions={positions}
-/>
-
-        <SolarSystem
-          running={running}
+        <SimulationClock simulationTimeRef={simulationTimeRef} running={running} speed={speed} onTick={setClockTime} />
+<SolarSystem
+          t={t}
+          simulationTimeRef={simulationTimeRef}
           selected={selected}
           onSelect={selectObject}
-          positions={positions}
+          positionsRef={positionsRef}
           resetView={resetView}
+          viewRequest={viewRequest}
         />
       </Canvas>
+      <button type="button" onClick={toggleMapOnly} aria-pressed={mapOnly}
+        aria-label={mapOnly ? "Boshqaruvlarni ko‘rsatish" : "Faqat xaritani ko‘rsatish"}
+        title={mapOnly ? "Boshqaruvlarni ko‘rsatish (Esc)" : "Butun xarita"}
+        className={`absolute right-4 z-50 inline-flex items-center gap-2 rounded-xl border border-line bg-panel/95 px-4 py-3 text-sm font-bold text-main shadow-lg backdrop-blur-xl sm:right-6 ${mapOnly ? "top-4" : "top-56"}`}>
+        {mapOnly ? <Eye size={18} /> : <Maximize size={18} />}
+        {mapOnly ? "Orqaga" : "Butun koinot"}
+      </button>
+      {!mapOnly && <>
+
+
+
+
+      <button onClick={() => { setLabOpen(value => !value); setSelected(null); }} aria-expanded={labOpen}
+        className="absolute right-4 top-40 z-40 rounded-xl border border-cyan-400/30 bg-panel/90 px-4 py-3 text-sm font-bold text-cyan-700 dark:text-cyan-200 backdrop-blur-xl sm:right-6">
+        {labOpen ? 'Laboratoriyani yopish' : '🔬 Laboratoriya'}
+      </button>
+      {labOpen && <AstronomyLab isDark={isDark} clockTime={clockTime} onDateChange={changeDate} speed={speed} onSpeedChange={setSpeed} onClose={() => setLabOpen(false)} />}
+
+      {!selected && !labOpen && <div className="absolute bottom-24 right-4 z-20 w-40 rounded-2xl border border-cyan-300/20 bg-panel/85 p-3 text-main backdrop-blur-xl sm:right-6 sm:w-64">
+        <p className="mb-2 text-xs font-bold text-cyan-700 dark:text-cyan-200">Koinot masshtabi</p>
+        <div className="grid grid-cols-1 gap-1.5 sm:grid-cols-2">{cosmicViews.map(view => <button key={view.id} onClick={() => {setSelected(null);setViewRequest({distance:view.distance});}} className="rounded-lg bg-inset px-2 py-2 text-xs hover:bg-cyan-300/20">{view.label}</button>)}</div>
+        <div className="mt-2 flex gap-2"><button aria-label="Yaqinlashtirish" onClick={() => setViewRequest({factor:.5})} className="flex flex-1 justify-center rounded-lg bg-inset p-2 hover:bg-hover"><ZoomIn size={18} /></button><button aria-label="Uzoqlashtirish" onClick={() => setViewRequest({factor:2})} className="flex flex-1 justify-center rounded-lg bg-inset p-2 hover:bg-hover"><ZoomOut size={18} /></button></div>
+        <p className="mt-2 text-[10px] leading-4 text-subtle">Masofa va o‘lchamlar ko‘rgazmali. G‘ildirak bilan uzoqlashing.</p>
+      </div>}
+
+      <Link to="/astronomy/telescope" className="absolute left-4 top-40 z-20 rounded-xl border border-fuchsia-300/30 bg-panel/90 px-4 py-3 text-sm font-bold text-fuchsia-700 dark:text-fuchsia-200 backdrop-blur-xl sm:left-6 sm:top-80">Space Telescope</Link>
 
       {/* INTERFEYS */}
       
-<div className="pointer-events-auto absolute left-1/2 top-24 z-40 flex -translate-x-1/2 gap-2 rounded-2xl border border-white/10 bg-black/70 p-2 backdrop-blur-xl">
-  <button
-    onClick={() => setSpaceMode("solar")}
-    className={`rounded-xl px-4 py-2 text-sm font-bold transition ${
-      spaceMode === "solar"
-        ? "bg-cyan-400 text-black"
-        : "text-white hover:bg-white/10"
-    }`}
-  >
-    Quyosh tizimi
-  </button>
-
-  <button
-    onClick={() => setSpaceMode("stars")}
-    className={`rounded-xl px-4 py-2 text-sm font-bold transition ${
-      spaceMode === "stars"
-        ? "bg-violet-500 text-white"
-        : "text-white hover:bg-white/10"
-    }`}
-  >
-    ✨ Yulduzlar
-  </button>
-</div>
-
       <div className="pointer-events-none absolute inset-0">
 
         {/* SAHIFA NOMI */}
         <div className="pointer-events-auto absolute left-4 top-24 max-w-[calc(100%-2rem)] sm:left-6">
           <Link
             to="/"
-            className="mb-3 flex w-fit items-center gap-2 rounded-xl border border-white/10 bg-black/60 px-4 py-2.5 text-sm backdrop-blur-xl transition hover:bg-white/10"
+            className={`mb-3 flex w-fit items-center gap-2 rounded-xl border px-4 py-2.5 text-sm backdrop-blur-xl transition ${isDark ? "border-line bg-panel/95 text-main hover:bg-hover" : "border-slate-200 bg-panel/90 text-slate-900 hover:bg-slate-100"}`}
           >
             <ArrowLeft size={17} />
-            Orqaga
+            {t.back}
           </Link>
 
-          <div className="hidden rounded-2xl border border-white/10 bg-black/60 p-5 backdrop-blur-xl sm:block">
-            <div className="mb-2 flex items-center gap-2 text-cyan-400">
+          <div className={`hidden rounded-2xl border p-5 backdrop-blur-xl sm:block ${isDark ? "border-line bg-panel/95" : "border-slate-200 bg-panel/90 shadow-lg"}`}>
+            <div className="mb-2 flex items-center gap-2 text-cyan-700 dark:text-cyan-400">
               <Sparkles size={17} />
               <span className="text-xs font-bold uppercase tracking-widest">
                 ExploreX Universe
@@ -794,17 +900,17 @@ const [spaceMode, setSpaceMode] = useState("solar");
             </div>
 
             <h1 className="text-2xl font-black">
-              Koinotni kashf et
+              {t.title}
             </h1>
 
-            <p className="mt-2 text-sm text-slate-400">
-              Interaktiv 3D astronomiya laboratoriyasi
+            <p className={`mt-2 text-sm ${isDark ? "text-subtle" : "text-slate-600"}`}>
+              {t.subtitle}
             </p>
           </div>
         </div>
 
         {/* QIDIRUV */}
-        <div className="pointer-events-auto absolute right-4 top-24 w-64 max-w-[calc(100%-2rem)] rounded-2xl border border-white/10 bg-black/70 p-3 backdrop-blur-xl sm:right-6 sm:w-80">
+        <div className={`pointer-events-auto absolute right-4 top-24 w-64 max-w-[calc(100%-2rem)] rounded-2xl border p-3 backdrop-blur-xl sm:right-6 sm:w-80 ${isDark ? "border-line bg-panel/95" : "border-slate-200 bg-panel/90 shadow-lg"}`}>
           <div className="flex gap-2">
             <input
               value={search}
@@ -814,13 +920,13 @@ const [spaceMode, setSpaceMode] = useState("solar");
                   searchObject();
                 }
               }}
-              placeholder="Sayyora yoki obyekt..."
-              className="min-w-0 flex-1 bg-transparent px-2 text-sm text-white outline-none placeholder:text-slate-500"
+              placeholder={t.placeholder}
+              className={`min-w-0 flex-1 bg-transparent px-2 text-sm outline-none placeholder:text-subtle ${isDark ? "text-main" : "text-slate-900"}`}
             />
 
             <button
               onClick={searchObject}
-              aria-label="Qidirish"
+              aria-label={t.search}
               className="rounded-xl bg-cyan-400 p-2 text-slate-950 transition hover:bg-cyan-300"
             >
               <Search size={19} />
@@ -828,26 +934,29 @@ const [spaceMode, setSpaceMode] = useState("solar");
           </div>
 
           {error && (
-            <p className="mt-2 px-2 text-xs text-red-400">
+            <p className="mt-2 px-2 text-xs text-red-700 dark:text-red-400">
               {error}
             </p>
           )}
         </div>
 
         {/* OBYEKTLAR RO'YXATI */}
-        <div className="pointer-events-auto absolute bottom-28 left-4 max-h-64 w-52 overflow-y-auto rounded-2xl border border-white/10 bg-black/75 p-3 backdrop-blur-xl sm:left-6 sm:w-60">
+        <div className={`pointer-events-auto absolute bottom-28 left-4 max-h-64 w-52 overflow-y-auto rounded-2xl border p-3 backdrop-blur-xl sm:left-6 sm:w-60 ${isDark ? "border-line bg-panel/95" : "border-slate-200 bg-panel/95 shadow-lg"}`}>
           <div className="mb-3 flex items-center gap-2 px-2">
-            <Orbit size={16} className="text-cyan-400" />
-            <p className="text-xs font-bold uppercase tracking-widest text-slate-300">
-              Obyektlar
+            <Orbit size={16} className="text-cyan-700 dark:text-cyan-400" />
+            <p className={`text-xs font-bold uppercase tracking-widest ${isDark ? "text-muted" : "text-slate-700"}`}>
+              {t.objects}
             </p>
           </div>
 
           <div className="mb-3 flex flex-wrap gap-1">
             {[
-              { id: "all", label: "Barchasi" },
-              { id: "planets", label: "Sayyoralar" },
-              { id: "dwarfs", label: "Mitti" },
+              { id: "all", label: t.all },
+              { id: "planets", label: t.planets },
+              { id: "dwarfs", label: t.dwarfs },
+              { id: "stars", label: t.stars },
+              { id: "blackholes", label: "Qora tuynuklar" },
+              { id: "galaxies", label: "Galaktikalar" },
             ].map((item) => (
               <button
                 key={item.id}
@@ -855,7 +964,7 @@ const [spaceMode, setSpaceMode] = useState("solar");
                 className={`rounded-lg px-2 py-1.5 text-xs font-semibold transition ${
                   category === item.id
                     ? "bg-cyan-400 text-slate-950"
-                    : "bg-white/10 text-slate-300 hover:bg-white/20"
+                    : isDark ? "bg-inset text-muted hover:bg-hover" : "bg-slate-100 text-slate-700 hover:bg-slate-200"
                 }`}
               >
                 {item.label}
@@ -869,47 +978,48 @@ const [spaceMode, setSpaceMode] = useState("solar");
               onClick={() => selectObject(object)}
               className={`mb-1 flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-sm transition ${
                 selected?.name === object.name
-                  ? "bg-cyan-400/15 text-cyan-300"
-                  : "text-slate-300 hover:bg-white/10"
+                  ? "bg-cyan-400/15 text-cyan-700 dark:text-cyan-300"
+                  : isDark ? "text-muted hover:bg-hover" : "text-slate-700 hover:bg-slate-100"
               }`}
             >
-              <span>{object.name}</span>
+              <span>{localizedName(object.name, t)}</span>
               <ChevronRight size={15} />
             </button>
           ))}
         </div>
 
         {/* BOSHQARUV */}
-        <div className="pointer-events-auto absolute bottom-5 left-1/2 flex -translate-x-1/2 items-center gap-4 whitespace-nowrap rounded-2xl border border-white/10 bg-black/75 px-5 py-3.5 shadow-2xl backdrop-blur-xl">
+        <div className={`pointer-events-auto absolute bottom-5 left-1/2 flex -translate-x-1/2 items-center gap-4 whitespace-nowrap rounded-2xl border px-5 py-3.5 shadow-2xl backdrop-blur-xl ${isDark ? "border-line bg-panel/95" : "border-slate-200 bg-panel/95"}`}>
           <button
             onClick={() => setRunning(!running)}
-            className="flex items-center gap-2 text-sm font-semibold transition hover:text-cyan-400"
+            className="flex items-center gap-2 text-sm font-semibold transition hover:text-cyan-700 dark:hover:text-cyan-400"
           >
             {running ? (
               <Pause size={19} />
             ) : (
               <Play size={19} />
             )}
-            {running ? "To'xtatish" : "Davom ettirish"}
+            {running ? t.pause : t.play}
           </button>
 
-          <div className="h-6 w-px bg-white/20" />
+          <div className={`h-6 w-px ${isDark ? "bg-inset" : "bg-slate-300"}`} />
 
           <button
             onClick={resetCamera}
-            className="flex items-center gap-2 text-sm font-semibold transition hover:text-cyan-400"
+            className="flex items-center gap-2 text-sm font-semibold transition hover:text-cyan-700 dark:hover:text-cyan-400"
           >
             <RotateCcw size={19} />
-            Qaytish
+            {t.reset}
           </button>
         </div>
 
         {/* BATAFSIL MA'LUMOT */}
         <SpaceInfo
-          selected={selected}
+          selected={labOpen ? null : selected}
           onClose={() => setSelected(null)}
         />
       </div>
+    </>}
     </div>
   );
 }

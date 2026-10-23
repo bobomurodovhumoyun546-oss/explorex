@@ -600,7 +600,7 @@ export default function Home() {
         <main
             className={`min-h-screen overflow-hidden transition-colors duration-500 ${isDark
                     ? "bg-[#030712] text-white"
-                    : "bg-[#f4f1e9] text-slate-900"
+                    : "bg-page text-slate-900"
                 }`}
         >
             {/* ================= HERO ================= */}
