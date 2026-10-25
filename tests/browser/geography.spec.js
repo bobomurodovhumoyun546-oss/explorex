@@ -101,7 +101,9 @@ test('country polygons and flags open the same local details with estimated popu
   await page.getByRole('checkbox', {name:'Bayroqlar',exact:true}).check();
   panel = await openUzbekistan(page);
   await panel.getByText('Ma’lumot sanalari va aniqligi').click();
-  await expect(panel.getByText(/Aholi baholangan yil: manbada ko‘rsatilmagan/)).toBeVisible();
+  await expect(panel.getByText(/Aholi baholangan yil: 2026/)).toBeVisible();
+  await expect(panel.getByText('Aholi bahosi sanasi: 2026-01-01.')).toBeVisible();
+  await expect(panel.getByRole('link', {name:'Aholi: rasmiy statistika manbasi'})).toHaveAttribute('href', 'https://siat.stat.uz/data/2441/?lang=en');
   await expect(panel.getByText(/Ma’lumot to‘plami olingan sana:/)).toBeVisible();
 });
 

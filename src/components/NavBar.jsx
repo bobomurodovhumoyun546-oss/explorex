@@ -17,8 +17,8 @@ import {
 import { useSettings } from "../context/settings";
 
 // Logo faylingni src/assets/logo.jpg manzilida qoldir
-import logo from "../assets/explorexwhitelogo-small.jpg";
-import logo2 from "../assets/explorexnew.jpg";
+import logo from "../assets/logonewXwh.jpg";
+import logo2 from "../assets/logonewXbl.jpg"
 
 const links = [
     { key: "home", path: "/", icon: Home },
@@ -83,9 +83,7 @@ export default function Navbar() {
                     <img
                         src={theme === "dark" ? logo2 : logo}
                         alt="ExploreX"
-                        width="400"
-                        height="133"
-                        className="h-10 w-auto max-w-[110px] object-contain sm:h-14 sm:max-w-[200px]"
+                        className="h-12 w-auto max-w-[160px] object-contain sm:h-14 sm:max-w-[200px]"
                     />
                 </NavLink>
 

@@ -16,6 +16,17 @@
       "field": "unMember",
       "value": true,
       "source": "https://www.un.org/en/about-us/member-states/guinea-bissau"
+    },
+    {
+      "country": "UZ",
+      "field": "population",
+      "value": 38236700,
+      "asOf": "2026-01-01",
+      "source": "https://siat.stat.uz/data/2441/?lang=en",
+      "sourceUpdatedAt": "2026-06-10",
+      "checkedAt": "2026-10-25",
+      "license": "CC BY 4.0",
+      "note": "National Statistics Committee, annual permanent population: 38 236.7 thousand people. Converted to persons; this is a dated estimate, not a live counter."
     }
   ],
   "mediaManifest": "/country-media/SOURCE.json",

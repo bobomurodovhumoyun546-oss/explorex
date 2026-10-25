@@ -11,11 +11,13 @@ npm run dev
 
 ```sh
 npm test
-npx playwright install chromium
+npx playwright install chromium firefox webkit
 npm run test:e2e
 ```
 
 `test:e2e` avval saytni build qiladi, keyin production preview orqali desktop va telefon ekranlarida Chromium sinovlarini bajaradi. Alohida build allaqachon tayyor bo‘lsa, `npx playwright test` ishlatish mumkin. Preview uchun 4173-port bo‘sh bo‘lishi kerak.
+
+Shuningdek `firefox` va `webkit` loyihalari Firefox hamda Safari dvigatelini tekshiradi. Alohida brauzer: `npx playwright test --project=firefox` yoki `--project=webkit`. Windows’dagi WebKit sinovi Apple qurilmasidagi Safari tekshiruvi bilan aynan bir xil emas. Telefon loyihasi Chromium’da Pixel 5 o‘lchami va sensorli kiritishni taqlid qiladi.
 
 Hisobot: `npm run test:e2e:report`. Xato bo‘lsa skrinshot va trace `test-results/` ichida saqlanadi. Bu fayllar Git’ga qo‘shilmaydi.
 

@@ -85,6 +85,9 @@ function Galaxy({ radius, seed, elliptical=false, count=9000, fadeInside=false }
     if (fadeInside && groupRef.current && materialRef.current) {
       groupRef.current.getWorldPosition(center);
       const fade=THREE.MathUtils.clamp((camera.position.distanceTo(center)/radius-.65)/1.1,0,.9);
+      // Zero-alpha galaxy shaders still shade the entire screen when nearby.
+      // Skip their draw calls until the galaxy actually fades into view.
+      groupRef.current.visible = fade > 0;
       materialRef.current.uniforms.opacity.value=fade;
       if(diskRef.current) diskRef.current.uniforms.opacity.value=fade;
       if(coreRef.current) coreRef.current.uniforms.opacity.value=fade;

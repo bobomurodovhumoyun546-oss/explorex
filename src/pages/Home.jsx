@@ -897,7 +897,58 @@ export default function Home() {
                 </motion.div>
             </section>
 
+            {/* ================= FOOTER ================= */}
 
+            <footer
+                className={`border-t px-5 py-8 ${isDark
+                        ? "border-white/10"
+                        : "border-slate-200"
+                    }`}
+            >
+                <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 md:flex-row">
+                    <div className="flex items-center gap-2">
+                        <Orbit
+                            size={23}
+                            className={
+                                isDark
+                                    ? "text-cyan-400"
+                                    : "text-blue-600"
+                            }
+                        />
+
+                        <span className="text-xl font-black">
+                            Explore
+                            <span
+                                className={
+                                    isDark
+                                        ? "text-cyan-400"
+                                        : "text-blue-600"
+                                }
+                            >
+                                X
+                            </span>
+                        </span>
+                    </div>
+
+                    <p
+                        className={`text-center text-sm ${isDark
+                                ? "text-slate-500"
+                                : "text-slate-600"
+                            }`}
+                    >
+                        {text.footer}
+                    </p>
+
+                    <span
+                        className={`text-xs ${isDark
+                                ? "text-slate-500"
+                                : "text-slate-600"
+                            }`}
+                    >
+                        © {new Date().getFullYear()} ExploreX
+                    </span>
+                </div>
+            </footer>
         </main>
     );
 }
