@@ -2,6 +2,7 @@ import {
   BrowserRouter,
   Routes,
   Route,
+  Link,
 } from "react-router-dom";
 
 import { lazy, Suspense } from 'react';
@@ -42,6 +43,7 @@ export default function App() {
             <Route path="/geography/records" element={<EarthRecords />} />
             <Route path="/geography/map" element={<WorldMap />} />
             <Route path="/geography/time-atlas" element={<TimeAtlas />} />
+            <Route path="*" element={<main className="flex min-h-dvh flex-col items-center justify-center gap-5 bg-page px-6 pt-28 text-center text-main"><p className="text-sm font-bold text-cyan-700 dark:text-cyan-300">404</p><h1 className="text-3xl font-black">Sahifa topilmadi</h1><p className="text-muted">Havolani tekshiring yoki bosh sahifaga qayting.</p><Link to="/" className="rounded-xl bg-cyan-400 px-5 py-3 font-bold text-slate-950">Bosh sahifaga qaytish</Link></main>} />
           </Routes>
           </Suspense>
           </PageErrorBoundary>

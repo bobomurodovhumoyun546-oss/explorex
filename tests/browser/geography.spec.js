@@ -8,6 +8,7 @@ test.beforeEach(async ({page}) => {
 async function mapReady(page) {
   await page.goto('/geography/map');
   await expect(page.locator('.rsm-geography')).toHaveCount(177);
+  await expect(page.getByText('Davlatlar yuklanmoqda...', {exact:true})).toBeHidden({timeout:45000});
   await expect(page.getByRole('button', {name: 'O‘zbekiston bayrog‘i', exact: true})).toBeVisible();
 }
 

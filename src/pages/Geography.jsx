@@ -1,11 +1,11 @@
 import { useSettings } from "../context/settings";
 import historicalMapImage from "../assets/pastmap.jpg";
 import worldMapImage from "../assets/map.jpg";
-import mapQuizImage from "../assets/mapquiz.jpg";
-import flagQuizImage from "../assets/flagquiz2.jpg";
-import earthRecordsImage from "../assets/rekords.jpg";
+import mapQuizImage from "../assets/mapquiz-card.jpg";
+import flagQuizImage from "../assets/flagquiz2-card.jpg";
+import earthRecordsImage from "../assets/rekords-card.jpg";
 
-import { Suspense, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Stars, useTexture } from "@react-three/drei";
 import { Link } from "react-router-dom";
@@ -67,8 +67,18 @@ function EarthModel({ rotating }) {
 
 function EarthScene({ rotating }) {
   const { theme } = useSettings();
+  const containerRef = useRef(null);
+  const [visible, setVisible] = useState(true);
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => setVisible(entry.isIntersecting));
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, []);
   return (
+    <div ref={containerRef} className="h-full w-full">
     <Canvas
+      dpr={[1, 1.5]}
+      frameloop={visible ? "always" : "never"}
       camera={{
         position: [0, 0, 7.5],
         fov: 45,
@@ -106,6 +116,7 @@ function EarthScene({ rotating }) {
         enablePan={false}
       />
     </Canvas>
+    </div>
   );
 }
 
@@ -262,6 +273,8 @@ export default function Geography() {
     {/* Orqa fon rasmi */}
     <img
       src={historicalMapImage}
+      loading="lazy"
+      decoding="async"
       alt="Tarixiy dunyo xaritasi"
       className="absolute inset-0 z-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
     />
@@ -323,6 +336,8 @@ export default function Geography() {
             >
               <img
                 src={worldMapImage}
+                loading="lazy"
+                decoding="async"
                 alt="Dunyo xaritasi"
                 className="absolute inset-0 z-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
@@ -367,6 +382,8 @@ export default function Geography() {
               {/* Orqa fon rasmi */}
               <img
                 src={mapQuizImage}
+                loading="lazy"
+                decoding="async"
                 alt="Davlatni top"
                 className="absolute inset-0 z-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
@@ -411,6 +428,8 @@ export default function Geography() {
   {/* Orqa fon rasmi */}
   <img
     src={flagQuizImage}
+    loading="lazy"
+    decoding="async"
     alt="Dunyo bayroqlari"
     className="absolute inset-0 z-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
   />
@@ -453,6 +472,8 @@ export default function Geography() {
   {/* Orqa fon rasmi */}
   <img
     src={earthRecordsImage}
+    loading="lazy"
+    decoding="async"
     alt="Yer rekordlari"
     className="absolute inset-0 z-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
   />

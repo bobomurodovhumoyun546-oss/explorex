@@ -743,11 +743,13 @@ export default function Astronomy() {
   useEffect(() => {
     if (!mapOnly) return;
     function handleKeyDown(event) {
-      if (event.key === "Escape") setMapOnly(false);
+      if (event.key !== "Escape") return;
+      if (selected) setSelected(null);
+      else setMapOnly(false);
     }
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [mapOnly, setMapOnly]);
+  }, [mapOnly, selected, setMapOnly]);
   function toggleMapOnly() {
     setLabOpen(false);
     setSelected(null);
@@ -832,6 +834,7 @@ export default function Astronomy() {
     <div data-map-only={mapOnly} className={`relative h-dvh w-full overflow-hidden transition-colors duration-300 ${isDark ? "bg-page text-main" : "bg-[#dce8f3] text-slate-900"}`}>
       {/* 3D KOINOT */}
       <Canvas
+        dpr={[1, 1.5]}
         className="space-map-canvas"
         camera={{
           position: [0, 35, 45],

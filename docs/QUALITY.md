@@ -31,6 +31,20 @@ Sinovlar xarita chegaralari va bayroqlar, mahalliy rasmlar, davlat paneli, telef
 
 ## Tezlik
 
+Karta rasmlarining 1200 px nusxalarini qayta tayyorlash: `./scripts/optimize-card-images.ps1`. Asl rasmlar saqlanadi. Geografiya kartalari ekranga yaqinlashganda yuklanadi; navigatsiya joriy logotiplarning 400 px nusxalarini ishlatadi. Asosiy 3D sahnalarda piksel zichligi 1–1,5 oralig‘ida cheklangan. Bu yuqori DPR telefonlarda chizish yukini kamaytiradi, barcha qurilmalarda bir xil FPS kafolati emas.
+
+`quality.spec.js` karta rasmlari, Quyoshni 3D xaritada bosish, koinot paneli va Esc, teleskop ko‘ruvchisi, rekord qidirish, 320 px navigatsiya va 404 sahifasini tekshiradi. `preferences.spec.js` bloklangan brauzer xotirasi hamda bo‘limlar bo‘ylab oq temani tekshiradi. Chromium sinovida WebGL uchun SwiftShader yoqilgan; haqiqiy telefon GPU tezligi shu sinovdan aniqlanmaydi.
+
+Bu muhitda 3D sahnali ikkita sinov takroran vaqt chegarasiga yetdi. Standart ishga tushirishda ular o‘tkazib yuboriladi, o‘tgan deb hisoblanmaydi. GPU ishlaydigan muhitda PowerShell orqali alohida yoqing:
+
+```powershell
+$env:RUN_WEBGL_TESTS = '1'
+npx playwright test tests/browser/quality.spec.js --grep 'Sun|geography cards'
+Remove-Item Env:RUN_WEBGL_TESTS
+```
+
+Yakuniy qo‘lda tekshirish: haqiqiy telefonda globus aylanishi, koinot masshtablari, Quyoshni bosish, oq tema, orientatsiyani almashtirish va uzoq ishlatgandagi tezlik. Desktop Chromium emulyatsiyasi Safari yoki telefon GPU tekshiruvi o‘rnini bosmaydi.
+
 Sahifalar `React.lazy` orqali kerak bo‘lganda yuklanadi. 3D koinot kodi bosh sahifaga yuklanmaydi. Navigatsiya logotiplari 400 px o‘lchamdagi nusxalardir; asl fayllar saqlangan. Windows’da ularni qayta tayyorlash: `./scripts/optimize-logos.ps1`.
 
 Build ogohlantirishidagi katta 3D chunk faqat astronomiya sahifasiga kerak. Uni boshlang‘ich JavaScript hajmi bilan aralashtirmang.

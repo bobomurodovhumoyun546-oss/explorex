@@ -1,6 +1,6 @@
 Add-Type -AssemblyName System.Drawing
 $assetDirectory = Join-Path (Split-Path $PSScriptRoot -Parent) 'src/assets'
-foreach ($assetName in @('logo', 'logo2')) {
+foreach ($assetName in @('logo', 'logo2', 'explorexwhitelogo', 'explorexnew')) {
     $sourceImage = [System.Drawing.Image]::FromFile((Join-Path $assetDirectory ($assetName + '.jpg')))
     $targetHeight = [int][Math]::Round($sourceImage.Height * 400.0 / $sourceImage.Width)
     $thumbnail = New-Object System.Drawing.Bitmap(400, $targetHeight)

@@ -4,6 +4,7 @@ import {
 } from "react";
 
 import { SettingsContext } from "./settings";
+import { readPreference, savePreference } from '../utils/preferences';
 
 const translations = {
   uz: {
@@ -44,11 +45,11 @@ const translations = {
 export function SettingsProvider({ children }) {
   const [mapOnly, setMapOnly] = useState(false);
   const [theme, setTheme] = useState(() => {
-    return localStorage.getItem("explorex-theme") || "dark";
+    return readPreference("explorex-theme", ["dark", "light"], "dark");
   });
 
   const [language, setLanguage] = useState(() => {
-    return localStorage.getItem("explorex-language") || "uz";
+    return readPreference("explorex-language", ["uz", "en", "ru"], "uz");
   });
 
   useEffect(() => {
@@ -59,12 +60,12 @@ export function SettingsProvider({ children }) {
 
     document.documentElement.dataset.theme = theme;
 
-    localStorage.setItem("explorex-theme", theme);
+    savePreference("explorex-theme", theme);
   }, [theme]);
 
   useEffect(() => {
     document.documentElement.lang = language;
-    localStorage.setItem("explorex-language", language);
+    savePreference("explorex-language", language);
   }, [language]);
 
   const toggleTheme = () => {

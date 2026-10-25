@@ -57,7 +57,7 @@ export default function SpaceInfo({ selected, onClose, mapOnly = false }) {
     ].filter((item) => item.value);
 
     return (
-        <div role="region" aria-label={`${info.name} haqida ma'lumot`} className={`pointer-events-auto absolute right-4 z-30 w-[calc(100%-2rem)] max-w-sm overflow-y-auto rounded-3xl border border-cyan-400/20 bg-panel/95 p-6 text-main shadow-[0_20px_80px_rgba(0,0,0,0.6)] backdrop-blur-2xl sm:right-6 ${mapOnly ? "bottom-4 top-20" : "bottom-24 top-44"}`}>
+        <div role="region" aria-label={`${info.name} haqida ma'lumot`} className={`pointer-events-auto absolute right-4 z-30 w-[calc(100%-2rem)] overflow-y-auto overscroll-contain rounded-3xl border border-cyan-400/20 bg-panel/95 p-6 text-main shadow-[0_20px_80px_rgba(0,0,0,0.6)] backdrop-blur-2xl sm:right-6 sm:max-w-sm ${mapOnly ? "bottom-4 max-h-[50dvh] sm:top-20 sm:max-h-none" : "bottom-24 max-h-[45dvh] sm:top-44 sm:max-h-none"}`}>
 
             {/* HEADER */}
             <div className="mb-5 flex items-start justify-between gap-3">
