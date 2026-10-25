@@ -18,7 +18,7 @@ import { useSettings } from "../context/settings";
 
 // Logo faylingni src/assets/logo.jpg manzilida qoldir
 import logo from "../assets/explorexwhitelogo-small.jpg";
-import logo2 from "../assets/explorexnew-small.jpg";
+import logo2 from "../assets/explorexnew.jpg";
 
 const links = [
     { key: "home", path: "/", icon: Home },
