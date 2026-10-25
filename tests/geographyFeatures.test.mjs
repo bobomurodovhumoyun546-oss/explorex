@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { FLAG_RECORDS_KEY, flagCountries, makeFlagQuestions, readFlagRecords, ROUND_COUNT, saveFlagRecord } from '../src/data/flagQuiz.js';
+import { FLAG_RECORDS_KEY, flagCountries, makeFlagQuestions, QUESTION_COUNTS, readFlagRecords, ROUND_COUNT, saveFlagRecord } from '../src/data/flagQuiz.js';
 import { earthRecords, filterEarthRecords } from '../src/data/earthRecords.js';
 
 function memoryStorage() {
@@ -30,6 +30,20 @@ test('top five records persist and can be read by a fresh session', () => {
   }
   assert.deepEqual(readFlagRecords(storage).map(r => r.score), [10, 9, 8, 7, 6]);
   assert.equal(JSON.parse(storage.getItem(FLAG_RECORDS_KEY)).length, 5);
+});
+
+test('all three round lengths produce unique questions and keep separate top five records', () => {
+  const storage = memoryStorage();
+  for (const total of QUESTION_COUNTS) {
+    const questions = makeFlagQuestions(Math.random, total);
+    assert.equal(questions.length, total);
+    assert.equal(new Set(questions.map(question => question.country.code)).size, total);
+    for (let score = 0; score <= total; score++) saveFlagRecord(storage, {score, total, date: '2026-10-24T00:00:00Z'});
+  }
+  const records = readFlagRecords(storage);
+  assert.equal(records.length, 15);
+  for (const total of QUESTION_COUNTS) assert.deepEqual(records.filter(record => record.total === total).map(record => record.score), [total, total - 1, total - 2, total - 3, total - 4]);
+  assert.throws(() => makeFlagQuestions(Math.random, 7), RangeError);
 });
 
 test('malformed or unavailable browser storage never crashes the game', () => {

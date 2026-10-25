@@ -1,3 +1,4 @@
+import MapViewport from "../components/MapViewport";
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
@@ -272,17 +273,14 @@ export default function GeographyChallenge() {
         }
 
         const selectedId = String(geo.id).padStart(3, "0");
+        answerLockedRef.current = true;
 
         if (selectedId === current.id) {
-            answerLockedRef.current = true;
             setScore((s) => s + 1);
             setAnswer({ correct: true, timeout: false });
         } else {
-            setWrongIds((previous) =>
-                previous.includes(selectedId)
-                    ? previous
-                    : [...previous, selectedId]
-            );
+            setWrongIds([selectedId]);
+            setAnswer({ correct: false, timeout: false });
         }
     }
 
@@ -443,7 +441,14 @@ export default function GeographyChallenge() {
                 {stage === "game" && current && (
                     <div className="grid gap-6 lg:grid-cols-[1fr_330px]">
                         {/* XARITA */}
-                        <div className="overflow-hidden rounded-3xl border border-line bg-panel">
+                        <MapViewport className="overflow-hidden rounded-3xl border border-line bg-panel" overlay={
+                            <div role="region" aria-label="To‘liq xaritadagi o‘yin">
+                                <div className="flex items-center justify-between gap-3 text-xs text-muted"><span>Savol {index + 1}/{questions.length} · {score} ball</span><span role="timer" aria-label="Qolgan vaqt" className={timeLeft <= 10 ? 'font-bold text-rose-500' : 'font-bold text-main'}>00:{String(timeLeft).padStart(2, '0')}</span></div>
+                                <p className="mt-2 text-xs text-subtle">Xaritadan toping:</p>
+                                <h2 className="mt-1 text-xl font-black">{current.name}</h2>
+                                {answer && <><p role="status" className="mt-2 text-sm">{answer.correct ? 'To‘g‘ri topdingiz!' : answer.timeout ? 'Vaqt tugadi! To‘g‘ri davlat yashil rangda.' : 'Noto‘g‘ri javob. To‘g‘ri davlat yashil rangda.'}</p><button onClick={nextQuestion} className="mt-3 w-full rounded-xl bg-emerald-400 px-4 py-3 text-sm font-bold text-slate-950">{index + 1 === questions.length ? 'Natijani ko‘rish' : 'Keyingi savol'}</button></>}
+                            </div>
+                        }>
                             <div className="flex flex-wrap items-center justify-between gap-3 border-b border-line px-5 py-4">
                                 <div>
                                     <h2 className="font-bold">
@@ -474,6 +479,7 @@ export default function GeographyChallenge() {
                                 </div>
                             </div>
 
+                            <div data-map-canvas>
                             <ComposableMap
                                 projection="geoMercator"
                                 projectionConfig={{
@@ -556,11 +562,12 @@ export default function GeographyChallenge() {
                                     </Geographies>
                                 </ZoomableGroup>
                             </ComposableMap>
+                            </div>
 
                             <p className="px-5 pb-5 text-center text-xs text-subtle">
                                 Xaritani surish va kattalashtirish mumkin.
                             </p>
-                        </div>
+                        </MapViewport>
 
                         {/* SAVOL PANELI */}
                         <div className="flex flex-col rounded-3xl border border-line bg-panel p-6">
@@ -625,7 +632,7 @@ export default function GeographyChallenge() {
                                 </h2>
 
                                 <p className="mt-4 text-sm leading-6 text-subtle">
-                                    Davlat joylashgan hududni bosing.
+                                    Davlat joylashgan hududni bosing. Faqat bitta urinish beriladi.
                                 </p>
                             </div>
 
@@ -653,7 +660,9 @@ export default function GeographyChallenge() {
                                         <span className="font-bold">
                                             {answer.correct
                                                 ? "To‘g‘ri topdingiz!"
-                                                : "Vaqt tugadi!"}
+                                                : answer.timeout
+                                                    ? "Vaqt tugadi!"
+                                                    : "Noto‘g‘ri javob. To‘g‘ri davlat yashil rangda ko‘rsatilgan."}
                                         </span>
                                     </div>
 

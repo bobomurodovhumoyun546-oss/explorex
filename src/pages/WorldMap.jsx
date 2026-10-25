@@ -1,8 +1,10 @@
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import {
     ComposableMap,
+    Geographies,
+    Geography,
     ZoomableGroup,
 } from "react-simple-maps";
 import {
@@ -13,24 +15,19 @@ import {
     ZoomOut,
     RotateCcw,
     Globe2,
-    Users,
-    MapPin,
-    Ruler,
-    Languages,
-    Wallet,
     LoaderCircle,
 } from "lucide-react";
 
-const API_URL =
-    "https://raw.githubusercontent.com/mledoze/countries/master/countries.json";
-const regionNames = {
-    Africa: "Afrika",
-    Americas: "Amerikalar",
-    Asia: "Osiyo",
-    Europe: "Yevropa",
-    Oceania: "Okeaniya",
-};
+import worldMap from "../data/worldCountries.json";
+import MapViewport from "../components/MapViewport";
+import WorldMapFlags from "../components/WorldMapFlags";
+import CountryInfoPanel from "../components/CountryInfoPanel";
+import { findMapCountry } from "../data/countryDetails";
+import { countryName as displayName, capitalName, geographyQuery } from "../data/geographyLocale";
+import { useSettings } from '../context/settings';
 
+const API_URL =
+    "/data/countries.json?v=geography-quality-1";
 const filters = [
     { id: "all", name: "Butun jahon" },
     { id: "Asia", name: "Osiyo" },
@@ -40,68 +37,27 @@ const filters = [
     { id: "Oceania", name: "Okeaniya" },
 ];
 
-const uzbekNames = {
-    Uzbekistan: "O‘zbekiston",
-    Kazakhstan: "Qozog‘iston",
-    Kyrgyzstan: "Qirg‘iziston",
-    Tajikistan: "Tojikiston",
-    Turkmenistan: "Turkmaniston",
-    France: "Fransiya",
-    Germany: "Germaniya",
-    Italy: "Italiya",
-    Spain: "Ispaniya",
-    "United Kingdom": "Buyuk Britaniya",
-    "United States": "AQSH",
-    Russia: "Rossiya",
-    China: "Xitoy",
-    Japan: "Yaponiya",
-    India: "Hindiston",
-    Türkiye: "Turkiya",
-    Turkey: "Turkiya",
-    Brazil: "Braziliya",
-    Canada: "Kanada",
-    Australia: "Avstraliya",
-    Egypt: "Misr",
-    "South Africa": "Janubiy Afrika",
-    "South Korea": "Janubiy Koreya",
-    "North Korea": "Shimoliy Koreya",
-    "New Zealand": "Yangi Zelandiya",
-    "Vatican City": "Vatikan",
+const regionViews = {
+    all: { center: [0, 10], zoom: 1 },
+    Asia: { center: [85, 30], zoom: 2 },
+    Europe: { center: [15, 50], zoom: 3 },
+    Americas: { center: [-85, 5], zoom: 1.5 },
+    Africa: { center: [20, 0], zoom: 2 },
+    Oceania: { center: [145, -20], zoom: 2 },
 };
 
-function displayName(country) {
-    return uzbekNames[country.name.common] || country.name.common;
-}
-
-function formatNumber(number) {
-    return typeof number === "number"
-        ? new Intl.NumberFormat("uz-UZ").format(number)
-        : "Ma’lumot yo‘q";
-}
-
-function Detail({ icon: Icon, label, value }) {
-    return (
-        <div className="flex gap-4 rounded-2xl border border-line bg-inset p-4">
-            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-cyan-400/10 text-cyan-700 dark:text-cyan-400">
-                <Icon size={21} />
-            </div>
-
-            <div className="min-w-0">
-                <p className="text-xs text-subtle">{label}</p>
-                <p className="mt-1 break-words font-semibold">{value}</p>
-            </div>
-        </div>
-    );
-}
-
 export default function WorldMap() {
+    const { mapOnly } = useSettings();
+    const canvasRef = useRef(null);
     const [countries, setCountries] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
+    const [retry, setRetry] = useState(0);
     const [selected, setSelected] = useState(null);
     const [search, setSearch] = useState("");
     const [region, setRegion] = useState("all");
     const [zoom, setZoom] = useState(1);
+    const [showFlags, setShowFlags] = useState(true);
     const [center, setCenter] = useState([0, 10]);
     const zoomIn = () => {
         setZoom((prev) => Math.min(prev * 1.6, 20));
@@ -133,13 +89,7 @@ export default function WorldMap() {
                     throw new Error("API noto‘g‘ri ma’lumot qaytardi.");
                 }
 
-                // 193 ta BMT a'zosi + Vatikan = 194
                 const filtered = data
-                    .filter(
-                        (country) =>
-                            country.unMember === true ||
-                            country.name?.common === "Vatican City"
-                    )
                     .sort((a, b) =>
                         displayName(a).localeCompare(displayName(b), "uz")
                     );
@@ -147,7 +97,7 @@ export default function WorldMap() {
                 setCountries(filtered);
             } catch (err) {
                 if (err.name !== "AbortError") {
-                    setError(err.message || "Ma’lumot yuklanmadi.");
+                    setError("Davlat ma’lumotlarini yuklab bo‘lmadi. Qayta urinib ko‘ring.");
                 }
             } finally {
                 if (!controller.signal.aborted) {
@@ -159,10 +109,10 @@ export default function WorldMap() {
         loadCountries();
 
         return () => controller.abort();
-    }, []);
+    }, [retry]);
 
     const filteredCountries = useMemo(() => {
-        const query = search.trim().toLocaleLowerCase();
+        const query = geographyQuery(search);
 
         return countries.filter((country) => {
             const matchesRegion =
@@ -170,10 +120,10 @@ export default function WorldMap() {
 
             const matchesSearch =
                 !query ||
-                displayName(country).toLocaleLowerCase().includes(query) ||
-                country.name.common.toLocaleLowerCase().includes(query) ||
+                geographyQuery(displayName(country)).includes(query) ||
+                geographyQuery(country.name.common).includes(query) ||
                 (country.capital || []).some((capital) =>
-                    capital.toLocaleLowerCase().includes(query)
+                    geographyQuery(capital).includes(query) || geographyQuery(capitalName(capital)).includes(query)
                 );
 
             return matchesRegion && matchesSearch;
@@ -181,8 +131,19 @@ export default function WorldMap() {
     }, [countries, region, search]);
 
     function selectCountry(country) {
+        if (!mapOnly && window.matchMedia('(max-width: 639px)').matches && canvasRef.current) {
+            const navigationBottom = document.querySelector('header')?.getBoundingClientRect().bottom || 80;
+            window.scrollBy({top: canvasRef.current.getBoundingClientRect().top - navigationBottom - 8, behavior:'instant'});
+        }
         setSelected(country);
     }
+
+    // A map can be clicked before the local reference data finish loading.
+    // Replace that initial name-only selection as soon as its full record arrives.
+    const selectedDetails = selected && (countries.find(country =>
+        (selected.cca2 && country.cca2 === selected.cca2)
+        || country.ccn3 === selected.ccn3
+        || country.name.common === selected.name.common) || selected);
 
     function resetMap() {
         setZoom(1);
@@ -191,19 +152,6 @@ export default function WorldMap() {
         setSearch("");
         setRegion("all");
     }
-
-    const currencyText = selected
-        ? Object.entries(selected.currencies || {})
-            .map(([code, currency]) =>
-                `${currency.name || code} (${currency.symbol || code})`
-            )
-            .join(", ") || "Ma’lumot yo‘q"
-        : "";
-
-    const languagesText = selected
-        ? Object.values(selected.languages || {}).join(", ") ||
-        "Ma’lumot yo‘q"
-        : "";
 
     return (
         <main className="min-h-screen bg-page px-4 pb-12 pt-28 text-main md:px-8">
@@ -242,7 +190,7 @@ export default function WorldMap() {
                             <p className="text-2xl font-black">
                                 {loading ? "..." : countries.length}
                             </p>
-                            <p className="text-xs text-subtle">Davlatlar</p>
+                            <p className="text-xs text-subtle">Davlat va hududlar</p>
                         </div>
                     </div>
                 </div>
@@ -276,7 +224,7 @@ export default function WorldMap() {
                         {filters.map((item) => (
                             <button
                                 key={item.id}
-                                onClick={() => setRegion(item.id)}
+                                onClick={() => { setRegion(item.id); setCenter(regionViews[item.id].center); setZoom(regionViews[item.id].zoom); }}
                                 className={`rounded-xl px-4 py-2.5 text-sm font-semibold transition ${region === item.id
                                         ? "bg-cyan-400 text-slate-950"
                                         : "border border-line bg-inset text-muted hover:bg-hover"
@@ -296,23 +244,25 @@ export default function WorldMap() {
                 )}
 
                 {error && (
-                    <div className="mb-6 rounded-xl border border-rose-400/20 bg-rose-400/10 p-4 text-rose-700 dark:text-rose-300">
+                    <div role="alert" className="mb-6 rounded-xl border border-rose-400/20 bg-rose-400/10 p-4 text-rose-700 dark:text-rose-300">
                         {error}
+                        <button type="button" onClick={() => setRetry(value => value + 1)} className="ml-3 rounded-lg border border-current px-3 py-2 text-sm font-bold">Qayta urinish</button>
                     </div>
                 )}
 
                 <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_350px]">
                     {/* MAP */}
-                    <div className="min-w-0 overflow-hidden rounded-3xl border border-line bg-panel">
+                    <MapViewport className={`min-w-0 overflow-hidden rounded-3xl border border-line bg-panel ${selectedDetails ? 'country-map-selected' : ''}`}>
                         <div className="flex flex-wrap items-center justify-between gap-3 border-b border-line p-5">
                             <div>
                                 <h2 className="font-bold">Interaktiv xarita</h2>
                                 <p className="mt-1 text-xs text-subtle">
-                                    Davlatni bosib, ma’lumotlarini ko‘ring
+                                    Davlat yoki bayroqni bosib, ma’lumotlarini ko‘ring
                                 </p>
                             </div>
 
                             <div className="flex gap-2">
+                                <label className="mr-2 flex items-center gap-2 text-xs"><input type="checkbox" checked={showFlags} onChange={event => setShowFlags(event.target.checked)} className="accent-cyan-400" />Bayroqlar</label>
                                 <button
                                     onClick={() => setZoom((z) => Math.min(z * 1.5, 8))}
                                     className="rounded-lg bg-inset p-2 hover:bg-hover"
@@ -339,7 +289,7 @@ export default function WorldMap() {
                             </div>
                         </div>
 
-                        <div className="relative w-full overflow-hidden rounded-2xl bg-panel">
+                        <div ref={canvasRef} data-map-canvas className="relative w-full overflow-hidden rounded-2xl bg-panel">
 
                             {/* XARITA */}
                             <ComposableMap
@@ -365,12 +315,22 @@ export default function WorldMap() {
                                         setZoom(newZoom);
                                     }}
                                 >
-                                    {/* ESKI Geographies KODINGNI SHU YERDA QOLDIR */}
+                                    <Geographies geography={worldMap}>
+                                        {({ geographies }) => <> {geographies.map(geo => {
+                                            const country = findMapCountry(countries, geo);
+                                            const active = selected && (country ? selected.cca2 === country.cca2 : selected.ccn3 === String(geo.id).padStart(3, '0'));
+                                            const visible = !country || filteredCountries.includes(country);
+                                            function choose() {
+                                                selectCountry(country || { ccn3: String(geo.id).padStart(3, '0'), name: {common: geo.properties.name, official: geo.properties.name} });
+                                            }
+                                            return <Geography key={geo.rsmKey} geography={geo} fill={active ? '#22d3ee' : visible ? '#24425f' : '#64748b'} stroke="#94a3b8" strokeWidth={.5 / zoom} role="button" tabIndex={0} aria-label={country ? displayName(country) : geo.properties.name} onClick={choose} onKeyDown={event => { if (event.key === 'Enter' || event.key === ' ') {event.preventDefault();choose();} }} style={{default:{outline:'none'},hover:{fill:'#38bdf8',outline:'none',cursor:'pointer'},pressed:{fill:'#22d3ee',outline:'none'}}}><title>{country ? displayName(country) : geo.properties.name}</title></Geography>;
+                                        })}{showFlags && <WorldMapFlags geographies={geographies} countries={filteredCountries} zoom={zoom} onSelect={selectCountry} displayName={displayName} />}</>}
+                                    </Geographies>
                                 </ZoomableGroup>
                             </ComposableMap>
 
                             {/* ZOOM TUGMALARI */}
-                            <div className="absolute bottom-6 right-6 z-20 flex flex-col gap-2">
+                            <div data-map-controls className="absolute bottom-6 right-6 z-20 flex flex-col gap-2">
 
                                 <button
                                     onClick={zoomIn}
@@ -407,103 +367,11 @@ export default function WorldMap() {
                         <p className="px-5 pb-5 text-center text-xs text-subtle">
                             Xaritani sichqoncha bilan suring va kattalashtiring.
                         </p>
-                    </div>
+                    </MapViewport>
 
                     {/* RIGHT PANEL */}
                     <div className="space-y-5">
-                        {selected ? (
-                            <div className="rounded-3xl border border-line bg-panel p-6">
-                                <div className="mb-6 flex items-center justify-between">
-                                    <span className="text-xs font-bold tracking-widest text-cyan-700 dark:text-cyan-400">
-                                        DAVLAT MA’LUMOTLARI
-                                    </span>
-
-                                    <button
-                                        onClick={() => setSelected(null)}
-                                        className="text-subtle hover:text-main"
-                                    >
-                                        <X size={20} />
-                                    </button>
-                                </div>
-
-                                {selected.flags?.svg && (
-                                    <img
-                                        src={selected.flags.svg}
-                                        alt={`${displayName(selected)} bayrog‘i`}
-                                        className="mb-6 h-28 w-44 rounded-lg border border-line object-contain"
-                                    />
-                                )}
-
-                                <h2 className="text-3xl font-black">
-                                    {displayName(selected)}
-                                </h2>
-
-                                <p className="mt-2 text-sm text-subtle">
-                                    {selected.name.official}
-                                </p>
-
-                                <div className="mt-7 space-y-3">
-                                    <Detail
-                                        icon={MapPin}
-                                        label="Poytaxti"
-                                        value={
-                                            selected.capital?.join(", ") ||
-                                            "Ma’lumot yo‘q"
-                                        }
-                                    />
-
-                                    <Detail
-                                        icon={Globe2}
-                                        label="Qit’asi"
-                                        value={
-                                            regionNames[selected.region] ||
-                                            selected.region ||
-                                            "—"
-                                        }
-                                    />
-
-                                    <Detail
-                                        icon={Users}
-                                        label="Aholisi"
-                                        value={formatNumber(selected.population)}
-                                    />
-
-                                    <Detail
-                                        icon={Ruler}
-                                        label="Maydoni"
-                                        value={`${formatNumber(selected.area)} km²`}
-                                    />
-
-                                    <Detail
-                                        icon={Languages}
-                                        label="Tillari"
-                                        value={languagesText}
-                                    />
-
-                                    <Detail
-                                        icon={Wallet}
-                                        label="Valyutasi"
-                                        value={currencyText}
-                                    />
-                                </div>
-                            </div>
-                        ) : (
-                            <div className="rounded-3xl border border-line bg-panel p-8 text-center">
-                                <Globe2
-                                    size={54}
-                                    className="mx-auto text-cyan-700 dark:text-cyan-400"
-                                />
-
-                                <h2 className="mt-6 text-2xl font-bold">
-                                    Davlatni tanlang
-                                </h2>
-
-                                <p className="mt-4 leading-7 text-subtle">
-                                    Xaritadagi davlatni yoki pastdagi
-                                    ro‘yxatdan birini tanlang.
-                                </p>
-                            </div>
-                        )}
+                        <div className="rounded-3xl border border-line bg-panel p-6 text-sm leading-7 text-muted">Davlatni yoki uning bayrog‘ini bosing. Ma’lumotlar oddiy va “Butun xarita” rejimida ham ochiladi.</div>
 
                         {/* COUNTRY LIST */}
                         <div className="rounded-3xl border border-line bg-panel p-5">
@@ -524,9 +392,9 @@ export default function WorldMap() {
                                                 : "hover:bg-hover"
                                             }`}
                                     >
-                                        {country.flags?.png && (
+                                        {(country.flags?.svg || country.flags?.png) && (
                                             <img
-                                                src={country.flags.png}
+                                                src={country.flags.svg || country.flags.png}
                                                 alt=""
                                                 className="h-5 w-8 object-contain"
                                             />
@@ -548,6 +416,7 @@ export default function WorldMap() {
                     </div>
                 </div>
             </div>
+            {selectedDetails && <CountryInfoPanel country={selectedDetails} displayName={displayName} onClose={() => setSelected(null)} />}
         </main>
     );
 }

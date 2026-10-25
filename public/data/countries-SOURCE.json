@@ -1,0 +1,26 @@
+{
+  "source": "https://raw.githubusercontent.com/restcountries/restcountries/bfadee4f951682c29970e53677707bc558e80b74/src/main/resources/countriesV3.1.json",
+  "commit": "bfadee4f951682c29970e53677707bc558e80b74",
+  "sha256": "8209daa9fd26e842e84992739dfbfb272566b60357a6ee760955bb4e9f2cc18e",
+  "retrievedAt": "2026-10-24T17:03:28.636306+00:00",
+  "license": "MPL-2.0",
+  "processing": "Selected fields retained. Coat of arms URLs replaced with Wikidata P94 Commons image URLs (CC0 metadata; images retain their original licenses). Population is a source estimate, not a live census.",
+  "leaderSource": "https://query.wikidata.org/",
+  "leaderQuery": "SELECT DISTINCT ?code ?country ?leader ?leaderLabel WHERE {\n  ?country wdt:P297 ?code; p:P35 ?statement.\n  ?statement ps:P35 ?leader; wikibase:rank ?rank.\n  FILTER(?rank != wikibase:DeprecatedRank)\n  FILTER NOT EXISTS { ?statement pq:P582 ?end. FILTER(?end <= NOW()) }\n  FILTER NOT EXISTS { ?statement pq:P580 ?start. FILTER(?start > NOW()) }\n  FILTER NOT EXISTS { ?leader wdt:P570 ?death. FILTER(?death <= NOW()) }\n  FILTER(?rank = wikibase:PreferredRank || NOT EXISTS {\n    ?country p:P35 ?preferred.\n    ?preferred wikibase:rank wikibase:PreferredRank; ps:P35 ?other.\n    FILTER NOT EXISTS { ?preferred pq:P582 ?e. FILTER(?e <= NOW()) }\n    FILTER NOT EXISTS { ?preferred pq:P580 ?s. FILTER(?s > NOW()) }\n  })\n  SERVICE wikibase:label { bd:serviceParam wikibase:language \"uz,en\". }\n}",
+  "leaderLicense": "CC0",
+  "coatOfArmsSource": "https://query.wikidata.org/",
+  "coatOfArmsQuery": "SELECT DISTINCT ?code ?crest WHERE { ?country wdt:P297 ?code; wdt:P94 ?crest. }",
+  "corrections": [
+    {
+      "country": "GW",
+      "field": "unMember",
+      "value": true,
+      "source": "https://www.un.org/en/about-us/member-states/guinea-bissau"
+    }
+  ],
+  "mediaManifest": "/country-media/SOURCE.json",
+  "mediaProcessing": "Flag and emblem images cached locally. Commons mirror images retain upstream provenance. Nauru government banner is retained unchanged; the UI displays its emblem region. Missing territory emblems are explicitly unavailable.",
+  "additionalFields": [
+    "capitalInfo"
+  ]
+}

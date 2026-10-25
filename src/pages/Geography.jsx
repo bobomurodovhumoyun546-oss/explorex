@@ -1,4 +1,4 @@
-import { useSettings } from "../context/SettingsContext";
+import { useSettings } from "../context/settings";
 
 import { Suspense, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";

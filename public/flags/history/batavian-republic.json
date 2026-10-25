@@ -1,0 +1,51 @@
+{
+  "id": "batavian-republic",
+  "name": "Batavian Republic",
+  "type": [
+    "historical",
+    "country"
+  ],
+  "successors": ["NL"],
+  "codes": {
+    "wikidata": "Q188553"
+  },
+  "region": [
+    "Europe",
+    "Western Europe"
+  ],
+  "aspect_ratio": "2:3",
+  "colors": [
+    {
+      "color": "red"
+    },
+    {
+      "color": "white"
+    },
+    {
+      "color": "blue"
+    }
+  ],
+  "description": "A horizontal tricolour of red, white and blue — the flag of the Batavian Republic.",
+  "periods": [
+    {
+      "start": "1795",
+      "end": "1806"
+    }
+  ],
+  "sources": [
+    "https://www.wikidata.org/wiki/Q188553",
+    "https://commons.wikimedia.org/wiki/Special:FilePath/Bataafse%20Republiek%20nationale%20vlag.svg",
+    "https://en.wikipedia.org/wiki/Batavian_Republic"
+  ],
+  "features": [
+    {
+      "type": "horizontal-stripes",
+      "stripes": [
+        "red",
+        "white",
+        "blue"
+      ],
+      "count": 3
+    }
+  ]
+}

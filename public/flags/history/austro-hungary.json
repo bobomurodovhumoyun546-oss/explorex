@@ -1,0 +1,62 @@
+{
+  "id": "austro-hungary",
+  "name": "Austria-Hungary (1869–1918)",
+  "successors": ["AT", "HU", "CSHH", "PL", "YUCS_1941"],
+  "type": [
+    "historical",
+    "country"
+  ],
+  "codes": {
+    "wikidata": "Q28513"
+  },
+  "region": [
+    "Europe",
+    "Eastern Europe",
+    "Western Europe",
+    "Southern Europe"
+  ],
+  "aspect_ratio": "2:3",
+  "colors": [
+    {
+      "color": "red",
+      "symbolism": "the upper stripe and the lower hoist quarter"
+    },
+    {
+      "color": "white",
+      "symbolism": "the central stripe"
+    },
+    {
+      "color": "green",
+      "symbolism": "the lower fly quarter (Hungarian colours)"
+    },
+    {
+      "color": "yellow",
+      "symbolism": "the crowns and details of the shields"
+    }
+  ],
+  "description": "The civil ensign: a red-white-red triband whose bottom stripe is red at the hoist and green at the fly, bearing the crowned shield of Austria toward the hoist and the crowned Hungarian arms toward the fly.",
+  "history": "The dual monarchy of Austria-Hungary was created by the Compromise of 1867. The 'common' flag combining the colours of both halves, with the two coats of arms, was used by joint Austro-Hungarian institutions (notably the Imperial and Royal armed forces — the k.u.k. Kriegsmarine) until the empire's dissolution in 1918.",
+  "periods": [
+    {
+      "start": "1869",
+      "end": "1918"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Flag_of_Austria-Hungary"
+  ],
+  "features": [
+    {
+      "type": "horizontal-stripes",
+      "role": "red, white, and a bottom stripe divided red (hoist) and green (fly)"
+    },
+    {
+      "type": "shield",
+      "role": "crowned shield of Austria"
+    },
+    {
+      "type": "shield",
+      "role": "crowned small arms of Hungary"
+    }
+  ]
+}

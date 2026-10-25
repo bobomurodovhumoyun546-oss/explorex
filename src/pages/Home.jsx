@@ -2,7 +2,7 @@
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
-import { useSettings } from "../context/SettingsContext";
+import { useSettings } from "../context/settings";
 
 import {
     ArrowRight,

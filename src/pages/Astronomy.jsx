@@ -1,5 +1,5 @@
 import { Suspense, useEffect, useMemo, useRef, useState } from "react";
-import { useSettings } from "../context/SettingsContext";
+import { useSettings } from "../context/settings";
 import { starsData } from "../data/universeData";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import {
@@ -1013,13 +1013,13 @@ export default function Astronomy() {
           </button>
         </div>
 
-        {/* BATAFSIL MA'LUMOT */}
-        <SpaceInfo
-          selected={labOpen ? null : selected}
-          onClose={() => setSelected(null)}
-        />
       </div>
     </>}
+      <SpaceInfo
+        selected={labOpen ? null : selected}
+        mapOnly={mapOnly}
+        onClose={() => setSelected(null)}
+      />
     </div>
   );
 }

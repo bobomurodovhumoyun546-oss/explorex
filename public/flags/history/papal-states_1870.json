@@ -1,0 +1,51 @@
+{
+  "id": "papal-states_1870",
+  "name": "Papal States (1825–1870)",
+  "type": [
+    "historical",
+    "country"
+  ],
+  "successors": ["IT"],
+  "codes": {
+    "wikidata": "Q170174"
+  },
+  "region": [
+    "Europe",
+    "Southern Europe"
+  ],
+  "aspect_ratio": "3:4",
+  "colors": [
+    {
+      "color": "yellow"
+    },
+    {
+      "color": "white"
+    }
+  ],
+  "description": "A vertical bicolour of gold and white, the white bearing the crossed keys of Saint Peter beneath the papal tiara.",
+  "history": "The gold-and-white flag of the Papal States, adopted in 1825 and flown until the states were absorbed into the Kingdom of Italy in 1870; the colours continue as the flag of Vatican City.",
+  "periods": [
+    {
+      "start": "1825",
+      "end": "1870"
+    }
+  ],
+  "sources": [
+    "https://www.wikidata.org/wiki/Q170174"
+  ],
+  "features": [
+    {
+      "type": "vertical-stripes",
+      "stripes": [
+        "yellow",
+        "white"
+      ],
+      "count": 2
+    },
+    {
+      "type": "coat-of-arms",
+      "position": "center",
+      "role": "crossed keys and papal tiara"
+    }
+  ]
+}

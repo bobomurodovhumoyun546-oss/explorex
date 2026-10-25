@@ -1,13 +1,14 @@
 import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, Flag, RotateCcw, Trophy } from 'lucide-react';
-import { makeFlagQuestions, readFlagRecords, ROUND_COUNT, saveFlagRecord } from '../data/flagQuiz';
+import { makeFlagQuestions, readFlagRecords, QUESTION_COUNTS, ROUND_COUNT, saveFlagRecord } from '../data/flagQuiz';
 
 function initialRecords() {
   try { return readFlagRecords(window.localStorage); } catch { return []; }
 }
 
 export default function FlagQuiz() {
+  const [questionCount, setQuestionCount] = useState(ROUND_COUNT);
   const [questions, setQuestions] = useState([]);
   const [index, setIndex] = useState(0);
   const [choice, setChoice] = useState(null);
@@ -18,9 +19,11 @@ export default function FlagQuiz() {
   const lockedRef = useRef(false);
   const finishedRef = useRef(false);
   const current = questions[index];
+  const total = questions.length || questionCount;
+  const modeRecords = records.filter(record => record.total === questionCount);
 
   function startGame() {
-    setQuestions(makeFlagQuestions());
+    setQuestions(makeFlagQuestions(Math.random, questionCount));
     setIndex(0);
     setScore(0);
     setChoice(null);
@@ -46,7 +49,7 @@ export default function FlagQuiz() {
     }
     finishedRef.current = true;
     try {
-      const result = saveFlagRecord(window.localStorage, { score, total: ROUND_COUNT, date: new Date().toISOString() });
+      const result = saveFlagRecord(window.localStorage, { score, total, date: new Date().toISOString() });
       setRecords(result.records);
       setStorageWarning(!result.saved);
     } catch { setStorageWarning(true); }
@@ -59,10 +62,10 @@ export default function FlagQuiz() {
       <div className="mb-9"><p className="mb-3 text-xs font-bold tracking-[.25em] text-amber-700 dark:text-amber-300">BAYROQLAR OLAMI</p><h1 className="text-3xl font-black sm:text-5xl">Bayroqni top!</h1><p className="mt-4 text-muted">Bayroqni ko‘ring, to‘rtta variantdan davlatni tanlang. Har to‘g‘ri javob — 1 ball.</p></div>
       <div className="grid items-start gap-6 lg:grid-cols-[1fr_280px]">
         <section className="rounded-3xl border border-line bg-panel p-5 sm:p-8" aria-label="Bayroq o‘yini">
-          {stage === 'intro' && <div className="py-8 text-center"><Flag size={64} className="mx-auto text-amber-700 dark:text-amber-300" /><h2 className="mt-6 text-2xl font-bold">Bayroqlarni qanchalik yaxshi bilasiz?</h2><p className="mx-auto mt-4 max-w-md leading-7 text-muted">32 davlat ichidan 10 ta tasodifiy bayroq. Savollar takrorlanmaydi. Yakunda eng yaxshi beshta natijangiz shu brauzerda saqlanadi.</p><button onClick={startGame} className="mt-8 inline-flex items-center gap-3 rounded-xl bg-amber-300 px-6 py-3 font-bold text-slate-950 hover:bg-amber-200">O‘yinni boshlash <ArrowRight size={19} /></button></div>}
+          {stage === 'intro' && <div className="py-8 text-center"><Flag size={64} className="mx-auto text-amber-700 dark:text-amber-300" /><h2 className="mt-6 text-2xl font-bold">Bayroqlarni qanchalik yaxshi bilasiz?</h2><p className="mx-auto mt-4 max-w-md leading-7 text-muted">32 davlat ichidan {questionCount} ta tasodifiy bayroq. Savollar takrorlanmaydi. Yakunda eng yaxshi beshta natijangiz har bir savol soni uchun alohida saqlanadi.</p><fieldset className="mt-6"><legend className="mb-3 text-sm text-muted">Savollar soni</legend><div className="flex justify-center gap-3">{QUESTION_COUNTS.map(count => <button key={count} type="button" aria-pressed={questionCount === count} onClick={() => setQuestionCount(count)} className={`rounded-xl border px-5 py-3 font-bold ${questionCount === count ? 'border-amber-300 bg-amber-300 text-slate-950' : 'border-line bg-inset'}`}>{count} ta</button>)}</div></fieldset><button onClick={startGame} className="mt-8 inline-flex items-center gap-3 rounded-xl bg-amber-300 px-6 py-3 font-bold text-slate-950 hover:bg-amber-200">O‘yinni boshlash <ArrowRight size={19} /></button></div>}
           {stage === 'game' && current && <>
-            <div className="mb-4 flex justify-between text-sm text-muted"><span>Savol {index + 1}/{ROUND_COUNT}</span><span>{score} ball</span></div>
-            <progress aria-label="O‘yin davomiyligi" className="mb-6 h-2 w-full accent-amber-300" value={index + 1} max={ROUND_COUNT} />
+            <div className="mb-4 flex justify-between text-sm text-muted"><span>Savol {index + 1}/{total}</span><span>{score} ball</span></div>
+            <progress aria-label="O‘yin davomiyligi" className="mb-6 h-2 w-full accent-amber-300" value={index + 1} max={total} />
             <div className="flex h-44 items-center justify-center rounded-2xl bg-panel/50 p-6 sm:h-52"><img key={current.country.code} src={`/flags/${current.country.code}.svg`} alt="Qaysi davlatning bayrog‘i?" className="max-h-full max-w-full object-contain shadow-xl" /></div>
             <h2 className="mb-4 mt-6 text-xl font-bold">Bu qaysi davlat?</h2>
             <div className="grid gap-3 sm:grid-cols-2">{current.options.map(option => {
@@ -70,11 +73,11 @@ export default function FlagQuiz() {
               const wrong = choice === option.code && !correct;
               return <button key={option.code} disabled={choice !== null} onClick={() => choose(option.code)} className={`min-h-14 rounded-xl border px-4 py-3 text-left font-semibold transition disabled:cursor-default ${correct ? 'border-emerald-400 bg-emerald-400/15 text-emerald-700 dark:text-emerald-200' : wrong ? 'border-rose-400 bg-rose-400/15 text-rose-700 dark:text-rose-200' : 'border-line bg-inset enabled:hover:border-amber-300 enabled:hover:bg-amber-300/10'}`}>{correct ? '✓ ' : wrong ? '✗ ' : ''}{option.name}</button>;
             })}</div>
-            {choice !== null && <div className="mt-5" aria-live="polite"><p className={choice === current.country.code ? 'text-emerald-700 dark:text-emerald-300' : 'text-rose-700 dark:text-rose-300'}>{choice === current.country.code ? 'To‘g‘ri javob! +1 ball' : `To‘g‘ri javob: ${current.country.name}`}</p><button onClick={next} className="mt-4 inline-flex items-center gap-3 rounded-xl bg-amber-300 px-5 py-3 font-bold text-slate-950 hover:bg-amber-200">{index + 1 === ROUND_COUNT ? 'Natijani ko‘rish' : 'Keyingi bayroq'} <ArrowRight size={18} /></button></div>}
+            {choice !== null && <div className="mt-5" aria-live="polite"><p className={choice === current.country.code ? 'text-emerald-700 dark:text-emerald-300' : 'text-rose-700 dark:text-rose-300'}>{choice === current.country.code ? 'To‘g‘ri javob! +1 ball' : `To‘g‘ri javob: ${current.country.name}`}</p><button onClick={next} className="mt-4 inline-flex items-center gap-3 rounded-xl bg-amber-300 px-5 py-3 font-bold text-slate-950 hover:bg-amber-200">{index + 1 === total ? 'Natijani ko‘rish' : 'Keyingi bayroq'} <ArrowRight size={18} /></button></div>}
           </>}
-          {stage === 'result' && <div className="py-8 text-center"><Trophy size={64} className="mx-auto text-amber-700 dark:text-amber-300" /><h2 className="mt-5 text-2xl font-bold">O‘yin yakunlandi!</h2><p className="mt-6 text-6xl font-black text-amber-700 dark:text-amber-300">{score}/{ROUND_COUNT}</p><p className="mt-4 text-muted">{score * 10}% to‘g‘ri javob</p><button onClick={startGame} className="mt-8 inline-flex items-center gap-3 rounded-xl bg-amber-300 px-6 py-3 font-bold text-slate-950"><RotateCcw size={18} /> Qayta o‘ynash</button></div>}
+          {stage === 'result' && <div className="py-8 text-center"><Trophy size={64} className="mx-auto text-amber-700 dark:text-amber-300" /><h2 className="mt-5 text-2xl font-bold">O‘yin yakunlandi!</h2><p className="mt-6 text-6xl font-black text-amber-700 dark:text-amber-300">{score}/{total}</p><p className="mt-4 text-muted">{Math.round(score / total * 100)}% to‘g‘ri javob</p><button onClick={startGame} className="mt-8 inline-flex items-center gap-3 rounded-xl bg-amber-300 px-6 py-3 font-bold text-slate-950"><RotateCcw size={18} /> Qayta o‘ynash</button><button onClick={() => setStage('intro')} className="mx-auto mt-4 block rounded-xl px-5 py-3 text-sm text-muted hover:text-main">Savollar sonini o‘zgartirish</button></div>}
         </section>
-        <aside className="rounded-3xl border border-amber-300/20 bg-panel p-6"><h2 className="flex items-center gap-2 text-lg font-bold"><Trophy size={20} className="text-amber-700 dark:text-amber-300" /> Rekordlar</h2><p className="mt-2 text-xs leading-5 text-subtle">Eng yaxshi 5 natija shu brauzerda saqlanadi.</p>{records.length ? <ol className="mt-5 space-y-3">{records.map((record,i) => <li key={`${record.date}-${i}`} className="flex justify-between gap-3 rounded-xl bg-inset p-3"><div><p className="text-sm font-semibold">{i + 1}-o‘rin</p><p className="mt-1 text-xs text-subtle">{new Date(record.date).toLocaleDateString('uz-UZ')}</p></div><span className="font-bold text-amber-700 dark:text-amber-300">{record.score}/{record.total}</span></li>)}</ol> : <p className="mt-6 text-sm text-subtle">Birinchi rekordingizni o‘rnating!</p>}{storageWarning && <p role="status" className="mt-4 text-sm text-amber-700 dark:text-amber-200">Brauzer saqlashga ruxsat bermadi. Natija faqat shu sessiyada ko‘rinadi.</p>}<p className="mt-6 text-xs text-subtle">Bayroqlar: FlagCDN. Tasvirlar sayt ichidan yuklanadi.</p></aside>
+        <aside className="rounded-3xl border border-amber-300/20 bg-panel p-6"><h2 className="flex items-center gap-2 text-lg font-bold"><Trophy size={20} className="text-amber-700 dark:text-amber-300" /> Rekordlar</h2><p className="mt-2 text-xs leading-5 text-subtle">{questionCount} ta savollik o‘yin uchun eng yaxshi 5 natija.</p>{modeRecords.length ? <ol className="mt-5 space-y-3">{modeRecords.map((record,i) => <li key={`${record.date}-${i}`} className="flex justify-between gap-3 rounded-xl bg-inset p-3"><div><p className="text-sm font-semibold">{i + 1}-o‘rin</p><p className="mt-1 text-xs text-subtle">{new Date(record.date).toLocaleDateString('uz-UZ')}</p></div><span className="font-bold text-amber-700 dark:text-amber-300">{record.score}/{record.total}</span></li>)}</ol> : <p className="mt-6 text-sm text-subtle">Birinchi rekordingizni o‘rnating!</p>}{storageWarning && <p role="status" className="mt-4 text-sm text-amber-700 dark:text-amber-200">Brauzer saqlashga ruxsat bermadi. Natija faqat shu sessiyada ko‘rinadi.</p>}<p className="mt-6 text-xs text-subtle">Bayroqlar: FlagCDN. Tasvirlar sayt ichidan yuklanadi.</p></aside>
       </div>
     </div>
   </main>;

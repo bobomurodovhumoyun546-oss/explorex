@@ -1,0 +1,53 @@
+{
+  "id": "rhodesia_1979",
+  "name": "Rhodesia (1968–1979)",
+  "successors": ["zimbabwe-rhodesia"],
+  "type": [
+    "historical",
+    "country"
+  ],
+  "codes": {
+    "wikidata": "Q217169"
+  },
+  "region": [
+    "Africa",
+    "Southern Africa"
+  ],
+  "aspect_ratio": "1:2",
+  "colors": [
+    {
+      "color": "green"
+    },
+    {
+      "color": "white"
+    }
+  ],
+  "description": "A green-white-green vertical triband bearing the Rhodesian coat of arms on the white centre.",
+  "history": "Adopted on 11 November 1968, the third anniversary of Rhodesia's Unilateral Declaration of Independence, replacing the light-blue ensign; the green stood for the land and the white for the settlers. It flew until Zimbabwe Rhodesia adopted its own flag on 4 September 1979.",
+  "periods": [
+    {
+      "start": "1968-11-11",
+      "end": "1979-09-04"
+    }
+  ],
+  "sources": [
+    "https://www.wikidata.org/wiki/Q217169",
+    "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Rhodesia%20%281968%E2%80%931979%29.svg",
+    "https://en.wikipedia.org/wiki/Flag_of_Rhodesia"
+  ],
+  "features": [
+    {
+      "type": "vertical-stripes",
+      "stripes": [
+        "green",
+        "white",
+        "green"
+      ],
+      "count": 3
+    },
+    {
+      "type": "coat-of-arms",
+      "position": "center"
+    }
+  ]
+}

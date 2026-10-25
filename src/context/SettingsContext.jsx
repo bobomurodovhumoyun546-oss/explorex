@@ -1,11 +1,9 @@
 import {
-  createContext,
-  useContext,
   useEffect,
   useState,
 } from "react";
 
-const SettingsContext = createContext(null);
+import { SettingsContext } from "./settings";
 
 const translations = {
   uz: {
@@ -93,16 +91,4 @@ export function SettingsProvider({ children }) {
       {children}
     </SettingsContext.Provider>
   );
-}
-
-export function useSettings() {
-  const context = useContext(SettingsContext);
-
-  if (!context) {
-    throw new Error(
-      "useSettings SettingsProvider ichida ishlatilishi kerak"
-    );
-  }
-
-  return context;
 }

@@ -14,11 +14,11 @@ import {
     Languages,
 } from "lucide-react";
 
-import { useSettings } from "../context/SettingsContext";
+import { useSettings } from "../context/settings";
 
 // Logo faylingni src/assets/logo.jpg manzilida qoldir
-import logo from "../assets/logo.jpg";
-import logo2 from "../assets/logo2.jpg"
+import logo from "../assets/explorexwhitelogo.jpg";
+import logo2 from "../assets/explorexnew.jpg"
 
 const links = [
     { key: "home", path: "/", icon: Home },

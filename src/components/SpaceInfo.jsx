@@ -13,7 +13,7 @@ import {
 
 import { spaceData } from "../data/spaceData";
 
-export default function SpaceInfo({ selected, onClose }) {
+export default function SpaceInfo({ selected, onClose, mapOnly = false }) {
     if (!selected) return null;
 
     const data = spaceData.find(
@@ -57,7 +57,7 @@ export default function SpaceInfo({ selected, onClose }) {
     ].filter((item) => item.value);
 
     return (
-        <div className="pointer-events-auto absolute bottom-24 right-4 top-44 z-30 w-[calc(100%-2rem)] max-w-sm overflow-y-auto rounded-3xl border border-cyan-400/20 bg-panel/95 p-6 text-main shadow-[0_20px_80px_rgba(0,0,0,0.6)] backdrop-blur-2xl sm:right-6">
+        <div role="region" aria-label={`${info.name} haqida ma'lumot`} className={`pointer-events-auto absolute right-4 z-30 w-[calc(100%-2rem)] max-w-sm overflow-y-auto rounded-3xl border border-cyan-400/20 bg-panel/95 p-6 text-main shadow-[0_20px_80px_rgba(0,0,0,0.6)] backdrop-blur-2xl sm:right-6 ${mapOnly ? "bottom-4 top-20" : "bottom-24 top-44"}`}>
 
             {/* HEADER */}
             <div className="mb-5 flex items-start justify-between gap-3">

@@ -1,4 +1,13 @@
-export const atlasYears = [1700, 1800, 1900, 1914, 1945, 1960, 1994, 2010];
+export const atlasYears = [1700, 1715, 1783, 1800, 1815, 1878, 1880, 1900, 1914, 1920, 1930, 1938, 1945, 1960, 1994, 2000, 2010];
+export const ATLAS_MIN_YEAR = 1700;
+export const ATLAS_MAX_YEAR = 2026;
+
+// Use the latest available snapshot at or before the requested year.
+// The UI always discloses its actual date rather than inventing annual borders.
+export function atlasSnapshotYear(year) {
+  if (!Number.isInteger(year) || year < ATLAS_MIN_YEAR || year > ATLAS_MAX_YEAR) throw new RangeError('Yil 1700–2026 oralig‘ida bo‘lishi kerak');
+  return atlasYears.findLast(value => value <= year);
+}
 export const atlasSource = 'https://github.com/aourednik/historical-basemaps';
 
 export function territoryName(properties = {}) {

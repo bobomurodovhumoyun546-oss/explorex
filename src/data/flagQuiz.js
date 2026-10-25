@@ -1,5 +1,6 @@
 export const FLAG_RECORDS_KEY = 'explorex.flagQuiz.records.v1';
 export const ROUND_COUNT = 10;
+export const QUESTION_COUNTS = [5, 10, 20];
 
 export const flagCountries = [
   ['uz', 'O‘zbekiston'], ['kz', 'Qozog‘iston'], ['kg', 'Qirg‘iziston'],
@@ -23,8 +24,9 @@ function shuffle(items, random) {
   return copy;
 }
 
-export function makeFlagQuestions(random = Math.random) {
-  return shuffle(flagCountries, random).slice(0, ROUND_COUNT).map(country => ({
+export function makeFlagQuestions(random = Math.random, count = ROUND_COUNT) {
+  if (!QUESTION_COUNTS.includes(count)) throw new RangeError('Savollar soni 5, 10 yoki 20 bo‘lishi kerak');
+  return shuffle(flagCountries, random).slice(0, count).map(country => ({
     country,
     options: shuffle([
       country,
@@ -36,10 +38,11 @@ export function makeFlagQuestions(random = Math.random) {
 export function validFlagRecords(value) {
   if (!Array.isArray(value)) return [];
   return value.filter(item => item && Number.isInteger(item.score)
-    && item.score >= 0 && item.score <= ROUND_COUNT && item.total === ROUND_COUNT
+    && QUESTION_COUNTS.includes(item.total) && item.score >= 0 && item.score <= item.total
     && typeof item.date === 'string' && Number.isFinite(Date.parse(item.date)))
     .map(({ score, total, date }) => ({ score, total, date }))
-    .sort((a, b) => b.score - a.score || Date.parse(b.date) - Date.parse(a.date)).slice(0, 5);
+    .sort((a, b) => b.score - a.score || Date.parse(b.date) - Date.parse(a.date))
+    .filter((record, index, records) => records.slice(0, index).filter(item => item.total === record.total).length < 5);
 }
 
 export function readFlagRecords(storage) {

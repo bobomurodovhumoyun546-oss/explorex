@@ -1,0 +1,3341 @@
+{
+  "license": "Images retain their original licenses; see the country image creditUrl/sourceUrl and original file page.",
+  "assets": [
+    {
+      "country": "AW",
+      "field": "flags",
+      "source": "https://flagcdn.com/aw.svg",
+      "local": "/country-media/flags/aw.svg",
+      "sha256": "2c9121a16748576e5bf0a2c24e5405ba42c9cae197ff213fadbdceb4cc706def"
+    },
+    {
+      "country": "AW",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Aruba_wapen.svg",
+      "local": "/country-media/coatOfArms/aw.svg",
+      "sha256": "dbf52b5e90b668c1057237f1dbc68e449f66d29b6b111284c2855e4ae82d455b"
+    },
+    {
+      "country": "AF",
+      "field": "flags",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg",
+      "local": "/country-media/flags/af.svg",
+      "sha256": "fc326ebb964d9a50e31984495d1cf94f810a8af2ecaac5615001358404a389be"
+    },
+    {
+      "country": "AF",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Arms_of_the_Islamic_Emirate_of_Afghanistan.svg",
+      "local": "/country-media/coatOfArms/af.svg",
+      "sha256": "326371d929154a94b63b85692a07334a689a76b92376675a8d6430ecb5d81ba6"
+    },
+    {
+      "country": "AO",
+      "field": "flags",
+      "source": "https://flagcdn.com/ao.svg",
+      "local": "/country-media/flags/ao.svg",
+      "sha256": "0f10545c2991c7ad5332dff881c0e176de0a021260e722af7cfdd996ce9b497e"
+    },
+    {
+      "country": "AO",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Emblem_of_Angola.svg",
+      "local": "/country-media/coatOfArms/ao.svg",
+      "sha256": "a9cd381f66a249a9639dfd02c9106d87f39bd80bbd4538ff809d383daf0da223"
+    },
+    {
+      "country": "AI",
+      "field": "flags",
+      "source": "https://flagcdn.com/ai.svg",
+      "local": "/country-media/flags/ai.svg",
+      "sha256": "45c2a6f26a00453c2efaeb31d053b163823f22e48371b2b137a64b41d2040020"
+    },
+    {
+      "country": "AI",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/6/67/Coat_of_arms_of_Anguilla.svg",
+      "local": "/country-media/coatOfArms/ai.svg",
+      "sha256": "4655bc15ff55e4ccb482bb70ffe6dd65253b6133d04ccf77bfd7b59d35e4c04c"
+    },
+    {
+      "country": "AX",
+      "field": "flags",
+      "source": "https://flagcdn.com/ax.svg",
+      "local": "/country-media/flags/ax.svg",
+      "sha256": "df64c5be1cc6592dc1aa6bd6891a8950f021311a86503ecc56143968c3ed4932"
+    },
+    {
+      "country": "AX",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Coat_of_arms_of_%C3%85land.svg",
+      "local": "/country-media/coatOfArms/ax.svg",
+      "sha256": "2bcc16fd5b6ae33aca4fe47bfa5cb176a4091470b701cbd274d456fce46d480b"
+    },
+    {
+      "country": "AL",
+      "field": "flags",
+      "source": "https://flagcdn.com/al.svg",
+      "local": "/country-media/flags/al.svg",
+      "sha256": "173ec6b28100ddbaeb011b73b4776e50fc2545e14c81ad65e25c19b7137788be"
+    },
+    {
+      "country": "AL",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Coat_of_arms_of_Albania.svg",
+      "local": "/country-media/coatOfArms/al.svg",
+      "sha256": "43847cd817c004bd25b5412329c1edb1a20f7a749a9e290ba922f7ef1de66866"
+    },
+    {
+      "country": "AD",
+      "field": "flags",
+      "source": "https://flagcdn.com/ad.svg",
+      "local": "/country-media/flags/ad.svg",
+      "sha256": "e2cf35be958f3b581660085c0d9b768610f476c486a3d23798f62187fffa270f"
+    },
+    {
+      "country": "AD",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_1fe5_111px-Coat_of_arms_of_Andorra.svg.png",
+      "local": "/country-media/coatOfArms/ad.png",
+      "sha256": "be8a089d98bddb44b05ae567360122b26d67a7c983ca0d76c745e9a2f3e69657"
+    },
+    {
+      "country": "AE",
+      "field": "flags",
+      "source": "https://flagcdn.com/ae.svg",
+      "local": "/country-media/flags/ae.svg",
+      "sha256": "8db8bfc3d1a711967e44fbe237a52d75cd03a3dfbcefc9d78febd61c2973915e"
+    },
+    {
+      "country": "AE",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Emblem_of_the_United_Arab_Emirates.svg",
+      "local": "/country-media/coatOfArms/ae.svg",
+      "sha256": "143c91eca0d79c9c7363e908ec2b35f68a56437850a9335734db1f9624279bd9"
+    },
+    {
+      "country": "AR",
+      "field": "flags",
+      "source": "https://flagcdn.com/ar.svg",
+      "local": "/country-media/flags/ar.svg",
+      "sha256": "0828d651a95f39cea1e5d9d2ee30ec4dbcf55d70bdea39c89ec80c83226ad86d"
+    },
+    {
+      "country": "AR",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_a085_85px-Coat_of_arms_of_Argentina.svg.png",
+      "local": "/country-media/coatOfArms/ar.png",
+      "sha256": "57dbb2084ad5a804b09b1d637a2356d8f9d27459be203b62f3d760f6e02b875c"
+    },
+    {
+      "country": "AM",
+      "field": "flags",
+      "source": "https://flagcdn.com/am.svg",
+      "local": "/country-media/flags/am.svg",
+      "sha256": "1eb2190d967efac59bb4f18f699b465f76dc3128593011e59243450cd593f846"
+    },
+    {
+      "country": "AM",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Coat_of_arms_of_Armenia.svg",
+      "local": "/country-media/coatOfArms/am.svg",
+      "sha256": "27cd75ec1e4105a87ab39fa7cde839d1d858a77adf6f40b7b1c7e3d1f42bf646"
+    },
+    {
+      "country": "AS",
+      "field": "flags",
+      "source": "https://flagcdn.com/as.svg",
+      "local": "/country-media/flags/as.svg",
+      "sha256": "082377dff1b4b890610f7d127594af7caa2ddee166050187a9fd4337726bc4a0"
+    },
+    {
+      "country": "AS",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/d/df/Seal_of_American_Samoa.svg",
+      "local": "/country-media/coatOfArms/as.svg",
+      "sha256": "c9e3db182b6fed86f7768c56768282f2663e8f5d9cfb5e2389aa30fb197a8d51"
+    },
+    {
+      "country": "AQ",
+      "field": "flags",
+      "source": "https://flagcdn.com/aq.svg",
+      "local": "/country-media/flags/aq.svg",
+      "sha256": "18adc3028d1237e66ca9f12d6b051e790b856d124c29531efde89c0271064dfe"
+    },
+    {
+      "country": "TF",
+      "field": "flags",
+      "source": "https://flagcdn.com/tf.svg",
+      "local": "/country-media/flags/tf.svg",
+      "sha256": "2d5150d06ce92b0ef019ae45eeb2f1134931c2fa12ada80822430985a8735056"
+    },
+    {
+      "country": "TF",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Armoiries_Terres_australes_et_antarctiques_fran%C3%A7aises.svg",
+      "local": "/country-media/coatOfArms/tf.svg",
+      "sha256": "fb04a9d86653bb1d04c0d851c251b008575e4acd85d6c895ceadd1f61793ffc2"
+    },
+    {
+      "country": "AG",
+      "field": "flags",
+      "source": "https://flagcdn.com/ag.svg",
+      "local": "/country-media/flags/ag.svg",
+      "sha256": "73f382e91c9e9ba8e786696f20011a04c7e22354e37db61921f2c57645ec7385"
+    },
+    {
+      "country": "AG",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_a634_104px-Coat_of_arms_of_Antigua_and_Barbuda.svg.png",
+      "local": "/country-media/coatOfArms/ag.png",
+      "sha256": "a0684ad76579d5691beb554f495fac7f7bfa9b399060090012776f86fdeca3af"
+    },
+    {
+      "country": "AU",
+      "field": "flags",
+      "source": "https://flagcdn.com/au.svg",
+      "local": "/country-media/flags/au.svg",
+      "sha256": "b826e039804d5cf313bd7e22a40ea2239e8e22ddba7c19a8787dfaad1dda71aa"
+    },
+    {
+      "country": "AU",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/Australia.png",
+      "local": "/country-media/coatOfArms/au.png",
+      "sha256": "435cb33f0ce7b2da963a309e7899f6fc368cbd6b720b2b6ef8a2b18b0d3a0edb"
+    },
+    {
+      "country": "AT",
+      "field": "flags",
+      "source": "https://flagcdn.com/at.svg",
+      "local": "/country-media/flags/at.svg",
+      "sha256": "5c5bded6c58d94069f75d61049773930b8a23aa2a73a17355f622c6ce40090dc"
+    },
+    {
+      "country": "AT",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Coat_of_arms_of_Austria.svg",
+      "local": "/country-media/coatOfArms/at.png",
+      "sha256": "5df11f3770a428f5430e5abc665094932a7427d3fdf1aec3815f6ce855198a0d"
+    },
+    {
+      "country": "AZ",
+      "field": "flags",
+      "source": "https://flagcdn.com/az.svg",
+      "local": "/country-media/flags/az.svg",
+      "sha256": "963c074ace679c88a77f6a5db3bd0f3b98a169dae5ebd12abb6293ecda497280"
+    },
+    {
+      "country": "AZ",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Emblem_of_Azerbaijan.svg",
+      "local": "/country-media/coatOfArms/az.svg",
+      "sha256": "223c263be8b56551a7b06c0c64c6cd6b0f1d5108baf779c3f4abd1687fee3b90"
+    },
+    {
+      "country": "BI",
+      "field": "flags",
+      "source": "https://flagcdn.com/bi.svg",
+      "local": "/country-media/flags/bi.svg",
+      "sha256": "00f86f0400888d0ecf5a2b9bfa66f176af6095f413d53d622b6c061c1723cfd9"
+    },
+    {
+      "country": "BI",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_6e36_95px-Coat_of_arms_of_Burundi.svg.png",
+      "local": "/country-media/coatOfArms/bi.png",
+      "sha256": "a6b70c4051918d4f6bec362de03e5fdc235008cc82864cda3e7f9842df37bb8e"
+    },
+    {
+      "country": "BE",
+      "field": "flags",
+      "source": "https://flagcdn.com/be.svg",
+      "local": "/country-media/flags/be.svg",
+      "sha256": "95933c385c9e72479ec7e63f6cbca50d07695fd2e41fab334ea549c20b234fd1"
+    },
+    {
+      "country": "BE",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Great_coat_of_arms_of_Belgium.svg",
+      "local": "/country-media/coatOfArms/be.svg",
+      "sha256": "786cf0d4ef6f6b883f9abcc61e6609206d285e2f049d7bb16271c20eb06597bd"
+    },
+    {
+      "country": "BJ",
+      "field": "flags",
+      "source": "https://flagcdn.com/bj.svg",
+      "local": "/country-media/flags/bj.svg",
+      "sha256": "03e7fd78282d719338630eaf2301fa9c9dbcbf57a9639a20e8fbb43353409569"
+    },
+    {
+      "country": "BJ",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/1/13/Coat_of_arms_of_Benin.svg",
+      "local": "/country-media/coatOfArms/bj.svg",
+      "sha256": "2e84acfcb4456309ee22dc9d1639c70f1673ebdc62edce63ef4e21c0efb9c778"
+    },
+    {
+      "country": "BF",
+      "field": "flags",
+      "source": "https://flagcdn.com/bf.svg",
+      "local": "/country-media/flags/bf.svg",
+      "sha256": "4c88dba85dcf8f799607e2ce32f5af58741ccd31f15fb917bf89f58a140f91a4"
+    },
+    {
+      "country": "BF",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_46a3_99px-Coat_of_arms_of_Burkina_Faso.svg.png",
+      "local": "/country-media/coatOfArms/bf.png",
+      "sha256": "9b2edbce5d7d9f84614e1d95f6837726aa075ba799c77c533ad0bc46fe8f3236"
+    },
+    {
+      "country": "BD",
+      "field": "flags",
+      "source": "https://flagcdn.com/bd.svg",
+      "local": "/country-media/flags/bd.svg",
+      "sha256": "b509e5c29b8c32761c273449647d5a35c5301227b27ee786d353be7916bfddaf"
+    },
+    {
+      "country": "BD",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_b9fe_120px-National_emblem_of_Bangladesh.svg.png",
+      "local": "/country-media/coatOfArms/bd.png",
+      "sha256": "f4c51793de3c1b91f78d5cbfc463baa4f11588ac3aa5da0c6d2d6f5e8797027b"
+    },
+    {
+      "country": "BG",
+      "field": "flags",
+      "source": "https://flagcdn.com/bg.svg",
+      "local": "/country-media/flags/bg.svg",
+      "sha256": "829c1f5f6f403632fd4710b8b7f3a313408e5285e4540af97950408ff9a5abfe"
+    },
+    {
+      "country": "BG",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/2/24/Coat_of_arms_of_Bulgaria.svg",
+      "local": "/country-media/coatOfArms/bg.svg",
+      "sha256": "4566b9ad33ac3d9bf32b3b8b57dde4a698d91186904358d6086a316f64340a1b"
+    },
+    {
+      "country": "BH",
+      "field": "flags",
+      "source": "https://flagcdn.com/bh.svg",
+      "local": "/country-media/flags/bh.svg",
+      "sha256": "4cb584ef406f6bc57ea9c935db43890b9719ae126fe1ad4fb10890709978162b"
+    },
+    {
+      "country": "BH",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_9479_120px-Emblem_of_Bahrain.svg.png",
+      "local": "/country-media/coatOfArms/bh.png",
+      "sha256": "3c6fb91d900435d5045d8c336e82766252cd3a247795e02e8c341b01008a608c"
+    },
+    {
+      "country": "BS",
+      "field": "flags",
+      "source": "https://flagcdn.com/bs.svg",
+      "local": "/country-media/flags/bs.svg",
+      "sha256": "44946f0ba5ad43cabe8bfa6c52e0f7a9562f7ff336d58478577f3b3a19c1ef08"
+    },
+    {
+      "country": "BS",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Coat_of_arms_of_the_Bahamas.svg",
+      "local": "/country-media/coatOfArms/bs.svg",
+      "sha256": "116435acb656034ae66c54f0adcd71e0e6ec7f1f355561765ab97663f53736f2"
+    },
+    {
+      "country": "BA",
+      "field": "flags",
+      "source": "https://flagcdn.com/ba.svg",
+      "local": "/country-media/flags/ba.svg",
+      "sha256": "1c83a2cf7e8366afb9d724f896902ec46a722739538349d6f41b0953d47f171f"
+    },
+    {
+      "country": "BA",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Coat_of_arms_of_Bosnia_and_Herzegovina.svg",
+      "local": "/country-media/coatOfArms/ba.svg",
+      "sha256": "5943614bf6c373d72e46cc5198654a056b1b4e341f8aa87f7d5f30efed94882d"
+    },
+    {
+      "country": "BL",
+      "field": "flags",
+      "source": "https://flagcdn.com/bl.svg",
+      "local": "/country-media/flags/bl.svg",
+      "sha256": "863f20b771a407641f97ecf1fb9975745b5a28720238fc5e5cc805e90f779186"
+    },
+    {
+      "country": "BL",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/3/35/Blason_St_Barth%C3%A9l%C3%A9my_TOM_entire.svg",
+      "local": "/country-media/coatOfArms/bl.svg",
+      "sha256": "0ea10ee120aaefd50c6692e598e618a73b1039249dad23b5593f567dd20ea1a8"
+    },
+    {
+      "country": "SH",
+      "field": "flags",
+      "source": "https://flagcdn.com/sh.svg",
+      "local": "/country-media/flags/sh.svg",
+      "sha256": "8ca5f24f5398983173fde419470d646b2e328a6cf9f98d77443a706dd204066d"
+    },
+    {
+      "country": "BY",
+      "field": "flags",
+      "source": "https://flagcdn.com/by.svg",
+      "local": "/country-media/flags/by.svg",
+      "sha256": "2af1ac1ecbfda4690e8b1b076def28e384aa69cbf5004ee37cef43665fd6e4f6"
+    },
+    {
+      "country": "BY",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_91a7_120px-Coat_of_arms_of_Belarus.svg.png",
+      "local": "/country-media/coatOfArms/by.png",
+      "sha256": "c0db8df899ff9a729f737c737d4e89fceb59e30a644c23b45333549ae83da2b7"
+    },
+    {
+      "country": "BZ",
+      "field": "flags",
+      "source": "https://flagcdn.com/bz.svg",
+      "local": "/country-media/flags/bz.svg",
+      "sha256": "99ff3a88d1493f5e00c8a4dd9f7eb379a004961f4503eb3e5598e388c911b583"
+    },
+    {
+      "country": "BZ",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Coat_of_arms_of_Belize.svg",
+      "local": "/country-media/coatOfArms/bz.svg",
+      "sha256": "4e5d55072f7a2c767be497a160b66bb093a0775a23338bc48484b054a89ece65"
+    },
+    {
+      "country": "BM",
+      "field": "flags",
+      "source": "https://flagcdn.com/bm.svg",
+      "local": "/country-media/flags/bm.svg",
+      "sha256": "c5641664796bd1a0906af9f10543eca02aca8fa97104b2f92fd07e9670adf91c"
+    },
+    {
+      "country": "BM",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/5/58/Coat_of_arms_of_Bermuda.svg",
+      "local": "/country-media/coatOfArms/bm.svg",
+      "sha256": "91d5795480fef761971ca9bc9f48550bab4222f5accec2d90784b8604ad51653"
+    },
+    {
+      "country": "BO",
+      "field": "flags",
+      "source": "https://flagcdn.com/bo.svg",
+      "local": "/country-media/flags/bo.svg",
+      "sha256": "7d724dac914eaed951a3e3dd901350b9636cfbba0fc4d78f1fcf193c1f29e67b"
+    },
+    {
+      "country": "BO",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Escudo_de_Bolivia.svg",
+      "local": "/country-media/coatOfArms/bo.svg",
+      "sha256": "2011ee5a95a2aeeceab7eb9b0c63504174ac636200c25554559a803f20c226c3"
+    },
+    {
+      "country": "BQ",
+      "field": "flags",
+      "source": "https://flagcdn.com/bq.svg",
+      "local": "/country-media/flags/bq.svg",
+      "sha256": "c05d6c9f222b2a0a08579d9d8e126a286bb85a3e895577e1119a9283545f8389"
+    },
+    {
+      "country": "BR",
+      "field": "flags",
+      "source": "https://flagcdn.com/br.svg",
+      "local": "/country-media/flags/br.svg",
+      "sha256": "e0215eff9f53b0236db885963ac45d6baea52e10ce33ceafdbe0eb1820d21160"
+    },
+    {
+      "country": "BR",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_cdea_120px-Coat_of_arms_of_Brazil.svg.png",
+      "local": "/country-media/coatOfArms/br.png",
+      "sha256": "c7958fa9328c740afc7c3d933b3fbbbc9a1955c921b298e26f74401342e329e7"
+    },
+    {
+      "country": "BB",
+      "field": "flags",
+      "source": "https://flagcdn.com/bb.svg",
+      "local": "/country-media/flags/bb.svg",
+      "sha256": "b38fe14e1e967ea658331d386e8028c5a02d2de70c8376b06deda6ea77a4938b"
+    },
+    {
+      "country": "BB",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_8fc0_120px-Coat_of_arms_of_Barbados.svg.png",
+      "local": "/country-media/coatOfArms/bb.png",
+      "sha256": "e807ac36154f6a65d7481e938570e1e4e28b76e0705f63b19aa3b9427517a4a5"
+    },
+    {
+      "country": "BN",
+      "field": "flags",
+      "source": "https://flagcdn.com/bn.svg",
+      "local": "/country-media/flags/bn.svg",
+      "sha256": "cdb37ed23eed4e4a010d3e68db6d66048a7e90b4d465c735f6e6072564b0fa91"
+    },
+    {
+      "country": "BN",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_0575_120px-Emblem_of_Brunei.svg.png",
+      "local": "/country-media/coatOfArms/bn.png",
+      "sha256": "4b84de60cbbc8761849c7cf8be8ce774768a9d6d94ccb20c1bdf975db9e3d963"
+    },
+    {
+      "country": "BT",
+      "field": "flags",
+      "source": "https://flagcdn.com/bt.svg",
+      "local": "/country-media/flags/bt.svg",
+      "sha256": "39a47be433cda95dab7521aed8609c61f3fe377524e5de397dbb9c75624dd822"
+    },
+    {
+      "country": "BT",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_82c4_120px-Emblem_of_Bhutan.svg.png",
+      "local": "/country-media/coatOfArms/bt.png",
+      "sha256": "4bed1b1796cca12ed09ffeb3cadbb9cd61e829b0743d6d2ed9ceae0be210d88a"
+    },
+    {
+      "country": "BV",
+      "field": "flags",
+      "source": "https://flagcdn.com/bv.svg",
+      "local": "/country-media/flags/bv.svg",
+      "sha256": "0d4b9a52f0a6bd264258baac791b39910a895bb6ca06f63477fa823a262febdc"
+    },
+    {
+      "country": "BW",
+      "field": "flags",
+      "source": "https://flagcdn.com/bw.svg",
+      "local": "/country-media/flags/bw.svg",
+      "sha256": "e89b9cb27040b2995d2f66fca2492eb19434c0793d80ff70ce6819f2540e40a0"
+    },
+    {
+      "country": "BW",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_8ab1_120px-Coat_of_arms_of_Botswana.svg.png",
+      "local": "/country-media/coatOfArms/bw.png",
+      "sha256": "72d9226e220cddca1634b8124e4003900e9b43178bfb6add9010d2e6e8a3599e"
+    },
+    {
+      "country": "CF",
+      "field": "flags",
+      "source": "https://flagcdn.com/cf.svg",
+      "local": "/country-media/flags/cf.svg",
+      "sha256": "f36cc981bf26cff6c9111be3edf29aa565164e713f9704e22d98116ac80816aa"
+    },
+    {
+      "country": "CF",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_3e30_120px-Coat_of_arms_of_the_Central_African_Republic.svg.png",
+      "local": "/country-media/coatOfArms/cf.png",
+      "sha256": "294cc203aa1f434c16703bc99020127f2236776960c5cf9c1b3fc1a95971d7c8"
+    },
+    {
+      "country": "CA",
+      "field": "flags",
+      "source": "https://flagcdn.com/ca.svg",
+      "local": "/country-media/flags/ca.svg",
+      "sha256": "3cd6c2b9fe12bc0617ef4374b570ad87920bae757a95b104384fc301352c6942"
+    },
+    {
+      "country": "CA",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Royal_Coat_of_arms_of_Canada.svg",
+      "local": "/country-media/coatOfArms/ca.svg",
+      "sha256": "18ba69fae647789c7b34e801b95d1991694e362a5283f9763e566a216ecf0d78"
+    },
+    {
+      "country": "CC",
+      "field": "flags",
+      "source": "https://flagcdn.com/cc.svg",
+      "local": "/country-media/flags/cc.svg",
+      "sha256": "aa90a1a32d390ab49a3a5f4dd9636efdec42a06204b16697c7275915215f4ea9"
+    },
+    {
+      "country": "CC",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Clunies-Ross_family_arms.svg/500px-Clunies-Ross_family_arms.svg.png",
+      "local": "/country-media/coatOfArms/cc.png",
+      "sha256": "c162ef7a4b4aa4ad73706c86433178b20b08efebaa0fd2461e442552a6e19e89"
+    },
+    {
+      "country": "CH",
+      "field": "flags",
+      "source": "https://flagcdn.com/ch.svg",
+      "local": "/country-media/flags/ch.svg",
+      "sha256": "a5ec3bbf0f3e686ea05ae17f51e8f3a287ad332217b679bbd393842b7d427859"
+    },
+    {
+      "country": "CH",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_afa3_108px-Coat_of_arms_of_Switzerland.svg.png",
+      "local": "/country-media/coatOfArms/ch.png",
+      "sha256": "3126a4f9a3242f14aa32b81dbd76f603e707a97460abcbd0a4a80ff59adbf888"
+    },
+    {
+      "country": "CL",
+      "field": "flags",
+      "source": "https://flagcdn.com/cl.svg",
+      "local": "/country-media/flags/cl.svg",
+      "sha256": "ca4d50dcf36926c82f02b895975f351a639b0aa1b91bb6ef776f4f07f225cc34"
+    },
+    {
+      "country": "CL",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Coat_of_arms_of_Chile_%28c%29.svg",
+      "local": "/country-media/coatOfArms/cl.svg",
+      "sha256": "a2c97d3b423128c0f858a92f5990e6f11157914254c880c5630332d1b1db722b"
+    },
+    {
+      "country": "CN",
+      "field": "flags",
+      "source": "https://flagcdn.com/cn.svg",
+      "local": "/country-media/flags/cn.svg",
+      "sha256": "ce797608958527808601798df00691aced6120bd600c0624161230020229dc99"
+    },
+    {
+      "country": "CN",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_6db1_110px-National_Emblem_of_the_People%2527s_Republic_of_China.svg.png",
+      "local": "/country-media/coatOfArms/cn.png",
+      "sha256": "1ae165c85aa81c22c129bd12edbb9a52e9bd59fa3d3d71799d075ba5eeba9210"
+    },
+    {
+      "country": "CI",
+      "field": "flags",
+      "source": "https://flagcdn.com/ci.svg",
+      "local": "/country-media/flags/ci.svg",
+      "sha256": "aaf7093dc7c4b1e65d6cd0a65cf20dc957971205a04985897fb3980bccb3a394"
+    },
+    {
+      "country": "CI",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_803d_120px-Coat_of_arms_of_C%25C3%25B4te_d%2527Ivoire_%25282001-2011_variant%2529.svg.png",
+      "local": "/country-media/coatOfArms/ci.png",
+      "sha256": "fb738b5b1101a072f92b54880738a0a97651a8fd262fcbd7aceb1daff2d3a3ed"
+    },
+    {
+      "country": "CM",
+      "field": "flags",
+      "source": "https://flagcdn.com/cm.svg",
+      "local": "/country-media/flags/cm.svg",
+      "sha256": "e00c6cbb0cb7364bc1b825e145ae6232d611d0e457dfa621b6bfafa3b7c76a7f"
+    },
+    {
+      "country": "CM",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_cbf0_106px-Coat_of_arms_of_Cameroon.svg.png",
+      "local": "/country-media/coatOfArms/cm.png",
+      "sha256": "6f29c323c5fbfc522564c5bc36e880359c6f4a5edeb7c0302c5494a8351a68d1"
+    },
+    {
+      "country": "CD",
+      "field": "flags",
+      "source": "https://flagcdn.com/cd.svg",
+      "local": "/country-media/flags/cd.svg",
+      "sha256": "e2e70cf2f16e4ede17ec2a6d0b740c82b622e2cae6b3419d2217092f9c0872f4"
+    },
+    {
+      "country": "CD",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/Democratic%20Republic%20of%20the%20Congo.png",
+      "local": "/country-media/coatOfArms/cd.png",
+      "sha256": "e536712ec283b337d860d1424f5cdf9233a37b1db1d56440ef38fa4974a52b6f"
+    },
+    {
+      "country": "CG",
+      "field": "flags",
+      "source": "https://flagcdn.com/cg.svg",
+      "local": "/country-media/flags/cg.svg",
+      "sha256": "3bff163be26e1c6877bf6aebdd3115eda88535d32c56b8c6406c998385caaebb"
+    },
+    {
+      "country": "CG",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_d5a6_118px-Coat_of_arms_of_the_Republic_of_the_Congo.svg.png",
+      "local": "/country-media/coatOfArms/cg.png",
+      "sha256": "1ad3f444cea06392126c8b7018664d46f2a7df0e7360a38338a6b36b5c4cf3e3"
+    },
+    {
+      "country": "CK",
+      "field": "flags",
+      "source": "https://flagcdn.com/ck.svg",
+      "local": "/country-media/flags/ck.svg",
+      "sha256": "9bd6978ba96d708f7a318c5f2f9c7b992553cc7275cd002135ea2f755c304d97"
+    },
+    {
+      "country": "CK",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_3c59_112px-Coat_of_arms_of_the_Cook_Islands.svg.png",
+      "local": "/country-media/coatOfArms/ck.png",
+      "sha256": "9cebec3e8e08b9c640a2c048733b4be0518a463234aa653f8f6ac23d52cf0eea"
+    },
+    {
+      "country": "CO",
+      "field": "flags",
+      "source": "https://flagcdn.com/co.svg",
+      "local": "/country-media/flags/co.svg",
+      "sha256": "ec3daa5a284fc6d10104a53fd16ea77eba9ac1044ffa629f953644c1de63dcd3"
+    },
+    {
+      "country": "CO",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Coat_of_arms_of_Colombia.svg",
+      "local": "/country-media/coatOfArms/co.svg",
+      "sha256": "06e80e5367d284f5ed6a98b6d25da372257d497d33a99303a247fa354f92fd56"
+    },
+    {
+      "country": "KM",
+      "field": "flags",
+      "source": "https://flagcdn.com/km.svg",
+      "local": "/country-media/flags/km.svg",
+      "sha256": "21e3ee9de83bf7ac6b57400e92f63d81f1f174624e9a2f408a5dd23d4d8f8f04"
+    },
+    {
+      "country": "KM",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_358c_120px-Coat_of_arms_of_Comoros.svg.png",
+      "local": "/country-media/coatOfArms/km.png",
+      "sha256": "d388b3f2d4deaf4ed3901ecaba883abb2c7f534fd37c1058ab74bdd821b40352"
+    },
+    {
+      "country": "CV",
+      "field": "flags",
+      "source": "https://flagcdn.com/cv.svg",
+      "local": "/country-media/flags/cv.svg",
+      "sha256": "bcbf0add799b13377bdf842e1f380ff630650d3b7dba2d8f1273093cfa6ceb0f"
+    },
+    {
+      "country": "CV",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Coat_of_arms_of_Cape_Verde.svg",
+      "local": "/country-media/coatOfArms/cv.svg",
+      "sha256": "b6f97b84d1263f34a97d9d9e09ef885b8e8329652874eac236c73ddeab8a1e35"
+    },
+    {
+      "country": "CR",
+      "field": "flags",
+      "source": "https://flagcdn.com/cr.svg",
+      "local": "/country-media/flags/cr.svg",
+      "sha256": "f7e60b87265310b60217dcd26b24879222a7e5e13fe4c52ae1afdc3c6c737bbf"
+    },
+    {
+      "country": "CR",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_7fab_110px-Coat_of_arms_of_Costa_Rica.svg.png",
+      "local": "/country-media/coatOfArms/cr.png",
+      "sha256": "173ab225337a72cd89aea1492e1d2aabb9a7cf7d2c49347657d5e0cc8bdfae10"
+    },
+    {
+      "country": "CU",
+      "field": "flags",
+      "source": "https://flagcdn.com/cu.svg",
+      "local": "/country-media/flags/cu.svg",
+      "sha256": "afba6d3e29d510e256c07b23f2afc00a9cea87296765138e5645fe995d24249f"
+    },
+    {
+      "country": "CU",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_4712_107px-Coat_of_arms_of_Cuba.svg.png",
+      "local": "/country-media/coatOfArms/cu.png",
+      "sha256": "45f0b3ce91b1ede5ac18cd78caeb73484d4e05d87d16aa0bdc636a876cb7c124"
+    },
+    {
+      "country": "CW",
+      "field": "flags",
+      "source": "https://flagcdn.com/cw.svg",
+      "local": "/country-media/flags/cw.svg",
+      "sha256": "6e35d3452497a8e5766b9c00087b91d06e79fde18dfe6b74fb18ff72c6635bc1"
+    },
+    {
+      "country": "CW",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Coat_of_arms_of_Cura%C3%A7ao.svg/500px-Coat_of_arms_of_Cura%C3%A7ao.svg.png",
+      "local": "/country-media/coatOfArms/cw.png",
+      "sha256": "1e0f481ff43ea8213b1f059df8aa86942dc8b22de537a94f4b0d2bd02412276c"
+    },
+    {
+      "country": "CX",
+      "field": "flags",
+      "source": "https://flagcdn.com/cx.svg",
+      "local": "/country-media/flags/cx.svg",
+      "sha256": "72bc59ee3b04cf605151213d5b40033d5d6ca3b3f6c6f0abeb8c337d6cda0824"
+    },
+    {
+      "country": "KY",
+      "field": "flags",
+      "source": "https://flagcdn.com/ky.svg",
+      "local": "/country-media/flags/ky.svg",
+      "sha256": "30e1eff5519219c27ded9fed93ad3b2acdf898b7494411f23c2c5828d96a1e30"
+    },
+    {
+      "country": "CY",
+      "field": "flags",
+      "source": "https://flagcdn.com/cy.svg",
+      "local": "/country-media/flags/cy.svg",
+      "sha256": "4473ff55e82a2872232b71802ecf37784223bffc2f13d2e564489586f94ef691"
+    },
+    {
+      "country": "CY",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_9044_118px-Coat_of_Arms_of_Cyprus.svg.png",
+      "local": "/country-media/coatOfArms/cy.png",
+      "sha256": "cf9115ea823d39d24e4d052bfb3af59b06e103bd185aa4eabe6a37f9b7551ce0"
+    },
+    {
+      "country": "CZ",
+      "field": "flags",
+      "source": "https://flagcdn.com/cz.svg",
+      "local": "/country-media/flags/cz.svg",
+      "sha256": "5f4ba801f6715e2d29f8b88f785bfc77a0dc1455a0f649626ad9a0cc66cd6df2"
+    },
+    {
+      "country": "CZ",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_7f84_100px-Coat_of_arms_of_the_Czech_Republic.svg.png",
+      "local": "/country-media/coatOfArms/cz.png",
+      "sha256": "445b90c004592db446c781f9f5945eed6432492bfaf4ac91ada7eb296ee6f211"
+    },
+    {
+      "country": "DE",
+      "field": "flags",
+      "source": "https://flagcdn.com/de.svg",
+      "local": "/country-media/flags/de.svg",
+      "sha256": "595d7718f6a22e5ea9de0cbbcabd857ac1892f4a6c81beb1ef936050193d9323"
+    },
+    {
+      "country": "DE",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/d/da/Coat_of_arms_of_Germany.svg",
+      "local": "/country-media/coatOfArms/de.svg",
+      "sha256": "3ea7d9cb06dab6f9b29701daed707689c595c8bad3601fc702bb2a9f8737e257"
+    },
+    {
+      "country": "DJ",
+      "field": "flags",
+      "source": "https://flagcdn.com/dj.svg",
+      "local": "/country-media/flags/dj.svg",
+      "sha256": "072cd869e9430e51fe7d48b0bd33c882b6365386c9987c03cb76f802597af936"
+    },
+    {
+      "country": "DJ",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_1006_110px-Coat_of_arms_of_Djibouti.svg.png",
+      "local": "/country-media/coatOfArms/dj.png",
+      "sha256": "0cb339a210061c3deac4df9de8e23abc32f0d3e9362b45b6207ed7f8e3c8e2d4"
+    },
+    {
+      "country": "DM",
+      "field": "flags",
+      "source": "https://flagcdn.com/dm.svg",
+      "local": "/country-media/flags/dm.svg",
+      "sha256": "b4371e4737d00b0391dbfc43db8136f9976dfc2d348c6b9cecf598e154319edc"
+    },
+    {
+      "country": "DM",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/4/40/Coat_of_arms_of_Dominica.svg",
+      "local": "/country-media/coatOfArms/dm.svg",
+      "sha256": "d203bced7fe3ff7671d3aae63c8c18f571ff18ad054658e8703c3c395f94c778"
+    },
+    {
+      "country": "DK",
+      "field": "flags",
+      "source": "https://flagcdn.com/dk.svg",
+      "local": "/country-media/flags/dk.svg",
+      "sha256": "eb4ea9929e6491fd0444ea5da5b9a19dda089a2ac758ad63956cfbcc7fa81cc3"
+    },
+    {
+      "country": "DK",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_d073_68px-National_Coat_of_arms_of_Denmark.svg.png",
+      "local": "/country-media/coatOfArms/dk.png",
+      "sha256": "f92151222ff27f28b0390548db83e16e8eeda85ac18650de19a80cdc0a0c236e"
+    },
+    {
+      "country": "DO",
+      "field": "flags",
+      "source": "https://flagcdn.com/do.svg",
+      "local": "/country-media/flags/do.svg",
+      "sha256": "ed01134a6d931721c58fc34771e34e1d513e9e06e7241a1e6528172093c77880"
+    },
+    {
+      "country": "DO",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/Dominican%20Republic.png",
+      "local": "/country-media/coatOfArms/do.png",
+      "sha256": "cf3d1c2da6384cc1a60b3a6e7bba727003e43207ee354ee6fe4aa0cbf7c16c6a"
+    },
+    {
+      "country": "DZ",
+      "field": "flags",
+      "source": "https://flagcdn.com/dz.svg",
+      "local": "/country-media/flags/dz.svg",
+      "sha256": "51bda9bdc313fa5418550d94d46f31e0c396f4e70c810b629fac0430f4b7e638"
+    },
+    {
+      "country": "DZ",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_4768_120px-Seal_of_Algeria.svg.png",
+      "local": "/country-media/coatOfArms/dz.png",
+      "sha256": "8b983c35c33e56069d4335678a703e25832d4b16eefb4dc4849ecb9c9eb0ad42"
+    },
+    {
+      "country": "EC",
+      "field": "flags",
+      "source": "https://flagcdn.com/ec.svg",
+      "local": "/country-media/flags/ec.svg",
+      "sha256": "59c54050d583084c7ea35fdba8e1afddb99260cc22c4fb2c81abef41144a335c"
+    },
+    {
+      "country": "EC",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Coat_of_arms_of_Ecuador.svg",
+      "local": "/country-media/coatOfArms/ec.svg",
+      "sha256": "31c93be91a59e508eb06d5ae187d39a6197bde98b78354872aeca8e58691d151"
+    },
+    {
+      "country": "EG",
+      "field": "flags",
+      "source": "https://flagcdn.com/eg.svg",
+      "local": "/country-media/flags/eg.svg",
+      "sha256": "07129395f46d9e71844fe9b485e05bf49741bc72a480b567297d6d865f3d8150"
+    },
+    {
+      "country": "EG",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_31c5_88px-Coat_of_arms_of_Egypt_%2528Official%2529.svg.png",
+      "local": "/country-media/coatOfArms/eg.png",
+      "sha256": "270fc47ffef6543afe902108842a3ea32ecacde02e7b98a9e036d1239c2a72cf"
+    },
+    {
+      "country": "ER",
+      "field": "flags",
+      "source": "https://flagcdn.com/er.svg",
+      "local": "/country-media/flags/er.svg",
+      "sha256": "69f92c176c843d7c899eaa7beaa1f75a0499d49fbb24e2053ed98be77e176498"
+    },
+    {
+      "country": "ER",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/3/36/Emblem_of_Eritrea_%28or_argent_azur%29.svg",
+      "local": "/country-media/coatOfArms/er.svg",
+      "sha256": "c16997866f563b0e2ab24b5901a89b5339ecef372d0681e8d4c3c02a8346e6e2"
+    },
+    {
+      "country": "EH",
+      "field": "flags",
+      "source": "https://flagcdn.com/eh.svg",
+      "local": "/country-media/flags/eh.svg",
+      "sha256": "ce96e3879ac3d67e7a64dd55a5aa1d5bf3692a2ccbb91f6fdfd656189fcd0ae6"
+    },
+    {
+      "country": "ES",
+      "field": "flags",
+      "source": "https://flagcdn.com/es.svg",
+      "local": "/country-media/flags/es.svg",
+      "sha256": "d672868d51fc5b4f2d76f510c9360a4401bdb3ca805349bd04cb4ba277d5b379"
+    },
+    {
+      "country": "ES",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Escudo_de_Espa%C3%B1a_%28variant%29.svg",
+      "local": "/country-media/coatOfArms/es.svg",
+      "sha256": "934e511b1140fa4a4d175487fb2b4d21da4fe6c0bde893ef1e81787e48b47b1f"
+    },
+    {
+      "country": "EE",
+      "field": "flags",
+      "source": "https://flagcdn.com/ee.svg",
+      "local": "/country-media/flags/ee.svg",
+      "sha256": "a880630e92f27af0f8f183023a98ed1e9fcee60a9dbcf721d0630fec5189ed36"
+    },
+    {
+      "country": "EE",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_22dd_120px-Coat_of_arms_of_Estonia.svg.png",
+      "local": "/country-media/coatOfArms/ee.png",
+      "sha256": "1c9de088103d50e825b84b47539cc30f93c4976d35f1c9b75a4ff6a852bb1edf"
+    },
+    {
+      "country": "ET",
+      "field": "flags",
+      "source": "https://flagcdn.com/et.svg",
+      "local": "/country-media/flags/et.svg",
+      "sha256": "980ec719a0be7227e6769b9bf9198b182b743b9544326f4ef2566ecd3ebfeb94"
+    },
+    {
+      "country": "ET",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_0c34_120px-Coat_of_arms_of_Ethiopia.svg.png",
+      "local": "/country-media/coatOfArms/et.png",
+      "sha256": "ed1e8d7f6e8fd7ebf44461226c23a18aea178fe42973c4fbaddca5c14a37a8e9"
+    },
+    {
+      "country": "FI",
+      "field": "flags",
+      "source": "https://flagcdn.com/fi.svg",
+      "local": "/country-media/flags/fi.svg",
+      "sha256": "5d1ab833fc8f13fd2474b99286d063f2bcd4332cf859063841788f908656aa14"
+    },
+    {
+      "country": "FI",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Coat_of_arms_of_Finland.svg",
+      "local": "/country-media/coatOfArms/fi.svg",
+      "sha256": "a9ed126479e824c074a9cac084ef7833df55606a5e6e429df3549748aa2bffb5"
+    },
+    {
+      "country": "FJ",
+      "field": "flags",
+      "source": "https://flagcdn.com/fj.svg",
+      "local": "/country-media/flags/fj.svg",
+      "sha256": "e2c0c872c02b315510c6923a7913d1783accabab0ea1eef103a3f23165af320f"
+    },
+    {
+      "country": "FJ",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Coat_of_arms_of_Fiji.svg",
+      "local": "/country-media/coatOfArms/fj.svg",
+      "sha256": "4e38d83494385692d1905f4a9c0a0517c9363d06656d6d7327704d374bfac0c7"
+    },
+    {
+      "country": "FK",
+      "field": "flags",
+      "source": "https://flagcdn.com/fk.svg",
+      "local": "/country-media/flags/fk.svg",
+      "sha256": "3bb31afe510af3b8ad548e3f3f6ed746437d0598bcde5b66e542768572e19383"
+    },
+    {
+      "country": "FK",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Coat_of_Arms_of_the_Falkland_Islands_%28relief%29.svg",
+      "local": "/country-media/coatOfArms/fk.svg",
+      "sha256": "4f84a293d06adf902cee86873068987065d628b2103e3fb777e1d8ec0c8185ba"
+    },
+    {
+      "country": "FR",
+      "field": "flags",
+      "source": "https://flagcdn.com/fr.svg",
+      "local": "/country-media/flags/fr.svg",
+      "sha256": "09645c97a47436337d63cd54625200542c65e0e1c83b774a58c9d28d0555b0e7"
+    },
+    {
+      "country": "FR",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/3/36/Arms_of_the_French_Republic.svg",
+      "local": "/country-media/coatOfArms/fr.svg",
+      "sha256": "5e4ecea363189a145b49cf67c2b5590dc8ee34c8b0abfbd0c7d19bcdbd5585d0"
+    },
+    {
+      "country": "FO",
+      "field": "flags",
+      "source": "https://flagcdn.com/fo.svg",
+      "local": "/country-media/flags/fo.svg",
+      "sha256": "ca2942942e55bfbf77cdc0c5ab8f22a99e4f4dd03f3274ed289f955786dccd15"
+    },
+    {
+      "country": "FO",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Coat_of_arms_of_the_Faroe_Islands.svg",
+      "local": "/country-media/coatOfArms/fo.svg",
+      "sha256": "b2419e75971021b860c953d501dcae8c9af8db8961b046c36ee8720fe000abab"
+    },
+    {
+      "country": "FM",
+      "field": "flags",
+      "source": "https://flagcdn.com/fm.svg",
+      "local": "/country-media/flags/fm.svg",
+      "sha256": "d88d4388bd3ecf181378e5f7889b04a5d6ccb10e0b0b73baf8f0149c440ad5af"
+    },
+    {
+      "country": "FM",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/Federated%20States%20of%20Micronesia.png",
+      "local": "/country-media/coatOfArms/fm.png",
+      "sha256": "b424fdb048a73df263a43246c6ed0b8b4d27b6009eec7b3cdcb1151c35a7ff7c"
+    },
+    {
+      "country": "GA",
+      "field": "flags",
+      "source": "https://flagcdn.com/ga.svg",
+      "local": "/country-media/flags/ga.svg",
+      "sha256": "43e2be0bceff86a5e9611d197478256416e2ed1b106b9df24651d553bc87b41f"
+    },
+    {
+      "country": "GA",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_0042_120px-Coat_of_arms_of_Gabon.svg.png",
+      "local": "/country-media/coatOfArms/ga.png",
+      "sha256": "3ef23ffbd9b8a24332b4229a8f2c3c2980120b479433d37ed52a9037cb2d4453"
+    },
+    {
+      "country": "GB",
+      "field": "flags",
+      "source": "https://flagcdn.com/gb.svg",
+      "local": "/country-media/flags/gb.svg",
+      "sha256": "42f04826dd7a76e4ecdc9a55fb4a774a26e03a425ca1363628bb1c6f6ea1a87e"
+    },
+    {
+      "country": "GB",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Coat_of_arms_of_the_United_Kingdom_%282022%2C_variant_2%29.svg",
+      "local": "/country-media/coatOfArms/gb.svg",
+      "sha256": "9f174df23d430fa5fd2afb7a84c05cdcd2579a870212514e8dd9d158e6c63ec3"
+    },
+    {
+      "country": "GE",
+      "field": "flags",
+      "source": "https://flagcdn.com/ge.svg",
+      "local": "/country-media/flags/ge.svg",
+      "sha256": "dfba0d29f581ff00c2e46b69cc90e0e9ff6371ab92fbe300664f6622f7ca0355"
+    },
+    {
+      "country": "GE",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/9/94/Greater_coat_of_arms_of_Georgia.svg",
+      "local": "/country-media/coatOfArms/ge.svg",
+      "sha256": "2841fdf29baa1b161e2057190f073b43f17af22f1c1a37c302617d2225431589"
+    },
+    {
+      "country": "GG",
+      "field": "flags",
+      "source": "https://flagcdn.com/gg.svg",
+      "local": "/country-media/flags/gg.svg",
+      "sha256": "05fb56e4a8b3b94470f678ce261ce93ce22f08b189aa86d8441b32210c183d50"
+    },
+    {
+      "country": "GH",
+      "field": "flags",
+      "source": "https://flagcdn.com/gh.svg",
+      "local": "/country-media/flags/gh.svg",
+      "sha256": "a8c4320f89adc39f1c43f0100031e6acfce9299aed5bf035732d00d34d44ee88"
+    },
+    {
+      "country": "GH",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/5/59/Coat_of_arms_of_Ghana.svg",
+      "local": "/country-media/coatOfArms/gh.svg",
+      "sha256": "b0026491e67fe9bf9fd3cfceeb7278ae6b98dda7d49d877233b66930db387aa8"
+    },
+    {
+      "country": "GI",
+      "field": "flags",
+      "source": "https://flagcdn.com/gi.svg",
+      "local": "/country-media/flags/gi.svg",
+      "sha256": "e5f4e6d23324e3b8682aad7033492640affac084ea7989e3f4c9a3f2a6347ee6"
+    },
+    {
+      "country": "GI",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/4/40/Coat_of_arms_of_Gibraltar1.svg",
+      "local": "/country-media/coatOfArms/gi.svg",
+      "sha256": "db0b032a866fdb6b7bcdfc61b681ec8511733e7e403cd44eb5e4d099ebf9ba96"
+    },
+    {
+      "country": "GN",
+      "field": "flags",
+      "source": "https://flagcdn.com/gn.svg",
+      "local": "/country-media/flags/gn.svg",
+      "sha256": "4932e18d832d6a781bc00400b69136cc9406234d3800e1e66ea809550a84b423"
+    },
+    {
+      "country": "GN",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_49b5_102px-Coat_of_arms_of_Guinea.svg.png",
+      "local": "/country-media/coatOfArms/gn.png",
+      "sha256": "a2aa96da78c6de797a2e470537d789141384720eaa708937b9a23be1daa5ba2a"
+    },
+    {
+      "country": "GP",
+      "field": "flags",
+      "source": "https://flagcdn.com/gp.svg",
+      "local": "/country-media/flags/gp.svg",
+      "sha256": "209a4c520dedebc18eb7acb4cecc8ec280c9234ac361f64738c6dcd08d93db62"
+    },
+    {
+      "country": "GP",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Coat_of_arms_of_Guadeloupe.svg",
+      "local": "/country-media/coatOfArms/gp.svg",
+      "sha256": "9f53b916588c134238690c1488ddec755de4a9af93e4dad23c8f94aab0f64d10"
+    },
+    {
+      "country": "GM",
+      "field": "flags",
+      "source": "https://flagcdn.com/gm.svg",
+      "local": "/country-media/flags/gm.svg",
+      "sha256": "d4418b31447cb5b7ddfcc3b47f3075795700363cc97132d9ab8b2de417027b98"
+    },
+    {
+      "country": "GM",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Coat_of_arms_of_The_Gambia.svg",
+      "local": "/country-media/coatOfArms/gm.svg",
+      "sha256": "a017fd45bc6bcdc68abb8170d8bd1b80f6ce7c7e17642f4277367a7d5c976af6"
+    },
+    {
+      "country": "GW",
+      "field": "flags",
+      "source": "https://flagcdn.com/gw.svg",
+      "local": "/country-media/flags/gw.svg",
+      "sha256": "00dd3c3891158fcb6de6afc3f93b8b4afc20f6aea7c344f097350fc8c9c0ffbc"
+    },
+    {
+      "country": "GW",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_1a91_118px-Emblem_of_Guinea-Bissau.svg.png",
+      "local": "/country-media/coatOfArms/gw.png",
+      "sha256": "a9f9bea8fe60baab6b49d756b15f09f298385d187808a95134268752a84b7f8a"
+    },
+    {
+      "country": "GQ",
+      "field": "flags",
+      "source": "https://flagcdn.com/gq.svg",
+      "local": "/country-media/flags/gq.svg",
+      "sha256": "c9127828406765ae4faf593ac240d82be9913bde2664ed462fc31dcae68eef52"
+    },
+    {
+      "country": "GQ",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Coat_of_arms_of_Equatorial_Guinea.svg",
+      "local": "/country-media/coatOfArms/gq.svg",
+      "sha256": "529c1e638443e4727bdd7e49ecbf8dfe3d8e45e2a4df629066a643054d034e7f"
+    },
+    {
+      "country": "GR",
+      "field": "flags",
+      "source": "https://flagcdn.com/gr.svg",
+      "local": "/country-media/flags/gr.svg",
+      "sha256": "e8a25b9e3e3cb19c682410411097401626c629152f31b45482c98abea8ab12c7"
+    },
+    {
+      "country": "GR",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_6ce2_120px-Coat_of_arms_of_Greece.svg.png",
+      "local": "/country-media/coatOfArms/gr.png",
+      "sha256": "acb9faed1c5df592f627f97b28a71acbe32bad5020e057fdd0be544f65d5d896"
+    },
+    {
+      "country": "GD",
+      "field": "flags",
+      "source": "https://flagcdn.com/gd.svg",
+      "local": "/country-media/flags/gd.svg",
+      "sha256": "a2068c160dddaf85e5ac16423100c50d1970990a7468f3e81eed2d11426c689a"
+    },
+    {
+      "country": "GD",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_860e_120px-Coat_of_arms_of_Grenada.svg.png",
+      "local": "/country-media/coatOfArms/gd.png",
+      "sha256": "45297967aa11c5e02c073df8855b4dce1398ab90529098eb43359ace86d43087"
+    },
+    {
+      "country": "GL",
+      "field": "flags",
+      "source": "https://flagcdn.com/gl.svg",
+      "local": "/country-media/flags/gl.svg",
+      "sha256": "f32a2bfa923186ebfa567af9072a38a46a4e1147a6401a44a13177d80ef63141"
+    },
+    {
+      "country": "GL",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Coat_of_arms_of_Greenland.svg",
+      "local": "/country-media/coatOfArms/gl.svg",
+      "sha256": "6a7c534ed6cce52bbb74a589feeaeffe95d0b240bad2330e9ba135ff7d6a0096"
+    },
+    {
+      "country": "GT",
+      "field": "flags",
+      "source": "https://flagcdn.com/gt.svg",
+      "local": "/country-media/flags/gt.svg",
+      "sha256": "d59addea6225e7eeb09efaee9a888aacc2b93651e1306a3de84764c6c729f821"
+    },
+    {
+      "country": "GT",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/Guatemala.png",
+      "local": "/country-media/coatOfArms/gt.png",
+      "sha256": "cc512974cbcd26c0cd25ed46b9941dd500100f375345b28920a50774a10db345"
+    },
+    {
+      "country": "GF",
+      "field": "flags",
+      "source": "https://flagcdn.com/gf.svg",
+      "local": "/country-media/flags/gf.svg",
+      "sha256": "59df62bfca4b444190219a4039f54c88d38e897d4619118c7b3f3adf20391c54"
+    },
+    {
+      "country": "GU",
+      "field": "flags",
+      "source": "https://flagcdn.com/gu.svg",
+      "local": "/country-media/flags/gu.svg",
+      "sha256": "a5d07ad0e3b8fa236f24208d395a8d38b740f92e8d81e6856dcc3104d661a9eb"
+    },
+    {
+      "country": "GY",
+      "field": "flags",
+      "source": "https://flagcdn.com/gy.svg",
+      "local": "/country-media/flags/gy.svg",
+      "sha256": "910830b8f1f35c778f37eb37d47eea0ea952d1bf04070f7eaeb697d0f8ead948"
+    },
+    {
+      "country": "GY",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_513a_120px-Coat_of_arms_of_Guyana.svg.png",
+      "local": "/country-media/coatOfArms/gy.png",
+      "sha256": "cc77d40ceec1bbfc8bbc5169fc7e613d9617e86021edf00b769b25bf1eba1c98"
+    },
+    {
+      "country": "HK",
+      "field": "flags",
+      "source": "https://flagcdn.com/hk.svg",
+      "local": "/country-media/flags/hk.svg",
+      "sha256": "4c7cbced68ee586af8b3d73a8d8a8c404deaa271da7204eb2afe5c1b070972eb"
+    },
+    {
+      "country": "HK",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/9/90/Regional_Emblem_of_Hong_Kong.svg",
+      "local": "/country-media/coatOfArms/hk.svg",
+      "sha256": "d77a19d333e3d8e935c49a03c874e01a16b09b5c7d627b9b48b969d9dc573e0a"
+    },
+    {
+      "country": "HM",
+      "field": "flags",
+      "source": "https://flagcdn.com/hm.svg",
+      "local": "/country-media/flags/hm.svg",
+      "sha256": "1fff6af9a474221a31f199401f8e247f66f04d160d917e77ec6011f975d92164"
+    },
+    {
+      "country": "HN",
+      "field": "flags",
+      "source": "https://flagcdn.com/hn.svg",
+      "local": "/country-media/flags/hn.svg",
+      "sha256": "d2dd47a43f01a52ffff72cc88bd0e4fc9b503dee57250d22f870c36346079c5d"
+    },
+    {
+      "country": "HN",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/8/81/Coat_of_arms_of_Honduras.svg",
+      "local": "/country-media/coatOfArms/hn.svg",
+      "sha256": "dc88693032f79f35cbbd7df0105019f00cfd25a217a7b8d8ffb271509f941cf4"
+    },
+    {
+      "country": "HR",
+      "field": "flags",
+      "source": "https://flagcdn.com/hr.svg",
+      "local": "/country-media/flags/hr.svg",
+      "sha256": "fa44157809f7739aabca54f3e27dfb1d7409ef17afe6ac18dd39294f124e205a"
+    },
+    {
+      "country": "HR",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Coat_of_arms_of_Croatia.svg",
+      "local": "/country-media/coatOfArms/hr.svg",
+      "sha256": "b5bafeb967f354a58e83dffb88a2206b5c759103c0c7864749f614386ed8a724"
+    },
+    {
+      "country": "HT",
+      "field": "flags",
+      "source": "https://flagcdn.com/ht.svg",
+      "local": "/country-media/flags/ht.svg",
+      "sha256": "65839463e163fd812f732f606111c68961e9bb23aa9624c8c448605fe0e086a1"
+    },
+    {
+      "country": "HT",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_477e_120px-Coat_of_arms_of_Haiti.svg.png",
+      "local": "/country-media/coatOfArms/ht.png",
+      "sha256": "a5e0a9e32555deb65c8d3787b5ad2ee033358269f22143789c8a633046f00a01"
+    },
+    {
+      "country": "HU",
+      "field": "flags",
+      "source": "https://flagcdn.com/hu.svg",
+      "local": "/country-media/flags/hu.svg",
+      "sha256": "2025b7ca34eac130a257abc189273adb73f5749cb0eb7c5c6d865d433d842e0b"
+    },
+    {
+      "country": "HU",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/3/34/Coat_of_arms_of_Hungary.svg",
+      "local": "/country-media/coatOfArms/hu.svg",
+      "sha256": "3ad221bd4454571293ae4c89be561c217d6559dbaee428e1517e36fe44dd03f4"
+    },
+    {
+      "country": "ID",
+      "field": "flags",
+      "source": "https://flagcdn.com/id.svg",
+      "local": "/country-media/flags/id.svg",
+      "sha256": "b9d9dea991a06a1211e93e8fa33adc6035ede25d07dc6e98cf97cc57fd94a340"
+    },
+    {
+      "country": "ID",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/9/90/National_emblem_of_Indonesia_Garuda_Pancasila.svg",
+      "local": "/country-media/coatOfArms/id.svg",
+      "sha256": "8153704649b7bab5ce2103d9c60c0f547c4d66aa2e9f736837a8a3c104a02082"
+    },
+    {
+      "country": "IM",
+      "field": "flags",
+      "source": "https://flagcdn.com/im.svg",
+      "local": "/country-media/flags/im.svg",
+      "sha256": "788070565e793244f601cc111a4ef03afd8c4840b33e976da14cd1afdf4f5f35"
+    },
+    {
+      "country": "IN",
+      "field": "flags",
+      "source": "https://flagcdn.com/in.svg",
+      "local": "/country-media/flags/in.svg",
+      "sha256": "ea9966697a16e75d64b4e6a9a468009944bd336e8098a34839033eb641329fcc"
+    },
+    {
+      "country": "IN",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg",
+      "local": "/country-media/coatOfArms/in.svg",
+      "sha256": "f6b7475f96250c408c515bc56d5a6f34a60676770ca6b02f5d317245f267f1af"
+    },
+    {
+      "country": "IO",
+      "field": "flags",
+      "source": "https://flagcdn.com/io.svg",
+      "local": "/country-media/flags/io.svg",
+      "sha256": "b947453364148016e7c294cb66297c83dbef12604990821b46987fafba0c56fa"
+    },
+    {
+      "country": "IE",
+      "field": "flags",
+      "source": "https://flagcdn.com/ie.svg",
+      "local": "/country-media/flags/ie.svg",
+      "sha256": "5a2e2ec73fb75642ce2a9f9237eb472016794fb49e825f72e769d2d10dff3f11"
+    },
+    {
+      "country": "IE",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Coat_of_arms_of_Ireland.svg",
+      "local": "/country-media/coatOfArms/ie.svg",
+      "sha256": "af333123808d289917c604beaed5d6c6d2225c25b5ab3069d7d768d86838c78f"
+    },
+    {
+      "country": "IR",
+      "field": "flags",
+      "source": "https://flagcdn.com/ir.svg",
+      "local": "/country-media/flags/ir.svg",
+      "sha256": "8e3015ef6405ba9c80a9c93897e3d75f21e4df303f3bcf8e363ea4c96cd06272"
+    },
+    {
+      "country": "IR",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Emblem_of_Iran.svg",
+      "local": "/country-media/coatOfArms/ir.svg",
+      "sha256": "dabf1d4bdecc964866c0552588be4a0c1e32af538ce32b8db8cfaf6bb43d900f"
+    },
+    {
+      "country": "IQ",
+      "field": "flags",
+      "source": "https://flagcdn.com/iq.svg",
+      "local": "/country-media/flags/iq.svg",
+      "sha256": "b0de86ef9c1cfb0067e0989bffa6f15579e0c78b331fc29a9e3469aea3cbec20"
+    },
+    {
+      "country": "IQ",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Coat_of_arms_of_Iraq.svg",
+      "local": "/country-media/coatOfArms/iq.svg",
+      "sha256": "b320e9e35c89b60cb87a5fb1025a2ec7fc65d4bdc356a6ae9ffaa3afc394f5db"
+    },
+    {
+      "country": "IS",
+      "field": "flags",
+      "source": "https://flagcdn.com/is.svg",
+      "local": "/country-media/flags/is.svg",
+      "sha256": "b14a90783cbe55b65c663efb67e1c235389f46d60d9601d28b36773016d520e2"
+    },
+    {
+      "country": "IS",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_06dc_113px-Coat_of_arms_of_Iceland.svg.png",
+      "local": "/country-media/coatOfArms/is.png",
+      "sha256": "5664fcb01f4b43343519d0de009486cb69c43d6276709829fb161217c5265b4c"
+    },
+    {
+      "country": "IL",
+      "field": "flags",
+      "source": "https://flagcdn.com/il.svg",
+      "local": "/country-media/flags/il.svg",
+      "sha256": "9e884f0c6d1001f8de2b478d3de9582f93fbbd9badcb31e3f52fefa3974ebc75"
+    },
+    {
+      "country": "IL",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_d3ce_97px-Emblem_of_Israel.svg.png",
+      "local": "/country-media/coatOfArms/il.png",
+      "sha256": "367e3654c4bc8dda31702ecf3b08cc3e5363d3d3e9b33fafd5cc4a8cf5ecbce2"
+    },
+    {
+      "country": "IT",
+      "field": "flags",
+      "source": "https://flagcdn.com/it.svg",
+      "local": "/country-media/flags/it.svg",
+      "sha256": "7f818fa8e36ca606a8cbd35106fd7d277f094f10f2aa1f7a0585421a20e37070"
+    },
+    {
+      "country": "IT",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/0/00/Emblem_of_Italy.svg",
+      "local": "/country-media/coatOfArms/it.svg",
+      "sha256": "da0df764042f3cd7e5f8416a16110cb2260a5a2647225c852c6a11f9d01b620e"
+    },
+    {
+      "country": "JM",
+      "field": "flags",
+      "source": "https://flagcdn.com/jm.svg",
+      "local": "/country-media/flags/jm.svg",
+      "sha256": "44504dda9d5bff31dfbcf5c8cce7acf0bfb9a7b16a697aadca3f9c4e854b62eb"
+    },
+    {
+      "country": "JM",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_941b_116px-Coat_of_arms_of_Jamaica.svg.png",
+      "local": "/country-media/coatOfArms/jm.png",
+      "sha256": "c1ce90222acbaf7364561d914ec9346e83d1dea3999c12876714c583977ac5d5"
+    },
+    {
+      "country": "JE",
+      "field": "flags",
+      "source": "https://flagcdn.com/je.svg",
+      "local": "/country-media/flags/je.svg",
+      "sha256": "8bd0a0d80cc4e75eac8a3069be0baa9f5ac6a96813485c4f8dc65ae857c621fa"
+    },
+    {
+      "country": "JO",
+      "field": "flags",
+      "source": "https://flagcdn.com/jo.svg",
+      "local": "/country-media/flags/jo.svg",
+      "sha256": "fb2b2896420258e37d2e27a1d07c6488b5ff14a587edfbe7c4153f93042b8424"
+    },
+    {
+      "country": "JO",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Coat_of_arms_of_Jordan.svg",
+      "local": "/country-media/coatOfArms/jo.svg",
+      "sha256": "9d76e01b5d83a9dc315afcbb2d9efe28d68a47fd6e381b52d6c56fd01c5e38ba"
+    },
+    {
+      "country": "JP",
+      "field": "flags",
+      "source": "https://flagcdn.com/jp.svg",
+      "local": "/country-media/flags/jp.svg",
+      "sha256": "e8e6f6e75bc02eeb35e5904edc13df9b5990da70ac1ff1daa7a9fcc61c709a03"
+    },
+    {
+      "country": "JP",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_49cd_120px-Imperial_Seal_of_Japan.svg.png",
+      "local": "/country-media/coatOfArms/jp.png",
+      "sha256": "642c469bbbfe786be84c0bf509cff220ad707c02f6617d57badf5e6bacf9fddb"
+    },
+    {
+      "country": "KZ",
+      "field": "flags",
+      "source": "https://flagcdn.com/kz.svg",
+      "local": "/country-media/flags/kz.svg",
+      "sha256": "71a7d90e17ae74f6bf9572d9560b83d2d6ca047482fe2a229b770c67338f3848"
+    },
+    {
+      "country": "KZ",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Emblem_of_Kazakhstan_latin.svg",
+      "local": "/country-media/coatOfArms/kz.svg",
+      "sha256": "fced3d0bbd1cfaadeebe17a84ddcdf4b6df38ad464d7011a6671619ca793bb93"
+    },
+    {
+      "country": "KE",
+      "field": "flags",
+      "source": "https://flagcdn.com/ke.svg",
+      "local": "/country-media/flags/ke.svg",
+      "sha256": "0c65788e07b97827d85662c06cd74e83ab6027c8915579821df896446b26d4d5"
+    },
+    {
+      "country": "KE",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Coat_of_arms_of_Kenya_%28Official%29.svg",
+      "local": "/country-media/coatOfArms/ke.svg",
+      "sha256": "0498fd219e8c6448b454209ad4dae858e9c2ff790639b605c3a20b13cf8d50fe"
+    },
+    {
+      "country": "KG",
+      "field": "flags",
+      "source": "https://flagcdn.com/kg.svg",
+      "local": "/country-media/flags/kg.svg",
+      "sha256": "b6e67c6fce0ab4dcd376abf4b1656bd8bc9a654c8320d4eef45c810921a1c869"
+    },
+    {
+      "country": "KG",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Emblem_of_Kyrgyzstan.svg",
+      "local": "/country-media/coatOfArms/kg.svg",
+      "sha256": "2da21ee39dfa0d112f551fe2477c2867617da6d5db79ba7a739cfb9ebf3bc165"
+    },
+    {
+      "country": "KH",
+      "field": "flags",
+      "source": "https://flagcdn.com/kh.svg",
+      "local": "/country-media/flags/kh.svg",
+      "sha256": "bdff20910e6d11f5c5b0a562d1302f4aad792255fcdc2e9a46bce1ed8fe8c56f"
+    },
+    {
+      "country": "KH",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_30d3_105px-Coat_of_arms_of_Cambodia.svg.png",
+      "local": "/country-media/coatOfArms/kh.png",
+      "sha256": "633f8dca02d45a0df293c18fd55425d43a4375f34219f3c2082682c6752963c4"
+    },
+    {
+      "country": "KI",
+      "field": "flags",
+      "source": "https://flagcdn.com/ki.svg",
+      "local": "/country-media/flags/ki.svg",
+      "sha256": "3c5c18f1a61d1c782f2f313f197b00530b6de5d72b3ed81814d7984d73c4e05d"
+    },
+    {
+      "country": "KI",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_5a66_109px-Coat_of_arms_of_Kiribati.svg.png",
+      "local": "/country-media/coatOfArms/ki.png",
+      "sha256": "79b41ff801effc70a66d3489d6338672b7549a5391fa2b78eda194165da46ab6"
+    },
+    {
+      "country": "KN",
+      "field": "flags",
+      "source": "https://flagcdn.com/kn.svg",
+      "local": "/country-media/flags/kn.svg",
+      "sha256": "5274df62085604bfd3586bc890842e0ea27a1c3dd3069571179e3eed381ed036"
+    },
+    {
+      "country": "KN",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_c7a1_106px-Coat_of_arms_of_Saint_Kitts_and_Nevis_%2528variant%2529.svg.png",
+      "local": "/country-media/coatOfArms/kn.png",
+      "sha256": "20c949b2bf232df30aacc0b1ffe307ce5b6bbf912f2901677a610da74da76f48"
+    },
+    {
+      "country": "KR",
+      "field": "flags",
+      "source": "https://flagcdn.com/kr.svg",
+      "local": "/country-media/flags/kr.svg",
+      "sha256": "4e0b6d5fa63e2fc1c3d86fda025a4c2129e52d5fc6551d8355e9385dd2d88f4b"
+    },
+    {
+      "country": "KR",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/9/96/Emblem_of_South_Korea.svg",
+      "local": "/country-media/coatOfArms/kr.svg",
+      "sha256": "173d27505ff0897cef920a94e9724ddab0a4d24079e4dc4c4a7038f03081fca6"
+    },
+    {
+      "country": "XK",
+      "field": "flags",
+      "source": "https://flagcdn.com/xk.svg",
+      "local": "/country-media/flags/xk.svg",
+      "sha256": "d58ac2f59d0b820c66ff60f80c59d6f61dc08c22a35f181429fe996a2870d4bb"
+    },
+    {
+      "country": "XK",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Emblem_of_the_Republic_of_Kosovo.svg",
+      "local": "/country-media/coatOfArms/xk.svg",
+      "sha256": "fe0d59b17e546ce05f090d6bcf5fbd3995b87a918857776ff1d85d213fd6fcfe"
+    },
+    {
+      "country": "KW",
+      "field": "flags",
+      "source": "https://flagcdn.com/kw.svg",
+      "local": "/country-media/flags/kw.svg",
+      "sha256": "ce62298731cb48e5f502af92203342f43bfa9568acfc6d2194c7227760e9184c"
+    },
+    {
+      "country": "KW",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/Kuwait.png",
+      "local": "/country-media/coatOfArms/kw.png",
+      "sha256": "bff6f4862a6535e4ce8cd45099fac1d9428c49da98ad3601e7d6140efad26b10"
+    },
+    {
+      "country": "LA",
+      "field": "flags",
+      "source": "https://flagcdn.com/la.svg",
+      "local": "/country-media/flags/la.svg",
+      "sha256": "c0cbe90abd407b916c31bc6d2cceb90ff61cf78ce5de00173e993c67f4e4ca15"
+    },
+    {
+      "country": "LA",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_3ca4_120px-Emblem_of_Laos.svg.png",
+      "local": "/country-media/coatOfArms/la.png",
+      "sha256": "d019413d5d982d9c37fba8524b288b66d459893bc9854983d9ba0ffdf2a7cef8"
+    },
+    {
+      "country": "LB",
+      "field": "flags",
+      "source": "https://flagcdn.com/lb.svg",
+      "local": "/country-media/flags/lb.svg",
+      "sha256": "2c69b33a241e21c003113bae58fda58a08113e265a94262f6d0de39277876462"
+    },
+    {
+      "country": "LB",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/9/98/Coat_of_arms_of_Lebanon.svg",
+      "local": "/country-media/coatOfArms/lb.svg",
+      "sha256": "fafc303e604a6943c0b16fea111e0b71ad7f3ec2b97b94b44decfb220ff4eaa1"
+    },
+    {
+      "country": "LR",
+      "field": "flags",
+      "source": "https://flagcdn.com/lr.svg",
+      "local": "/country-media/flags/lr.svg",
+      "sha256": "b722560baa4a55e843b78f3a3485ff4ad31e5acd659142add4ba3990be2578cb"
+    },
+    {
+      "country": "LR",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/6/64/Coat_of_arms_of_Liberia.svg",
+      "local": "/country-media/coatOfArms/lr.svg",
+      "sha256": "79613c7f67c94c3e6ac1de01988db528cf15318523517fd3fdb939a50a54412f"
+    },
+    {
+      "country": "LY",
+      "field": "flags",
+      "source": "https://flagcdn.com/ly.svg",
+      "local": "/country-media/flags/ly.svg",
+      "sha256": "e2b019746d67350a9dcfc595616d0b73b868c8f3757f9516665e9141d8f0c117"
+    },
+    {
+      "country": "LY",
+      "field": "coatOfArms",
+      "source": "https://rawaq.hakomitna.ly/assets/2024/11/%D8%AD%D9%83%D9%88%D9%85%D8%A9-%D8%A7%D9%84%D9%88%D8%AD%D8%AF%D8%A9-%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A%D8%A9.svg",
+      "local": "/country-media/coatOfArms/ly.svg",
+      "sha256": "e4c4de2c0f5d16d138d5331e7e36b2306593e65600555fe534bdfabc08b2295e"
+    },
+    {
+      "country": "LC",
+      "field": "flags",
+      "source": "https://flagcdn.com/lc.svg",
+      "local": "/country-media/flags/lc.svg",
+      "sha256": "13f4f19e5d3a4a590ba7698e0b19df13d1dd817e4928c20fb4ba949ed8737daf"
+    },
+    {
+      "country": "LC",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_462b_120px-Coat_of_arms_of_Saint_Lucia.svg.png",
+      "local": "/country-media/coatOfArms/lc.png",
+      "sha256": "6996389c4dcf648aac5d173df9a920422198eafa672249dca28194654b701ec9"
+    },
+    {
+      "country": "LI",
+      "field": "flags",
+      "source": "https://flagcdn.com/li.svg",
+      "local": "/country-media/flags/li.svg",
+      "sha256": "308d212c6046d523637598a5034bdc6132706c7c3c33c5d042748226da61e8c3"
+    },
+    {
+      "country": "LI",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/1/18/Staatswappen-Liechtensteins.svg",
+      "local": "/country-media/coatOfArms/li.svg",
+      "sha256": "58613544382bdb00f6fa3611501d7060f6baca83d4b4b2d0cb31932d50e4ec37"
+    },
+    {
+      "country": "LK",
+      "field": "flags",
+      "source": "https://flagcdn.com/lk.svg",
+      "local": "/country-media/flags/lk.svg",
+      "sha256": "c6d5351f0c9d5611cdfaf64b6b5324db73b437bc9d4e4bdc8a70a7d66533df93"
+    },
+    {
+      "country": "LK",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_4048_84px-Emblem_of_Sri_Lanka.svg.png",
+      "local": "/country-media/coatOfArms/lk.png",
+      "sha256": "bdc8f06e5725bc8f4c0bc270dd6f937fd55a87c804d1577ba6c4fe0ea02989c7"
+    },
+    {
+      "country": "LS",
+      "field": "flags",
+      "source": "https://flagcdn.com/ls.svg",
+      "local": "/country-media/flags/ls.svg",
+      "sha256": "66002ab481b35579ef88633fea8114d698990afdaf94b0173e9c9d614d126b49"
+    },
+    {
+      "country": "LS",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/4/42/Coat_of_arms_of_Lesotho.svg",
+      "local": "/country-media/coatOfArms/ls.svg",
+      "sha256": "f45914d45ca82f1ebd3ef5aeaa6980dc38e754989cbfd80fdc513813b52960ab"
+    },
+    {
+      "country": "LT",
+      "field": "flags",
+      "source": "https://flagcdn.com/lt.svg",
+      "local": "/country-media/flags/lt.svg",
+      "sha256": "9743f780184a60fc75a312b34151ff1a2699e0bf0d456eb91dcbae0472b4d566"
+    },
+    {
+      "country": "LT",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Coat_of_arms_of_Lithuania.svg",
+      "local": "/country-media/coatOfArms/lt.svg",
+      "sha256": "ff8870326a233c51440fcd0e0981eb8967dee5c8b6a5b0e27fdd91a52d57149f"
+    },
+    {
+      "country": "LU",
+      "field": "flags",
+      "source": "https://flagcdn.com/lu.svg",
+      "local": "/country-media/flags/lu.svg",
+      "sha256": "23c57bfe462e31f5655923c458bc77769dc62679e69750f6bf96371f62287f70"
+    },
+    {
+      "country": "LU",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_0c2d_119px-Great_coat_of_arms_of_Luxembourg.svg.png",
+      "local": "/country-media/coatOfArms/lu.png",
+      "sha256": "016949ae36709c103d7ae20f739562ee06b648e8bf49cb661ade7f935d678e46"
+    },
+    {
+      "country": "LV",
+      "field": "flags",
+      "source": "https://flagcdn.com/lv.svg",
+      "local": "/country-media/flags/lv.svg",
+      "sha256": "470445d5df6d4ff5e51e0fe120a78ad2e416b86476efdf09cf921d43806fde03"
+    },
+    {
+      "country": "LV",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_51f3_120px-Coat_of_arms_of_Latvia.svg.png",
+      "local": "/country-media/coatOfArms/lv.png",
+      "sha256": "1e77ea9a406cb72691d5aed7d73a0bcf54f701a588b5971de16660a0aa6e0225"
+    },
+    {
+      "country": "MO",
+      "field": "flags",
+      "source": "https://flagcdn.com/mo.svg",
+      "local": "/country-media/flags/mo.svg",
+      "sha256": "f163f905ead86c901f7345c72c8bb60a898281370a8c6ea8bb15566c570b40ca"
+    },
+    {
+      "country": "MO",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/8/87/Regional_Emblem_of_Macau.svg",
+      "local": "/country-media/coatOfArms/mo.svg",
+      "sha256": "ffd805b2e6198c259582bab80631cb164a71a2b89d36cdc6739a92a111f64502"
+    },
+    {
+      "country": "MF",
+      "field": "flags",
+      "source": "https://flagcdn.com/mf.svg",
+      "local": "/country-media/flags/mf.svg",
+      "sha256": "09645c97a47436337d63cd54625200542c65e0e1c83b774a58c9d28d0555b0e7"
+    },
+    {
+      "country": "MA",
+      "field": "flags",
+      "source": "https://flagcdn.com/ma.svg",
+      "local": "/country-media/flags/ma.svg",
+      "sha256": "1f6f0d1bf2e6d69fc943eb0eb3a96a4e5f8473bfdd1bd6b5a4c903c6c7ee2fe2"
+    },
+    {
+      "country": "MA",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Coat_of_arms_of_Morocco.svg",
+      "local": "/country-media/coatOfArms/ma.svg",
+      "sha256": "99d43799989b679a36940861a0d35b7e31ae52fec2983a01a669bbe9e79a2f60"
+    },
+    {
+      "country": "MC",
+      "field": "flags",
+      "source": "https://flagcdn.com/mc.svg",
+      "local": "/country-media/flags/mc.svg",
+      "sha256": "bb97fd4d27f655e164f59612ad1dfd6d25a2663369ecc38b3777dd88b9c2752b"
+    },
+    {
+      "country": "MC",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Coat_of_arms_of_Monaco.svg",
+      "local": "/country-media/coatOfArms/mc.svg",
+      "sha256": "a4873402beeab262edddfc8dc8b1329838602eb942f4c9c3c6b432ab2382eb8a"
+    },
+    {
+      "country": "MD",
+      "field": "flags",
+      "source": "https://flagcdn.com/md.svg",
+      "local": "/country-media/flags/md.svg",
+      "sha256": "a61c465c0aebd959715da03389b9aedcb9198ef840f578ef03cc2af0c76bfa31"
+    },
+    {
+      "country": "MD",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Coat_of_arms_of_Moldova.svg",
+      "local": "/country-media/coatOfArms/md.svg",
+      "sha256": "b56383ba85a8d8a614c4c424b93d9423af4812dd29136fbcdd15223684560a26"
+    },
+    {
+      "country": "MG",
+      "field": "flags",
+      "source": "https://flagcdn.com/mg.svg",
+      "local": "/country-media/flags/mg.svg",
+      "sha256": "00a570504860576bcb032613cb185013ce9400e05fd9c1fdc274f9664d27f9d6"
+    },
+    {
+      "country": "MG",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_a9f5_120px-Seal_of_Madagascar.svg.png",
+      "local": "/country-media/coatOfArms/mg.png",
+      "sha256": "023e626d06e97f04a304f870fd79aefa61d57dcae700167adbc13816099d6003"
+    },
+    {
+      "country": "MV",
+      "field": "flags",
+      "source": "https://flagcdn.com/mv.svg",
+      "local": "/country-media/flags/mv.svg",
+      "sha256": "a825c00d340b88c63605d514c9c0e74ef17c0cf10caa0d0e46bb7ebee4788dd5"
+    },
+    {
+      "country": "MV",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/Maldives.png",
+      "local": "/country-media/coatOfArms/mv.png",
+      "sha256": "4990f905c5a3c592c76f981e1ed62682a395477891c0783efc21cdde5d211648"
+    },
+    {
+      "country": "MX",
+      "field": "flags",
+      "source": "https://flagcdn.com/mx.svg",
+      "local": "/country-media/flags/mx.svg",
+      "sha256": "baa6f7163f307c16a5d3e36c83a09fe46adbe16adfa866d4bb2d750a79d96b92"
+    },
+    {
+      "country": "MX",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Coat_of_arms_of_Mexico.svg",
+      "local": "/country-media/coatOfArms/mx.svg",
+      "sha256": "2b8d21103887910eb26f3dc4e59f5b0351b14b6ebf885e37c400bb49297da490"
+    },
+    {
+      "country": "MH",
+      "field": "flags",
+      "source": "https://flagcdn.com/mh.svg",
+      "local": "/country-media/flags/mh.svg",
+      "sha256": "4d9431d294c64f7e972d174778186715be741d5941e23db89a32dcffcfbfa2ab"
+    },
+    {
+      "country": "MH",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/Marshall%20Islands.png",
+      "local": "/country-media/coatOfArms/mh.png",
+      "sha256": "cb80610cebb6296271cd9f1364a73d6ee372653728841a3b3b1eb83286115c2d"
+    },
+    {
+      "country": "MK",
+      "field": "flags",
+      "source": "https://flagcdn.com/mk.svg",
+      "local": "/country-media/flags/mk.svg",
+      "sha256": "72a37e581f614d791fa6d88831d06c56a0f757e5a596d8fc1189b0d8147cfda6"
+    },
+    {
+      "country": "MK",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Coat_of_arms_of_North_Macedonia.svg",
+      "local": "/country-media/coatOfArms/mk.svg",
+      "sha256": "e98abac50777975ff01d07fa4c5e1d18d3597b09ea91b9c0428d81e3f436beda"
+    },
+    {
+      "country": "ML",
+      "field": "flags",
+      "source": "https://flagcdn.com/ml.svg",
+      "local": "/country-media/flags/ml.svg",
+      "sha256": "ae9516c41b4bb5385e047fc66da8e0e3e3b9360a5850c36d4b5c21950be3853c"
+    },
+    {
+      "country": "ML",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_c68f_120px-Coat_of_arms_of_Mali.svg.png",
+      "local": "/country-media/coatOfArms/ml.png",
+      "sha256": "4a54ec0afc36845fb78f358087ebeb73daf7ad7733663f5dc615e25266a66126"
+    },
+    {
+      "country": "MT",
+      "field": "flags",
+      "source": "https://flagcdn.com/mt.svg",
+      "local": "/country-media/flags/mt.svg",
+      "sha256": "708f8eef0bca92371fd77cdf0f567bb432f292e0fea202b97e181b011bddf3cb"
+    },
+    {
+      "country": "MT",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_1051_94px-Coat_of_arms_of_Malta.svg.png",
+      "local": "/country-media/coatOfArms/mt.png",
+      "sha256": "9bd3d3244a9d097ae69f9ae8fa750ee8d19339199b338184a2083faf90053909"
+    },
+    {
+      "country": "MM",
+      "field": "flags",
+      "source": "https://flagcdn.com/mm.svg",
+      "local": "/country-media/flags/mm.svg",
+      "sha256": "2ebf5312f5a4d89646aba2320b3dce9918136bdfd42303819830fcc29e905edb"
+    },
+    {
+      "country": "MM",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/e/eb/State_Seal_of_the_Republic_of_the_Union_of_Myanmar.svg",
+      "local": "/country-media/coatOfArms/mm.svg",
+      "sha256": "eb791f5212938f7d1e610421cdc8573659f3c50c8e730a95512e344faf050d0c"
+    },
+    {
+      "country": "ME",
+      "field": "flags",
+      "source": "https://flagcdn.com/me.svg",
+      "local": "/country-media/flags/me.svg",
+      "sha256": "4c5a11bc5fc1b0cdb2f7c10b5fe2f4aa50f44d970c74bf9c408fc58dcebfe66b"
+    },
+    {
+      "country": "ME",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/2/23/Coat_of_arms_of_Montenegro.svg",
+      "local": "/country-media/coatOfArms/me.svg",
+      "sha256": "bcebdf95250638fa736e8dff7533f394457310e9c2f7fab7a5bc76ab76f8a2c7"
+    },
+    {
+      "country": "MN",
+      "field": "flags",
+      "source": "https://flagcdn.com/mn.svg",
+      "local": "/country-media/flags/mn.svg",
+      "sha256": "4f89f928fbfa245916b324dc272363ab12dba689814a9d2112023205e8e69baf"
+    },
+    {
+      "country": "MN",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/3/3e/State_emblem_of_Mongolia.svg",
+      "local": "/country-media/coatOfArms/mn.svg",
+      "sha256": "c43001e4d04337cc75d7358aecc9752f53c60677c1b499b985e958a8326391ef"
+    },
+    {
+      "country": "MP",
+      "field": "flags",
+      "source": "https://flagcdn.com/mp.svg",
+      "local": "/country-media/flags/mp.svg",
+      "sha256": "f4d7305aa7c5f53025bfef7c314847ccb4576b358dd47aa89b941e49968343f0"
+    },
+    {
+      "country": "MZ",
+      "field": "flags",
+      "source": "https://flagcdn.com/mz.svg",
+      "local": "/country-media/flags/mz.svg",
+      "sha256": "649e978eea07a70c6e7303a5291476b3f224063070abf4f6a5f4ddcbba7c1cf6"
+    },
+    {
+      "country": "MZ",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/1/14/Emblem_of_Mozambique.svg",
+      "local": "/country-media/coatOfArms/mz.svg",
+      "sha256": "4c88dcf1e3a3658b1d85929afdc9f0953ef72276929579ae04f9993112c81479"
+    },
+    {
+      "country": "MR",
+      "field": "flags",
+      "source": "https://flagcdn.com/mr.svg",
+      "local": "/country-media/flags/mr.svg",
+      "sha256": "1655e7ed2d848678e50138df15f3db7b37ed7a9c4f61cdf7e26cfec12d0e7057"
+    },
+    {
+      "country": "MR",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_bfd6_120px-Seal_of_Mauritania.svg.png",
+      "local": "/country-media/coatOfArms/mr.png",
+      "sha256": "a14122f2233935e11e0493ff08d5dcf230a151283bed9df146c34d95c6cc5b04"
+    },
+    {
+      "country": "MS",
+      "field": "flags",
+      "source": "https://flagcdn.com/ms.svg",
+      "local": "/country-media/flags/ms.svg",
+      "sha256": "a9c4f97f953a20d5441ba8003ec8496ab60ba70c11d865d30a9c2aa03bc1efa4"
+    },
+    {
+      "country": "MS",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Coat_of_arms_of_Montserrat.svg",
+      "local": "/country-media/coatOfArms/ms.svg",
+      "sha256": "098d4b01872cc79e832389c789a8becf64db1712d6e4d2a6e700fd82a392212d"
+    },
+    {
+      "country": "MQ",
+      "field": "flags",
+      "source": "https://flagcdn.com/mq.svg",
+      "local": "/country-media/flags/mq.svg",
+      "sha256": "1e7bffabcf97e379a1b56ade6c1421c3610a640045b766665c57a12d982f006e"
+    },
+    {
+      "country": "MU",
+      "field": "flags",
+      "source": "https://flagcdn.com/mu.svg",
+      "local": "/country-media/flags/mu.svg",
+      "sha256": "c35ef8388abd492cb6ddbb0b46e3be87244ec1088682de208a745c93c4852a80"
+    },
+    {
+      "country": "MU",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Coat_of_arms_of_Mauritius.svg",
+      "local": "/country-media/coatOfArms/mu.svg",
+      "sha256": "e3214cb7677c75c0366d7b31e9e6adfebde3d792effb2bb95c4f05c23389eca1"
+    },
+    {
+      "country": "MW",
+      "field": "flags",
+      "source": "https://flagcdn.com/mw.svg",
+      "local": "/country-media/flags/mw.svg",
+      "sha256": "81a7dc8d3f32fcdc7cd98408f9602f53176a7ea3645770e4d852fc3646a2e576"
+    },
+    {
+      "country": "MW",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_a389_116px-Coat_of_arms_of_Malawi.svg.png",
+      "local": "/country-media/coatOfArms/mw.png",
+      "sha256": "dba9c30c594d185b794f5b08db6fa00e6fd92e171fc49d125d43819c9103219f"
+    },
+    {
+      "country": "MY",
+      "field": "flags",
+      "source": "https://flagcdn.com/my.svg",
+      "local": "/country-media/flags/my.svg",
+      "sha256": "1d3284c77094859fb63c1880af4f8f9a3916935a12faae060678c6e3455e956d"
+    },
+    {
+      "country": "MY",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/2/26/Coat_of_arms_of_Malaysia.svg",
+      "local": "/country-media/coatOfArms/my.svg",
+      "sha256": "71741ec4a4a66154486d94ec985622b58f0e87ea4caa18458af9f9ce9566ceb5"
+    },
+    {
+      "country": "YT",
+      "field": "flags",
+      "source": "https://flagcdn.com/yt.svg",
+      "local": "/country-media/flags/yt.svg",
+      "sha256": "39582c3280dbcddb6c8669ca5020f68e12a120c2e8c760a7580306cc56cd93d1"
+    },
+    {
+      "country": "NA",
+      "field": "flags",
+      "source": "https://flagcdn.com/na.svg",
+      "local": "/country-media/flags/na.svg",
+      "sha256": "ddc9fc887177f92e80fed16082c988924fbd19773ea33729fa3f2a1896d13814"
+    },
+    {
+      "country": "NA",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Coat_of_arms_of_Namibia.svg",
+      "local": "/country-media/coatOfArms/na.svg",
+      "sha256": "c7141dc1f7d3a6ceb8da73daca4aec971b8df4504229e4a27a178690006dadce"
+    },
+    {
+      "country": "NC",
+      "field": "flags",
+      "source": "https://flagcdn.com/nc.svg",
+      "local": "/country-media/flags/nc.svg",
+      "sha256": "1f0a00010879d1045c2e1f602881819877dc3b42c74960c2955e04396a259685"
+    },
+    {
+      "country": "NC",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Emblem_of_New_Caledonia.svg",
+      "local": "/country-media/coatOfArms/nc.svg",
+      "sha256": "c9aa0da9f452437218675251b3de88318ae9ed91998cb15edee1c06dd38a54c4"
+    },
+    {
+      "country": "NE",
+      "field": "flags",
+      "source": "https://flagcdn.com/ne.svg",
+      "local": "/country-media/flags/ne.svg",
+      "sha256": "286098862efda02108b4a8fe0c7f75b1275685be841c62a283d55412155781d9"
+    },
+    {
+      "country": "NE",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_9f62_120px-Coat_of_arms_of_Niger.svg.png",
+      "local": "/country-media/coatOfArms/ne.png",
+      "sha256": "5a92fb20acb2376fa234c88427466c25b3a29416ff0c5551c3355019ec8c328b"
+    },
+    {
+      "country": "NF",
+      "field": "flags",
+      "source": "https://flagcdn.com/nf.svg",
+      "local": "/country-media/flags/nf.svg",
+      "sha256": "224e33c2d211398fc41eaa399691312e913f08397ea80cb3931b16c289d6cbd4"
+    },
+    {
+      "country": "NG",
+      "field": "flags",
+      "source": "https://flagcdn.com/ng.svg",
+      "local": "/country-media/flags/ng.svg",
+      "sha256": "3dbebd9f8e31821d5fa22f976cfe9a338788fda81308f0d573e69fd9dfcce24e"
+    },
+    {
+      "country": "NG",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Coat_of_arms_of_Nigeria.svg",
+      "local": "/country-media/coatOfArms/ng.svg",
+      "sha256": "75c45bfdc045846a9f30db47dfaaa95d7a798457eaf45bda2292f3664652c060"
+    },
+    {
+      "country": "NI",
+      "field": "flags",
+      "source": "https://flagcdn.com/ni.svg",
+      "local": "/country-media/flags/ni.svg",
+      "sha256": "ed4fbc934d1bde93634e8904e0c1aec45587c95a2bbfbd024aa729e9adc956d6"
+    },
+    {
+      "country": "NI",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_4b54_120px-Coat_of_arms_of_Nicaragua.svg.png",
+      "local": "/country-media/coatOfArms/ni.png",
+      "sha256": "8d364943b247c24ef4e7ffbcc23af375cd88d289279af4e59c348202acdfdd29"
+    },
+    {
+      "country": "NU",
+      "field": "flags",
+      "source": "https://flagcdn.com/nu.svg",
+      "local": "/country-media/flags/nu.svg",
+      "sha256": "33af519360a2305beb3a58a41e800b23157f49db8b508363e52de9619a7f3b69"
+    },
+    {
+      "country": "NL",
+      "field": "flags",
+      "source": "https://flagcdn.com/nl.svg",
+      "local": "/country-media/flags/nl.svg",
+      "sha256": "2f7463573cdc3a0f7760c18459a3280d9272d1e6b2060909f12b95644e4fd545"
+    },
+    {
+      "country": "NL",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_5cd8_109px-Royal_coat_of_arms_of_the_Netherlands.svg.png",
+      "local": "/country-media/coatOfArms/nl.png",
+      "sha256": "e6fb7a3b88632a673d7593a4b724def8744beb9fb3dfdec42cf6ef8acdd39357"
+    },
+    {
+      "country": "NO",
+      "field": "flags",
+      "source": "https://flagcdn.com/no.svg",
+      "local": "/country-media/flags/no.svg",
+      "sha256": "0d4b9a52f0a6bd264258baac791b39910a895bb6ca06f63477fa823a262febdc"
+    },
+    {
+      "country": "NO",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/9/95/Coat_of_arms_of_Norway.svg",
+      "local": "/country-media/coatOfArms/no.svg",
+      "sha256": "84260ace276ea626a1887ca206b40142b159eb3cc80ce65ad82b3c5eede0c58d"
+    },
+    {
+      "country": "NP",
+      "field": "flags",
+      "source": "https://flagcdn.com/np.svg",
+      "local": "/country-media/flags/np.svg",
+      "sha256": "f4a65e693806dbb31a5b2808a88d577c72ba0e8c5872fbd1e8600ff63a77c489"
+    },
+    {
+      "country": "NP",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/2/23/Emblem_of_Nepal.svg",
+      "local": "/country-media/coatOfArms/np.svg",
+      "sha256": "f67bcc604764a8c20c8e2054bb7d9bf10547e735fad63c95b169721b305661e9"
+    },
+    {
+      "country": "NR",
+      "field": "flags",
+      "source": "https://flagcdn.com/nr.svg",
+      "local": "/country-media/flags/nr.svg",
+      "sha256": "1db6563151cfc25388f8167a967a96b0794cde41f1bcfa3e521bdaa794af2fcc"
+    },
+    {
+      "country": "NR",
+      "field": "coatOfArms",
+      "source": "https://justice.gov.nr/wp-content/uploads/2024/02/Nauru_Main_Banner.jpg",
+      "local": "/country-media/coatOfArms/nr.jpg",
+      "sha256": "82bf9e8d6f110cdaf9033716d3d16c4054febcf354d1a6eff55a31f1f5594c43"
+    },
+    {
+      "country": "NZ",
+      "field": "flags",
+      "source": "https://flagcdn.com/nz.svg",
+      "local": "/country-media/flags/nz.svg",
+      "sha256": "aa29843a365d4eb21d35932172232d7d591a35fc51ac95c040c356f0f16c447e"
+    },
+    {
+      "country": "NZ",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Coat_of_arms_of_New_Zealand.svg",
+      "local": "/country-media/coatOfArms/nz.svg",
+      "sha256": "a5bf856c0ad324b4ee298d509ac4f6fe86bc9ca4c7a515c8d181e65b0d0dc88d"
+    },
+    {
+      "country": "OM",
+      "field": "flags",
+      "source": "https://flagcdn.com/om.svg",
+      "local": "/country-media/flags/om.svg",
+      "sha256": "38f39605556392f32fc4aa12e6db9a9c6984acd3cc7f3ccfbca9a014bc44796a"
+    },
+    {
+      "country": "OM",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_33a9_120px-National_emblem_of_Oman.svg.png",
+      "local": "/country-media/coatOfArms/om.png",
+      "sha256": "43f0d1ce343a3140475f03568b5628d85187569869850813b4083b230e269cc0"
+    },
+    {
+      "country": "PK",
+      "field": "flags",
+      "source": "https://flagcdn.com/pk.svg",
+      "local": "/country-media/flags/pk.svg",
+      "sha256": "2011fe01e332cfc8f16c861d4818bacf4ed1b6d9fa657cc246f86ab15a313768"
+    },
+    {
+      "country": "PK",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/e/ef/State_emblem_of_Pakistan.svg",
+      "local": "/country-media/coatOfArms/pk.svg",
+      "sha256": "c828330e0632263f69d0cde8fb433db788a8265c3957e1054ed9c407c75400fe"
+    },
+    {
+      "country": "PA",
+      "field": "flags",
+      "source": "https://flagcdn.com/pa.svg",
+      "local": "/country-media/flags/pa.svg",
+      "sha256": "8e8c7cf854aa3367d9ed9eda6c585540bde6369ef6163f435334216be4536200"
+    },
+    {
+      "country": "PA",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_0f0b_109px-Coat_of_arms_of_Panama.svg.png",
+      "local": "/country-media/coatOfArms/pa.png",
+      "sha256": "79c4ea4924828fb79b1e5d73b9f865d5ca170fad36c66b31165917f8b19a78aa"
+    },
+    {
+      "country": "PN",
+      "field": "flags",
+      "source": "https://flagcdn.com/pn.svg",
+      "local": "/country-media/flags/pn.svg",
+      "sha256": "2affa299bd92330f8eaab9888193ca3802c47b4bbe4068c6f91eb198f7024625"
+    },
+    {
+      "country": "PE",
+      "field": "flags",
+      "source": "https://flagcdn.com/pe.svg",
+      "local": "/country-media/flags/pe.svg",
+      "sha256": "a35cf7c9bb6ac08e6d60d9683c78318746edc82284022aef02c9d6a07540045c"
+    },
+    {
+      "country": "PE",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Escudo_nacional_del_Per%C3%BA.svg",
+      "local": "/country-media/coatOfArms/pe.svg",
+      "sha256": "65175f9fb56e8cc9aadd6041863cf8d37f9b14ad1730cd2ee105dc5782fbf194"
+    },
+    {
+      "country": "PH",
+      "field": "flags",
+      "source": "https://flagcdn.com/ph.svg",
+      "local": "/country-media/flags/ph.svg",
+      "sha256": "d554297356ab66a5061df4c73c3bb293381875d86175fa0508f7ac4f035eb721"
+    },
+    {
+      "country": "PH",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_b889_108px-Coat_of_arms_of_the_Philippines.svg.png",
+      "local": "/country-media/coatOfArms/ph.png",
+      "sha256": "74a4a4496d50d08c901328cdb0a67a96cec718bbc59843d1dfc80b59f6289736"
+    },
+    {
+      "country": "PW",
+      "field": "flags",
+      "source": "https://flagcdn.com/pw.svg",
+      "local": "/country-media/flags/pw.svg",
+      "sha256": "47fc578c8ad500ed537a46e73859b597f819474e3d0227ccd266cdd793596aa6"
+    },
+    {
+      "country": "PW",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Seal_of_Palau.svg",
+      "local": "/country-media/coatOfArms/pw.svg",
+      "sha256": "9ab51e7e29c22f9fd5c3f7f1337ede89f923347b5d7c14afa481895ccb8605e8"
+    },
+    {
+      "country": "PG",
+      "field": "flags",
+      "source": "https://flagcdn.com/pg.svg",
+      "local": "/country-media/flags/pg.svg",
+      "sha256": "d98adee3bf8945b389144b04bc49824c85711e1d473236971ac8a48939328064"
+    },
+    {
+      "country": "PG",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/b/b4/National_emblem_of_Papua_New_Guinea.svg",
+      "local": "/country-media/coatOfArms/pg.svg",
+      "sha256": "b837622cce87ebbbaa88e376a5edc08de0eddc05b6da19eeb8629b68988a9e87"
+    },
+    {
+      "country": "PL",
+      "field": "flags",
+      "source": "https://flagcdn.com/pl.svg",
+      "local": "/country-media/flags/pl.svg",
+      "sha256": "da6d9e34f2007194b0082d4caac04d1744b7b27fc40098747d4bc62e0d5a5bb2"
+    },
+    {
+      "country": "PL",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Herb_Polski.svg",
+      "local": "/country-media/coatOfArms/pl.svg",
+      "sha256": "1a914454039b089475084a2eef8a3ab919a809aa944c146e6173bdd086ae5bea"
+    },
+    {
+      "country": "PR",
+      "field": "flags",
+      "source": "https://flagcdn.com/pr.svg",
+      "local": "/country-media/flags/pr.svg",
+      "sha256": "b7b5e25ba11680b8c7718c823fb93945e46b66b857faafa730f42bd1903baac1"
+    },
+    {
+      "country": "KP",
+      "field": "flags",
+      "source": "https://flagcdn.com/kp.svg",
+      "local": "/country-media/flags/kp.svg",
+      "sha256": "2891274f3603b50b8eb795f50ba361b7b4586ecc1f42f900689decd527fcc386"
+    },
+    {
+      "country": "KP",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/North%20Korea.png",
+      "local": "/country-media/coatOfArms/kp.png",
+      "sha256": "e1e87c5efffcd05aad6bcacd6acaca10ff432a0f402716218c31c44173d1eb98"
+    },
+    {
+      "country": "PT",
+      "field": "flags",
+      "source": "https://flagcdn.com/pt.svg",
+      "local": "/country-media/flags/pt.svg",
+      "sha256": "f60337f226fba6b695f54222f63b354920b1ecb4a0ff27f16bd49983f345f4c7"
+    },
+    {
+      "country": "PT",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/1/15/Coat_of_arms_of_Portugal.svg",
+      "local": "/country-media/coatOfArms/pt.svg",
+      "sha256": "ef93d0af732e8297ca1f0066ac3491135838570a6ddb928b6d1bb62c0ee4c3d5"
+    },
+    {
+      "country": "PY",
+      "field": "flags",
+      "source": "https://flagcdn.com/py.svg",
+      "local": "/country-media/flags/py.svg",
+      "sha256": "5bb06bf5b8f3ea2633dcfc0d417400786c69d6b1cb681208072f4658d2838af2"
+    },
+    {
+      "country": "PY",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/7/70/Coat_of_arms_of_Paraguay.svg",
+      "local": "/country-media/coatOfArms/py.svg",
+      "sha256": "01e231d0e641bc888adc6472fabde4d175e7b411b4d5f4dc2eeb44c26c5039ee"
+    },
+    {
+      "country": "PS",
+      "field": "flags",
+      "source": "https://flagcdn.com/ps.svg",
+      "local": "/country-media/flags/ps.svg",
+      "sha256": "6ccd9cbaff9c67f772dfa2154c5e178fdd7a78f07e7177a3cea431116a98afdc"
+    },
+    {
+      "country": "PS",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Coat_of_arms_of_Palestine.svg",
+      "local": "/country-media/coatOfArms/ps.svg",
+      "sha256": "237d03a16b01eff832848e54d24b3ae1e0b419f2131956f5d8ecfebd128c64e7"
+    },
+    {
+      "country": "PF",
+      "field": "flags",
+      "source": "https://flagcdn.com/pf.svg",
+      "local": "/country-media/flags/pf.svg",
+      "sha256": "f04ae2415d82f1ca5b3e1803d9321374821baedee0dcf5e1b5660d8c83dde39f"
+    },
+    {
+      "country": "PF",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/6/65/Coat_of_arms_of_French_Polynesia.svg",
+      "local": "/country-media/coatOfArms/pf.svg",
+      "sha256": "7f12326e72d12efe9067e9ff6c6391983c6a8db2628c5eea635e42b3a03427db"
+    },
+    {
+      "country": "QA",
+      "field": "flags",
+      "source": "https://flagcdn.com/qa.svg",
+      "local": "/country-media/flags/qa.svg",
+      "sha256": "5332c024cb6bac6d7ca2f96347d2ce8cfc63f5bf2643a1d1e6ed6146e6b75a1d"
+    },
+    {
+      "country": "QA",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Emblem_of_Qatar-2022.svg",
+      "local": "/country-media/coatOfArms/qa.svg",
+      "sha256": "8fad4be30ea7c15d8257e5c8a686001b2e78c63ce40a90133aa143be0a60e958"
+    },
+    {
+      "country": "RE",
+      "field": "flags",
+      "source": "https://flagcdn.com/re.svg",
+      "local": "/country-media/flags/re.svg",
+      "sha256": "d331ea0782d4c246e19f4387a6faffb069c706ddc24a2340c8d2c7f780d43607"
+    },
+    {
+      "country": "RE",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Armoiries_R%C3%A9union.svg/500px-Armoiries_R%C3%A9union.svg.png",
+      "local": "/country-media/coatOfArms/re.png",
+      "sha256": "b1fe086c5423a961e3917816dd0eab8e9262c03b8c74a6c2822accbe083515a4"
+    },
+    {
+      "country": "RO",
+      "field": "flags",
+      "source": "https://flagcdn.com/ro.svg",
+      "local": "/country-media/flags/ro.svg",
+      "sha256": "20c8e69585273d35ba38fe2cae0d0201445a3b410c9589f4f7053316662482e3"
+    },
+    {
+      "country": "RO",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/7/70/Coat_of_arms_of_Romania.svg",
+      "local": "/country-media/coatOfArms/ro.svg",
+      "sha256": "232bed9e5166fbc5dfc6b1c38e9550ffca2ab5dc29d5359008a2189d0533eea5"
+    },
+    {
+      "country": "RU",
+      "field": "flags",
+      "source": "https://flagcdn.com/ru.svg",
+      "local": "/country-media/flags/ru.svg",
+      "sha256": "eb1dbd977fdb824dcae7767ce9ec3a023e41158e81b5f524772609ddcb622025"
+    },
+    {
+      "country": "RU",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Coat_of_Arms_of_the_Russian_Federation.svg",
+      "local": "/country-media/coatOfArms/ru.svg",
+      "sha256": "bb6f3c799dad93f1996032182082052012d9c3445669fb98a5f6a900473b2aeb"
+    },
+    {
+      "country": "RW",
+      "field": "flags",
+      "source": "https://flagcdn.com/rw.svg",
+      "local": "/country-media/flags/rw.svg",
+      "sha256": "21b67e23f19a1bca9b4ad87ff788b4992cebc00a6deeca1eb9c56c16b63c0de8"
+    },
+    {
+      "country": "RW",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/1/17/Coat_of_arms_of_Rwanda.svg",
+      "local": "/country-media/coatOfArms/rw.svg",
+      "sha256": "d617ac2729159a05eaf54ba75f8748182600643147de178b9d784f7b7ecc28d3"
+    },
+    {
+      "country": "SA",
+      "field": "flags",
+      "source": "https://flagcdn.com/sa.svg",
+      "local": "/country-media/flags/sa.svg",
+      "sha256": "7176d38f2e39fa7c96608f5ae85bb51ba964f1b9a972b33b0d04796fe4487f71"
+    },
+    {
+      "country": "SA",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_02bd_112px-Coat_of_arms_of_Saudi_Arabia.svg.png",
+      "local": "/country-media/coatOfArms/sa.png",
+      "sha256": "e3eda2efc7b1553602a490a5d5c3848b0724c40a1462fd4e342fbb868053eed7"
+    },
+    {
+      "country": "SD",
+      "field": "flags",
+      "source": "https://flagcdn.com/sd.svg",
+      "local": "/country-media/flags/sd.svg",
+      "sha256": "305064d3c23eac774752898e1b3e9ff8ab7ecdfa45495be446dc520de8415727"
+    },
+    {
+      "country": "SD",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_4aa4_107px-Emblem_of_Sudan.svg.png",
+      "local": "/country-media/coatOfArms/sd.png",
+      "sha256": "6cf0ab88ec185ff3b501db764f9ee51fd4212d2692893eb793431152d370ea1b"
+    },
+    {
+      "country": "SN",
+      "field": "flags",
+      "source": "https://flagcdn.com/sn.svg",
+      "local": "/country-media/flags/sn.svg",
+      "sha256": "c0593c9c104142eadae2d76bd739b28a37d2218bf1ef4b37bf8fa9655bfab087"
+    },
+    {
+      "country": "SN",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_ac5b_101px-Coat_of_arms_of_Senegal.svg.png",
+      "local": "/country-media/coatOfArms/sn.png",
+      "sha256": "130c330133a07893cded62d46eaf74bccc1f7229d061d7ff73c04c02407e796d"
+    },
+    {
+      "country": "SG",
+      "field": "flags",
+      "source": "https://flagcdn.com/sg.svg",
+      "local": "/country-media/flags/sg.svg",
+      "sha256": "d8782c5cc56587009a4939e9c0a95402001114eacda264417cd8f1678ff9329d"
+    },
+    {
+      "country": "SG",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/Singapore.png",
+      "local": "/country-media/coatOfArms/sg.png",
+      "sha256": "b095b2a7631114e939b617099f1c9084b4c2972a4721eecb3753d6c2d0e3e26e"
+    },
+    {
+      "country": "GS",
+      "field": "flags",
+      "source": "https://flagcdn.com/gs.svg",
+      "local": "/country-media/flags/gs.svg",
+      "sha256": "b961866c898447bb7fc060e4d18dc6080ccad384ff4bf849260fb5577221a841"
+    },
+    {
+      "country": "GS",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/7/78/Coat_of_arms_of_South_Georgia_and_the_South_Sandwich_Islands.svg",
+      "local": "/country-media/coatOfArms/gs.svg",
+      "sha256": "c4606c194bbf3c3c890ecd8be79fc1d60b43fdb4ca6abe3fba04fbc12d7933aa"
+    },
+    {
+      "country": "SJ",
+      "field": "flags",
+      "source": "https://flagcdn.com/sj.svg",
+      "local": "/country-media/flags/sj.svg",
+      "sha256": "0d4b9a52f0a6bd264258baac791b39910a895bb6ca06f63477fa823a262febdc"
+    },
+    {
+      "country": "SB",
+      "field": "flags",
+      "source": "https://flagcdn.com/sb.svg",
+      "local": "/country-media/flags/sb.svg",
+      "sha256": "56e24d58d3912dcd3c89187ee9ec08ea09957055296e823007ad615a4485f751"
+    },
+    {
+      "country": "SB",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_c4f6_100px-Coat_of_arms_of_the_Solomon_Islands.svg.png",
+      "local": "/country-media/coatOfArms/sb.png",
+      "sha256": "0f2566a30b41672cba99a6054bb4c5e0bbf2b98551029015b6659dfef8c68b33"
+    },
+    {
+      "country": "SL",
+      "field": "flags",
+      "source": "https://flagcdn.com/sl.svg",
+      "local": "/country-media/flags/sl.svg",
+      "sha256": "21d7e0663d2b8e1d455a0e1456c63dfbb273becdacbf7c1fa0e22d915f136cf4"
+    },
+    {
+      "country": "SL",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_b0f2_120px-Coat_of_arms_of_Sierra_Leone.svg.png",
+      "local": "/country-media/coatOfArms/sl.png",
+      "sha256": "482610b51839aeb54c22a3addf4ec730350e39fe83b03db8b810f81297a843f7"
+    },
+    {
+      "country": "SV",
+      "field": "flags",
+      "source": "https://flagcdn.com/sv.svg",
+      "local": "/country-media/flags/sv.svg",
+      "sha256": "cbd0f1c0170aad674c898a602f0e43fcf330640cbbab0653d6ae4f941f7cd83d"
+    },
+    {
+      "country": "SV",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Coat_of_arms_of_El_Salvador.svg",
+      "local": "/country-media/coatOfArms/sv.svg",
+      "sha256": "096b79600d2296de4d7075c88570874c81f290fbf682aa5d5f3dfa7fd9b2e5f2"
+    },
+    {
+      "country": "SM",
+      "field": "flags",
+      "source": "https://flagcdn.com/sm.svg",
+      "local": "/country-media/flags/sm.svg",
+      "sha256": "bb35493ba0a9f7e7a447f8cf4ea17fa50777db06d7266e08edd6c54593aea1c8"
+    },
+    {
+      "country": "SM",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Coat_of_arms_of_San_Marino.svg",
+      "local": "/country-media/coatOfArms/sm.svg",
+      "sha256": "d8074af24b220fd22eecd97b25eee1ae70c7f569d625e8b61d4c9d3c3bd3e84a"
+    },
+    {
+      "country": "SO",
+      "field": "flags",
+      "source": "https://flagcdn.com/so.svg",
+      "local": "/country-media/flags/so.svg",
+      "sha256": "3a342342f94f00a74984e10743f4589e7856076df6686f05e3192cd0ee0300e1"
+    },
+    {
+      "country": "SO",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Coat_of_arms_of_Somalia.svg",
+      "local": "/country-media/coatOfArms/so.svg",
+      "sha256": "8cf78761077017629dbbcb00cb15817f4750b42cf26279623621c475d218b45e"
+    },
+    {
+      "country": "PM",
+      "field": "flags",
+      "source": "https://flagcdn.com/pm.svg",
+      "local": "/country-media/flags/pm.svg",
+      "sha256": "2e210b75c1024a800b1367b28052f6741ae2ee9d188375c0ae481284b3ab3846"
+    },
+    {
+      "country": "PM",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Armoiries_SaintPierreetMiquelon.svg",
+      "local": "/country-media/coatOfArms/pm.svg",
+      "sha256": "db51e49314cf02c0f6fa056db99374e35cff13692e27d7018e4d8b2d3dec26e5"
+    },
+    {
+      "country": "RS",
+      "field": "flags",
+      "source": "https://flagcdn.com/rs.svg",
+      "local": "/country-media/flags/rs.svg",
+      "sha256": "5bc4c8297033b5b31ca9496dd1ad29232aa14389dc8c93db38f99faa707ebba3"
+    },
+    {
+      "country": "RS",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/9/96/Coat_of_arms_of_Serbia.svg",
+      "local": "/country-media/coatOfArms/rs.svg",
+      "sha256": "6197f63ec950cdfd4a838cc32e52c7aa0ff4fd50ca2b5258c0e753ebe6a69912"
+    },
+    {
+      "country": "SS",
+      "field": "flags",
+      "source": "https://flagcdn.com/ss.svg",
+      "local": "/country-media/flags/ss.svg",
+      "sha256": "0f2a925c6daf8945ff257938e04b0609441f698010d80c9717904c71a54a235e"
+    },
+    {
+      "country": "SS",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_51f5_120px-Coat_of_arms_of_South_Sudan.svg.png",
+      "local": "/country-media/coatOfArms/ss.png",
+      "sha256": "9ac916882f832440bcac62314f5e3c457352f06c52bbcf71dfbfe19458516ffc"
+    },
+    {
+      "country": "ST",
+      "field": "flags",
+      "source": "https://flagcdn.com/st.svg",
+      "local": "/country-media/flags/st.svg",
+      "sha256": "a95075950bff55641b4274439a909c6bda8005b22c397ef6315839ce9d0dec55"
+    },
+    {
+      "country": "ST",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_a031_120px-Coat_of_arms_of_S%25C3%25A3o_Tom%25C3%25A9_and_Pr%25C3%25ADncipe.svg.png",
+      "local": "/country-media/coatOfArms/st.png",
+      "sha256": "309987525c887d39c0bf922b25fd2cf62587e4deb6dbd72a08cdbff54e5d15ea"
+    },
+    {
+      "country": "SR",
+      "field": "flags",
+      "source": "https://flagcdn.com/sr.svg",
+      "local": "/country-media/flags/sr.svg",
+      "sha256": "098067b9dd5a6aac668c8883f9b96fe68865dc20a6f88a8859146900e389dd63"
+    },
+    {
+      "country": "SR",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Coat_of_arms_of_Suriname.svg",
+      "local": "/country-media/coatOfArms/sr.svg",
+      "sha256": "7ca9667e7f1a841d019a39fa2fc45a0fce9e8e31eaa47cbaac2d147570f829a8"
+    },
+    {
+      "country": "SK",
+      "field": "flags",
+      "source": "https://flagcdn.com/sk.svg",
+      "local": "/country-media/flags/sk.svg",
+      "sha256": "e684da4cc4c07969475456c69ba6e9e853360d5522dd5273beec02933c5f5767"
+    },
+    {
+      "country": "SK",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Coat_of_arms_of_Slovakia.svg",
+      "local": "/country-media/coatOfArms/sk.svg",
+      "sha256": "4844084b1d5439511b8dd387251fc660401c3192ef811bd5de6c77e802d435c3"
+    },
+    {
+      "country": "SI",
+      "field": "flags",
+      "source": "https://flagcdn.com/si.svg",
+      "local": "/country-media/flags/si.svg",
+      "sha256": "31b0d198128163affed8e660033c7a5cbe3ecc726188ab678ddb5521d5e9bb4e"
+    },
+    {
+      "country": "SI",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_a258_93px-Coat_of_arms_of_Slovenia.svg.png",
+      "local": "/country-media/coatOfArms/si.png",
+      "sha256": "40e7fc93a11846d40ea4222ac6d94c70c462f4c2bcbca4b3050ad7d6a6ad2af0"
+    },
+    {
+      "country": "SE",
+      "field": "flags",
+      "source": "https://flagcdn.com/se.svg",
+      "local": "/country-media/flags/se.svg",
+      "sha256": "426348d99d9cace2df6eaa6d6766d5a5ac21bb65a504a4ed974486cf96156b8f"
+    },
+    {
+      "country": "SE",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_4f39_69px-Coat_of_arms_of_Sweden_%2528shield_and_chain%2529.svg.png",
+      "local": "/country-media/coatOfArms/se.png",
+      "sha256": "ba197ef8ff5801aae28c9e3bcc3218a61b10f65bf1c3ea9672a247811c9cbc22"
+    },
+    {
+      "country": "SZ",
+      "field": "flags",
+      "source": "https://flagcdn.com/sz.svg",
+      "local": "/country-media/flags/sz.svg",
+      "sha256": "3d48fcbb07942d6d590bceb07f8462db36130a625022f12710e53c6cfdc51f77"
+    },
+    {
+      "country": "SZ",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_008e_120px-Coat_of_arms_of_Swaziland.svg.png",
+      "local": "/country-media/coatOfArms/sz.png",
+      "sha256": "4fe08d885964e0acad88776823f963948d44d773932db1242c19b73343743468"
+    },
+    {
+      "country": "SX",
+      "field": "flags",
+      "source": "https://flagcdn.com/sx.svg",
+      "local": "/country-media/flags/sx.svg",
+      "sha256": "c05d6ac73a8e70c81e47d9448d9175f4812b0f509c26ceec8f57cceb17341283"
+    },
+    {
+      "country": "SX",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Wapen_van_Sint_Maarten.svg",
+      "local": "/country-media/coatOfArms/sx.svg",
+      "sha256": "edb8b69e3af4a19fadd025c389c38d5d359f888f19711dc01a3ddbbf1b189794"
+    },
+    {
+      "country": "SC",
+      "field": "flags",
+      "source": "https://flagcdn.com/sc.svg",
+      "local": "/country-media/flags/sc.svg",
+      "sha256": "b7a1ccdf0b210a2273426eaf334679dba7d3f5a90dddd91882beffa891bf3035"
+    },
+    {
+      "country": "SC",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Coat_of_arms_of_Seychelles.svg",
+      "local": "/country-media/coatOfArms/sc.svg",
+      "sha256": "c333a9522003cf38c08092f864e31941a6775de71b58a988cff5c652d995e1df"
+    },
+    {
+      "country": "SY",
+      "field": "flags",
+      "source": "https://flagcdn.com/sy.svg",
+      "local": "/country-media/flags/sy.svg",
+      "sha256": "114f63ff44c34361216c25e49c65ade53ba07a4607e5e917b089c60a0df6c173"
+    },
+    {
+      "country": "SY",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_6a7f_120px-Coat_of_arms_of_Syria.svg.png",
+      "local": "/country-media/coatOfArms/sy.png",
+      "sha256": "70a29c0b789743352916ecd44cda20079a11f4152d385a089b245d1453bf5710"
+    },
+    {
+      "country": "TC",
+      "field": "flags",
+      "source": "https://flagcdn.com/tc.svg",
+      "local": "/country-media/flags/tc.svg",
+      "sha256": "d32ec58140866a2108647bc648fff338819fa2478874c2b6af4340e322e7216b"
+    },
+    {
+      "country": "TC",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Coat_of_arms_of_the_Turks_and_Caicos_Islands.svg",
+      "local": "/country-media/coatOfArms/tc.svg",
+      "sha256": "a699ab9f0b36643eeafc9c661c7a99a2ffc7c3faa007edcb386ed184fd2eb5d6"
+    },
+    {
+      "country": "TD",
+      "field": "flags",
+      "source": "https://flagcdn.com/td.svg",
+      "local": "/country-media/flags/td.svg",
+      "sha256": "46d9a786225c476c021be32564d43497ec48d654694379969ac86d4aec8cf8a0"
+    },
+    {
+      "country": "TD",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Coat_of_arms_of_Chad.svg",
+      "local": "/country-media/coatOfArms/td.svg",
+      "sha256": "dfc04bf318c6cbf083e5edac91c3fb6f3eb3038172065d9f558c159b3480f7be"
+    },
+    {
+      "country": "TG",
+      "field": "flags",
+      "source": "https://flagcdn.com/tg.svg",
+      "local": "/country-media/flags/tg.svg",
+      "sha256": "8d50a4818de595d967b3cd0d6b0dc91ce0532b1679813af9eea27a560a7662c1"
+    },
+    {
+      "country": "TG",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_be89_96px-Coat_of_arms_of_Togo.svg.png",
+      "local": "/country-media/coatOfArms/tg.png",
+      "sha256": "6751f8d7daac93e3d826266a10023eb321b3c91e32579aaecdd6d49db6db6275"
+    },
+    {
+      "country": "TH",
+      "field": "flags",
+      "source": "https://flagcdn.com/th.svg",
+      "local": "/country-media/flags/th.svg",
+      "sha256": "6b5a7a862ef01de1efd7ca3526655609ef7b05cd2ee6e14eacc0436bb93da555"
+    },
+    {
+      "country": "TH",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_0614_113px-Emblem_of_Thailand.svg.png",
+      "local": "/country-media/coatOfArms/th.png",
+      "sha256": "ae307f7d0a96f2620cc0c3b7e4c1f11d014e2a4bcf3b3666b4a77800d40a9613"
+    },
+    {
+      "country": "TJ",
+      "field": "flags",
+      "source": "https://flagcdn.com/tj.svg",
+      "local": "/country-media/flags/tj.svg",
+      "sha256": "597f154cc4f0bc5b4941c880fd2cd79c2a20a1b1d5845c86e934c4500fab78d8"
+    },
+    {
+      "country": "TJ",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Emblem_of_Tajikistan.svg",
+      "local": "/country-media/coatOfArms/tj.svg",
+      "sha256": "e7d69e7a17e27361c90ffeeb325382817e6d4a9007c5ca8caba250aa742cdde6"
+    },
+    {
+      "country": "TK",
+      "field": "flags",
+      "source": "https://flagcdn.com/tk.svg",
+      "local": "/country-media/flags/tk.svg",
+      "sha256": "f3c7c4a9c8e0f52b5e3b4891a355f350a10f75cc7517a0755689705cd35e7b66"
+    },
+    {
+      "country": "TM",
+      "field": "flags",
+      "source": "https://flagcdn.com/tm.svg",
+      "local": "/country-media/flags/tm.svg",
+      "sha256": "a03b94f68d3eec97f3cdc495ceb98af910087b2623a02dc233820dfcc2ec2085"
+    },
+    {
+      "country": "TM",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/Turkmenistan.png",
+      "local": "/country-media/coatOfArms/tm.png",
+      "sha256": "2078e3939097dd6d1368aa2fafcdd837190741dbebd6a8947b53a98dbd5b9899"
+    },
+    {
+      "country": "TL",
+      "field": "flags",
+      "source": "https://flagcdn.com/tl.svg",
+      "local": "/country-media/flags/tl.svg",
+      "sha256": "1f25223cf5d05c32593ca66f0126a14bd728535a6678edb5ba84df13614c0312"
+    },
+    {
+      "country": "TL",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_796d_120px-Coat_of_arms_of_East_Timor.svg.png",
+      "local": "/country-media/coatOfArms/tl.png",
+      "sha256": "69cc34d19562a6d7dcda335d224f6afe0547f210b91da5d333a44fe43e25476c"
+    },
+    {
+      "country": "TO",
+      "field": "flags",
+      "source": "https://flagcdn.com/to.svg",
+      "local": "/country-media/flags/to.svg",
+      "sha256": "aaf4a1b55742a45ae01330347e723ec9d9da9b15e1e9e05cd7d1910de91eef00"
+    },
+    {
+      "country": "TO",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_61fb_108px-Coat_of_arms_of_Tonga.svg.png",
+      "local": "/country-media/coatOfArms/to.png",
+      "sha256": "d7882debba61447118a4371a303b3ff9d019809dad2bf31c46d4048715e7df36"
+    },
+    {
+      "country": "TT",
+      "field": "flags",
+      "source": "https://flagcdn.com/tt.svg",
+      "local": "/country-media/flags/tt.svg",
+      "sha256": "89fa29d1f4a553154be8ae34b5f6a31e4baf6197fee40d9103ada5b80de7e31b"
+    },
+    {
+      "country": "TT",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/Trinidad%20and%20Tobago.png",
+      "local": "/country-media/coatOfArms/tt.png",
+      "sha256": "f6dfee24cca28b498aa81df5de53d5cf57ebf00290838d6dd47c0ae2b8b3eced"
+    },
+    {
+      "country": "TN",
+      "field": "flags",
+      "source": "https://flagcdn.com/tn.svg",
+      "local": "/country-media/flags/tn.svg",
+      "sha256": "b0d8964ee6ff40309779e0a1ea2780926a85edf9f1715c22ecbd04e14a4be9b4"
+    },
+    {
+      "country": "TN",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/8/80/Coat_of_arms_of_Tunisia.svg",
+      "local": "/country-media/coatOfArms/tn.svg",
+      "sha256": "f185a61a133e3bf86db4485fe10f60695c5d9524556f165ef814b54be0d8978c"
+    },
+    {
+      "country": "TR",
+      "field": "flags",
+      "source": "https://flagcdn.com/tr.svg",
+      "local": "/country-media/flags/tr.svg",
+      "sha256": "f15da84b4e5b23f54b8177126f5711e6fd0db8d26a1b0d3cf7901d0aa8e6b7b1"
+    },
+    {
+      "country": "TR",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_2c99_120px-TurkishEmblem.svg.png",
+      "local": "/country-media/coatOfArms/tr.png",
+      "sha256": "29323c2162a9b07ab486612d645980669b9a04855b3cb66e38541e1e650a69c1"
+    },
+    {
+      "country": "TV",
+      "field": "flags",
+      "source": "https://flagcdn.com/tv.svg",
+      "local": "/country-media/flags/tv.svg",
+      "sha256": "8596575d86d9ca070a2453f8fdfe7a0168d1df078e1e04ebfee804dff04069ef"
+    },
+    {
+      "country": "TV",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Coat_of_arms_of_Tuvalu.svg",
+      "local": "/country-media/coatOfArms/tv.svg",
+      "sha256": "64bbbc3703c09b7091a54e935eab7fd135e6ad6fe4cc5f73b0943090f6378495"
+    },
+    {
+      "country": "TW",
+      "field": "flags",
+      "source": "https://flagcdn.com/tw.svg",
+      "local": "/country-media/flags/tw.svg",
+      "sha256": "5e68330a1f2a298257ebbd3201512e8f947a688f4ff395df802ef7f15aeeb79b"
+    },
+    {
+      "country": "TW",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/8/8b/National_Emblem_of_the_Republic_of_China.svg",
+      "local": "/country-media/coatOfArms/tw.svg",
+      "sha256": "e56076ae87b324115a333352e30c2da2352f0172d85ed846f78f8b4e60f4ab27"
+    },
+    {
+      "country": "TZ",
+      "field": "flags",
+      "source": "https://flagcdn.com/tz.svg",
+      "local": "/country-media/flags/tz.svg",
+      "sha256": "0bdf0b45ec36def31a5ef9e162fe40bbca1d78a522bde23cb4f42d5929affdbc"
+    },
+    {
+      "country": "TZ",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/Tanzania.png",
+      "local": "/country-media/coatOfArms/tz.png",
+      "sha256": "a97145a9f457436ef169726d5596e817900481723c5f3daca7537b3341f35d06"
+    },
+    {
+      "country": "UG",
+      "field": "flags",
+      "source": "https://flagcdn.com/ug.svg",
+      "local": "/country-media/flags/ug.svg",
+      "sha256": "b0d36274f9eac739b04046783a38c18bebd42587a0b0b1cc3d31a32e1ec05374"
+    },
+    {
+      "country": "UG",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Coat_of_arms_of_Uganda.svg",
+      "local": "/country-media/coatOfArms/ug.svg",
+      "sha256": "ba55141722475a9f364297672e924e01ed9a8fe43b1c24494c9029539102d4a8"
+    },
+    {
+      "country": "UA",
+      "field": "flags",
+      "source": "https://flagcdn.com/ua.svg",
+      "local": "/country-media/flags/ua.svg",
+      "sha256": "542eaacd659923163edf3b1100c43bc137cc1ad9f0e394dee94de37d40ce1fca"
+    },
+    {
+      "country": "UA",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_95d6_86px-Lesser_Coat_of_Arms_of_Ukraine.svg.png",
+      "local": "/country-media/coatOfArms/ua.png",
+      "sha256": "d8cb364baddbd9f756a5bcbc2654a64f29276ae987b257a49f58f82463f01b9f"
+    },
+    {
+      "country": "UM",
+      "field": "flags",
+      "source": "https://flagcdn.com/um.svg",
+      "local": "/country-media/flags/um.svg",
+      "sha256": "e1792c011daad918fdbd99a21f7f46fd71018ffd052af5a7d7faf9954d593e31"
+    },
+    {
+      "country": "UY",
+      "field": "flags",
+      "source": "https://flagcdn.com/uy.svg",
+      "local": "/country-media/flags/uy.svg",
+      "sha256": "856fc0e14ff877b68a68c89144852808e7a17b213d5f1dba4b9d27435c0b2f54"
+    },
+    {
+      "country": "UY",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_851d_90px-Coat_of_arms_of_Uruguay.svg.png",
+      "local": "/country-media/coatOfArms/uy.png",
+      "sha256": "8be6ed918257aa95de3b0dc121b53a29880eb6e0e7bf8addb8d40e34deb4de78"
+    },
+    {
+      "country": "US",
+      "field": "flags",
+      "source": "https://flagcdn.com/us.svg",
+      "local": "/country-media/flags/us.svg",
+      "sha256": "e1792c011daad918fdbd99a21f7f46fd71018ffd052af5a7d7faf9954d593e31"
+    },
+    {
+      "country": "US",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Greater_coat_of_arms_of_the_United_States.svg",
+      "local": "/country-media/coatOfArms/us.svg",
+      "sha256": "2e7a6d04e697f0b3c59f42e7aa0fa273249019897b98c10a420e08cb2b9fab9d"
+    },
+    {
+      "country": "UZ",
+      "field": "flags",
+      "source": "https://flagcdn.com/uz.svg",
+      "local": "/country-media/flags/uz.svg",
+      "sha256": "7ce6e8b7f4dd2a5bc050f9e538d22fde2fd371df15b751e48a29c1c3cb3df00b"
+    },
+    {
+      "country": "UZ",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/7/77/Emblem_of_Uzbekistan.svg",
+      "local": "/country-media/coatOfArms/uz.svg",
+      "sha256": "e0998260687fd356752d28793a91495ad107de1cf3cbad4bf99c60f79f4071a9"
+    },
+    {
+      "country": "VA",
+      "field": "flags",
+      "source": "https://flagcdn.com/va.svg",
+      "local": "/country-media/flags/va.svg",
+      "sha256": "23174e1d9538ebf371a55e0dbe1ada98b3e5062859b0c0d3b85f7f6f1427fa99"
+    },
+    {
+      "country": "VA",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Coat_of_arms_of_Vatican_City_%282023%E2%80%93present%29.svg",
+      "local": "/country-media/coatOfArms/va.svg",
+      "sha256": "0814a867e6107260db551facbd0589ce81630f6a622e9ca7abfa6c2a326ee092"
+    },
+    {
+      "country": "VC",
+      "field": "flags",
+      "source": "https://flagcdn.com/vc.svg",
+      "local": "/country-media/flags/vc.svg",
+      "sha256": "c2a36b00c4c8c637b6847ed2dafb6d90b879ea298ab57d062f6ab968027e1766"
+    },
+    {
+      "country": "VC",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Coat_of_arms_of_Saint_Vincent_and_the_Grenadines.svg",
+      "local": "/country-media/coatOfArms/vc.svg",
+      "sha256": "b907a0e44d0147dd830a80024d09cf26dffe21fdd1d853f057f683639fc7c0d6"
+    },
+    {
+      "country": "VE",
+      "field": "flags",
+      "source": "https://flagcdn.com/ve.svg",
+      "local": "/country-media/flags/ve.svg",
+      "sha256": "756f64b7ab11de19928d6ee6235079200ba45477ea150b7fc3ffbd94f4fbebfe"
+    },
+    {
+      "country": "VE",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/4/46/Coat_of_arms_of_Venezuela.svg",
+      "local": "/country-media/coatOfArms/ve.svg",
+      "sha256": "6af0d8b95d98196cf85cda3d8ba8531f5e4149fc28a8bc325fae5e581e868ed0"
+    },
+    {
+      "country": "VG",
+      "field": "flags",
+      "source": "https://flagcdn.com/vg.svg",
+      "local": "/country-media/flags/vg.svg",
+      "sha256": "da78c74f47384b9a1a2c88dcda7dd2d615428b850c3a30f74dddba0724213559"
+    },
+    {
+      "country": "VG",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Coat_of_arms_of_the_British_Virgin_Islands.svg/500px-Coat_of_arms_of_the_British_Virgin_Islands.svg.png",
+      "local": "/country-media/coatOfArms/vg.png",
+      "sha256": "5f0baabbfa18135a468846dde74569f765a93bb103d75a973bd11ede2b9b010d"
+    },
+    {
+      "country": "VI",
+      "field": "flags",
+      "source": "https://flagcdn.com/vi.svg",
+      "local": "/country-media/flags/vi.svg",
+      "sha256": "f38cfcf80eb16ae36559a4f540c45699367e4ab23cbc37c41c98e88b58b9370a"
+    },
+    {
+      "country": "VI",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/8/80/Seal_of_the_United_States_Virgin_Islands.svg",
+      "local": "/country-media/coatOfArms/vi.svg",
+      "sha256": "a5ed790fd0a58ea601522d402c66623713e4fb38b4b4868a1a179fd0b4c1e7cc"
+    },
+    {
+      "country": "VN",
+      "field": "flags",
+      "source": "https://flagcdn.com/vn.svg",
+      "local": "/country-media/flags/vn.svg",
+      "sha256": "bd236e52dc564431ea569bca0a7b81ae8e8663675cb24a7b6da43ff926cc147c"
+    },
+    {
+      "country": "VN",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_afcb_118px-Coat_of_arms_of_Vietnam.svg.png",
+      "local": "/country-media/coatOfArms/vn.png",
+      "sha256": "751f681b1e207e94bed5d08218a10f2f1a59f3c39209c6d19006d51dc0cd059b"
+    },
+    {
+      "country": "VU",
+      "field": "flags",
+      "source": "https://flagcdn.com/vu.svg",
+      "local": "/country-media/flags/vu.svg",
+      "sha256": "18232f22b21730b4ec64a83c709f6546465c4777c2a3ad759686c3c2dfbc2745"
+    },
+    {
+      "country": "VU",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Coat_of_arms_of_Vanuatu.svg",
+      "local": "/country-media/coatOfArms/vu.svg",
+      "sha256": "9baa7b6e1f0aa910177452dbda5afa2824b5a321a1dc9a9d11bb1095b1e4d6f1"
+    },
+    {
+      "country": "WF",
+      "field": "flags",
+      "source": "https://flagcdn.com/wf.svg",
+      "local": "/country-media/flags/wf.svg",
+      "sha256": "ac87487bf4186f4e8b5d5787c7853b7f5ed980d8dcd4fcace53292ff5bc04317"
+    },
+    {
+      "country": "WS",
+      "field": "flags",
+      "source": "https://flagcdn.com/ws.svg",
+      "local": "/country-media/flags/ws.svg",
+      "sha256": "acedd8fb18df15e9483cc8c0f30f24b7ff2299ca9006c261040e88677c0df0b3"
+    },
+    {
+      "country": "WS",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_079a_119px-Coat_of_arms_of_Samoa.svg.png",
+      "local": "/country-media/coatOfArms/ws.png",
+      "sha256": "45ffaad57545e3a5fcdeb9739ab7fabdea3c666bfbd2610811cbd082c1e8353c"
+    },
+    {
+      "country": "YE",
+      "field": "flags",
+      "source": "https://flagcdn.com/ye.svg",
+      "local": "/country-media/flags/ye.svg",
+      "sha256": "a92f3989182049dc218f7698c45d8cdfc64e6f945c71f20a9d188dd01698df2d"
+    },
+    {
+      "country": "YE",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Emblem_of_Yemen_%282%29.svg",
+      "local": "/country-media/coatOfArms/ye.svg",
+      "sha256": "aea8f0b1e63ee075978944107cd2d04752f0454089000d4245e85d93e3618e64"
+    },
+    {
+      "country": "ZA",
+      "field": "flags",
+      "source": "https://flagcdn.com/za.svg",
+      "local": "/country-media/flags/za.svg",
+      "sha256": "6fbf0b68db7024ac996c92b1bbc62efe9a3bf12e469efaa29ae4fe0fa5c6da39"
+    },
+    {
+      "country": "ZA",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Coat_of_arms_of_South_Africa_%28heraldic%29.svg",
+      "local": "/country-media/coatOfArms/za.svg",
+      "sha256": "227ed9ca432309659f9ea8eb46a61197a66d7d8252a159ffc7aa1d6e6e44abd4"
+    },
+    {
+      "country": "ZM",
+      "field": "flags",
+      "source": "https://flagcdn.com/zm.svg",
+      "local": "/country-media/flags/zm.svg",
+      "sha256": "b64a4ec9612720033a3e8de806cfdd112a8ce48f35b2ec66e013d6c5e25e3445"
+    },
+    {
+      "country": "ZM",
+      "field": "coatOfArms",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/2/28/Coat_of_arms_of_Zambia.svg",
+      "local": "/country-media/coatOfArms/zm.svg",
+      "sha256": "75bbb7afdf4ee0f3e4efc5ba666906d6d8e55afecdc322db87b454dafbc398a0"
+    },
+    {
+      "country": "ZW",
+      "field": "flags",
+      "source": "https://flagcdn.com/zw.svg",
+      "local": "/country-media/flags/zw.svg",
+      "sha256": "f0b79e8841f06a4afed5a90142b1c202776dc1d1c82328f310458d7c0ee975d9"
+    },
+    {
+      "country": "ZW",
+      "field": "coatOfArms",
+      "source": "https://raw.githubusercontent.com/ano/Coat-of-Arms/master/%5Ben.wikipedia.org%5D_3e20_120px-Coat_of_arms_of_Zimbabwe.svg.png",
+      "local": "/country-media/coatOfArms/zw.png",
+      "sha256": "6083ba67071cf1231432df82481a3f18368126182566624a1abec1df8b778459"
+    }
+  ],
+  "unavailable": [
+    "KY",
+    "GG",
+    "GF",
+    "GU",
+    "IM",
+    "IO",
+    "JE",
+    "MF",
+    "MP",
+    "YT",
+    "NF",
+    "NU",
+    "PN",
+    "PR",
+    "TK",
+    "WF"
+  ]
+}

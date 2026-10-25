@@ -1,0 +1,67 @@
+{
+  "id": "MG",
+  "name": "Madagascar",
+  "type": [
+    "country"
+  ],
+  "codes": {
+    "iso_3166_1_alpha2": "MG",
+    "iso_3166_1_alpha3": "MDG",
+    "fifa": "MAD",
+    "ioc": "MAD",
+    "wikidata": "Q1019"
+  },
+  "region": [
+    "Africa",
+    "Eastern Africa",
+    "Francophonie"
+  ],
+  "aspect_ratio": "2:3",
+  "colors": [
+    {
+      "color": "white",
+      "symbolism": "purity; together with red, the colours of the historic Merina monarchy that ruled Madagascar before colonisation"
+    },
+    {
+      "color": "red",
+      "symbolism": "sovereignty; the colour of the historic Merina kingdom"
+    },
+    {
+      "color": "green",
+      "symbolism": "the coastal Hova peasantry and the country's hope and progress"
+    }
+  ],
+  "description": "A white vertical band at the hoist, one-third of the flag's width; at the fly, two equal horizontal stripes — red over green — taking the remaining two-thirds. The white forms an L-shape against the red-and-green bicolour at the fly.",
+  "history": "Adopted on 14 October 1958, when Madagascar became an autonomous republic within the French Community ahead of full independence on 26 June 1960. The colours combine the red and white of the pre-colonial Merina kingdom (which ruled most of Madagascar in the 19th century) with green, traditionally associated with the coastal Hova peasantry. The flag has been retained unchanged through all subsequent constitutional changes, including the 1975–1992 Marxist Democratic Republic.",
+  "variant": [
+    "civil",
+    "state",
+    "civil-ensign",
+    "state-ensign"
+  ],
+  "periods": [
+    {
+      "start": "1958-10-14"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Flag_of_Madagascar"
+  ],
+  "features": [
+    {
+      "type": "horizontal-stripes",
+      "stripes": [
+        "red",
+        "green"
+      ],
+      "count": 2,
+      "symbolism": "red and green at the fly, recalling the Merina kingdom (red) and the Malagasy peasantry (green)"
+    },
+    {
+      "type": "side",
+      "color": "white",
+      "proportion": "1/3",
+      "symbolism": "the white hoist band, the colour of the historic Merina monarchy"
+    }
+  ]
+}

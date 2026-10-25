@@ -1,0 +1,44 @@
+{
+  "id": "two-sicilies",
+  "name": "Kingdom of the Two Sicilies (1816–1861)",
+  "type": [
+    "historical",
+    "country"
+  ],
+  "successors": ["IT"],
+  "codes": {
+    "wikidata": "Q180393"
+  },
+  "region": [
+    "Europe",
+    "Southern Europe"
+  ],
+  "aspect_ratio": "2:3",
+  "colors": [
+    {
+      "color": "white"
+    }
+  ],
+  "description": "A white field charged at the centre with the elaborate Bourbon coat of arms of the Two Sicilies.",
+  "history": "Flag of the Kingdom of the Two Sicilies, the Bourbon state of southern Italy, from its creation in 1816 until its annexation into unified Italy in 1861.",
+  "periods": [
+    {
+      "start": "1816",
+      "end": "1861"
+    }
+  ],
+  "sources": [
+    "https://www.wikidata.org/wiki/Q180393"
+  ],
+  "features": [
+    {
+      "type": "solid",
+      "color": "white"
+    },
+    {
+      "type": "coat-of-arms",
+      "position": "center",
+      "role": "Bourbon arms of the Two Sicilies"
+    }
+  ]
+}

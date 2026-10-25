@@ -2,8 +2,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
-import { geoArea } from 'd3-geo';
-import { atlasMapUrl, atlasYears, normalizeHistoricalMap, territoryColor, territoryName } from '../src/data/timeAtlas.js';
+import { geoArea, geoContains } from 'd3-geo';
+import { atlasSnapshotYear, atlasMapUrl, atlasYears, normalizeHistoricalMap, territoryColor, territoryName } from '../src/data/timeAtlas.js';
+import { makeAtlasFlagMarkers, territoryFlag } from '../src/data/atlasFlagMarkers.js';
 import { filterTelescopeImages, telescopeImages } from '../src/data/telescopeGallery.js';
 
 test('every selectable atlas year has real, distinct polygon data', () => {
@@ -27,6 +28,39 @@ test('historical polygon orientation never fills the whole globe', () => {
     const data = normalizeHistoricalMap(source);
     for (const feature of data.features) assert.ok(geoArea(feature) < 2 * Math.PI, `${year}: ${territoryName(feature.properties)}`);
     assert.equal(JSON.stringify(source), original);
+  }
+});
+
+test('every year 1700–2026 resolves to a disclosed existing prior snapshot', () => {
+  for (let year = 1700; year <= 2026; year++) {
+    const snapshot = atlasSnapshotYear(year);
+    assert.ok(snapshot <= year && atlasYears.includes(snapshot));
+    assert.ok(!atlasYears.some(value => value > snapshot && value <= year));
+  }
+  assert.equal(atlasSnapshotYear(2026), 2010);
+  for (const invalid of [1699, 2027, NaN, 1914.5]) assert.throws(() => atlasSnapshotYear(invalid), RangeError);
+});
+
+test('historical flags change with their periods and do not fill unknown periods with modern flags', () => {
+  assert.equal(territoryFlag({ NAME: 'United States' }, 2026).id, 'US');
+  assert.notEqual(territoryFlag({ NAME: 'United States' }, 1900).id, 'US');
+  assert.equal(territoryFlag({ NAME: 'Uzbekistan' }, 1800), null);
+  assert.equal(territoryFlag({ NAME: 'Uzbekistan' }, 2026).id, 'UZ');
+  assert.match(territoryFlag({ NAME: 'USSR' }, 1960).id, /SUHH/);
+  assert.equal(territoryFlag({ NAME: 'Unknown polity' }, 2026), null);
+});
+
+test('flag anchors lie on their territory and all displayed flag assets are local', () => {
+  for (const year of atlasYears) {
+    const data = normalizeHistoricalMap(JSON.parse(readFileSync(new URL(`../public${atlasMapUrl(year)}`, import.meta.url))));
+    const markers = makeAtlasFlagMarkers(data, year);
+    assert.ok(markers.length > 0, String(year));
+    for (const marker of markers) {
+      assert.ok(geoContains(data.features[marker.index], marker.coordinates), `${year}: ${territoryName(marker.properties)}`);
+      const svg = readFileSync(new URL(`../public/flags/history/${marker.flag.id}.svg`, import.meta.url), 'utf8');
+      assert.match(svg, /<svg\b/);
+      assert.doesNotMatch(svg, /<script\b/i);
+    }
   }
 });
 
