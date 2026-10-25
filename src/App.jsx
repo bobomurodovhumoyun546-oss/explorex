@@ -18,6 +18,7 @@ const SpaceTelescope = lazy(() => import('./pages/SpaceTelescope'));
 const TimeAtlas = lazy(() => import('./pages/TimeAtlas'));
 
 import Navbar from "./components/NavBar";
+import Footer from './components/Footer';
 import PageErrorBoundary from './components/PageErrorBoundary';
 
 import {
@@ -47,6 +48,7 @@ export default function App() {
           </Routes>
           </Suspense>
           </PageErrorBoundary>
+          <Footer />
         </div>
       </BrowserRouter>
     </SettingsProvider>

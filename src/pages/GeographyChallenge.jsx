@@ -1,6 +1,6 @@
 import MapViewport from "../components/MapViewport";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useEffectEvent, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import {
     ComposableMap,
@@ -196,7 +196,7 @@ export default function GeographyChallenge() {
     const [questions, setQuestions] = useState([]);
     const [index, setIndex] = useState(0);
     const [score, setScore] = useState(0);
-    const [timeLeft, setTimeLeft] = useState(30);
+    const [timeLeft, setTimeLeft] = useState(10);
     const [answer, setAnswer] = useState(null);
     const [wrongIds, setWrongIds] = useState([]);
     const [center, setCenter] = useState([0, 10]);
@@ -242,7 +242,7 @@ export default function GeographyChallenge() {
         // These handlers run on clicks; the compiler treats nested map/render-prop callbacks as render paths.
         // eslint-disable-next-line react-hooks/purity
         const now = Date.now();
-        deadlineRef.current = now + 30000;
+        deadlineRef.current = now + 10000;
         startedAtRef.current = now;
         answerLockedRef.current = false;
         setElapsed(0);
@@ -250,7 +250,7 @@ export default function GeographyChallenge() {
         setQuestions(selected);
         setIndex(0);
         setScore(0);
-        setTimeLeft(30);
+        setTimeLeft(10);
         setAnswer(null);
         setWrongIds([]);
         setStage("game");
@@ -292,10 +292,10 @@ export default function GeographyChallenge() {
             return;
         }
 
-        deadlineRef.current = Date.now() + 30000;
+        deadlineRef.current = Date.now() + 10000;
         answerLockedRef.current = false;
         setIndex((i) => i + 1);
-        setTimeLeft(30);
+        setTimeLeft(10);
         setAnswer(null);
         setWrongIds([]);
     }
@@ -311,6 +311,13 @@ export default function GeographyChallenge() {
         setAnswer(null);
         setWrongIds([]);
     }
+
+    const advanceQuestion = useEffectEvent(() => nextQuestion());
+    useEffect(() => {
+        if (stage !== 'game' || !answer) return;
+        const timer = setTimeout(() => advanceQuestion(), 2000);
+        return () => clearTimeout(timer);
+    }, [stage, answer, current]);
 
     return (
         <main className="min-h-screen bg-page px-4 pb-12 pt-28 text-main md:px-8">
@@ -422,7 +429,7 @@ export default function GeographyChallenge() {
                                         </p>
 
                                         <p className="mt-5 text-sm text-emerald-700 dark:text-emerald-300">
-                                            Har bir savolga 30 soniya
+                                            Har bir savolga 10 soniya
                                         </p>
 
                                         {disabled && (
@@ -443,10 +450,10 @@ export default function GeographyChallenge() {
                         {/* XARITA */}
                         <MapViewport className="overflow-hidden rounded-3xl border border-line bg-panel" overlay={
                             <div role="region" aria-label="To‘liq xaritadagi o‘yin">
-                                <div className="flex items-center justify-between gap-3 text-xs text-muted"><span>Savol {index + 1}/{questions.length} · {score} ball</span><span role="timer" aria-label="Qolgan vaqt" className={timeLeft <= 10 ? 'font-bold text-rose-500' : 'font-bold text-main'}>00:{String(timeLeft).padStart(2, '0')}</span></div>
+                                <div className="flex items-center justify-between gap-3 text-xs text-muted"><span>Savol {index + 1}/{questions.length} · {score} ball</span><span role="timer" aria-label="Qolgan vaqt" className={timeLeft <= 3 ? 'font-bold text-rose-500' : 'font-bold text-main'}>00:{String(timeLeft).padStart(2, '0')}</span></div>
                                 <p className="mt-2 text-xs text-subtle">Xaritadan toping:</p>
                                 <h2 className="mt-1 text-xl font-black">{current.name}</h2>
-                                {answer && <><p role="status" className="mt-2 text-sm">{answer.correct ? 'To‘g‘ri topdingiz!' : answer.timeout ? 'Vaqt tugadi! To‘g‘ri davlat yashil rangda.' : 'Noto‘g‘ri javob. To‘g‘ri davlat yashil rangda.'}</p><button onClick={nextQuestion} className="mt-3 w-full rounded-xl bg-emerald-400 px-4 py-3 text-sm font-bold text-slate-950">{index + 1 === questions.length ? 'Natijani ko‘rish' : 'Keyingi savol'}</button></>}
+                                {answer && <><p role="status" className="mt-2 text-sm">{answer.correct ? 'To‘g‘ri topdingiz!' : answer.timeout ? 'Vaqt tugadi! To‘g‘ri davlat yashil rangda.' : 'Noto‘g‘ri javob. To‘g‘ri davlat yashil rangda.'} {!answer.correct && current.name}</p><p className="mt-2 text-xs text-muted">{index + 1 === questions.length ? 'Natija avtomatik ochiladi…' : 'Keyingi savol avtomatik ochiladi…'}</p></>}
                             </div>
                         }>
                             <div className="flex flex-wrap items-center justify-between gap-3 border-b border-line px-5 py-4">
@@ -592,7 +599,7 @@ export default function GeographyChallenge() {
 
                             {/* TAYMER */}
                             <div
-                                className={`mt-8 flex items-center justify-between rounded-2xl border p-4 ${timeLeft <= 10
+                                className={`mt-8 flex items-center justify-between rounded-2xl border p-4 ${timeLeft <= 3
                                         ? "border-rose-400/30 bg-rose-400/10"
                                         : "border-cyan-400/20 bg-cyan-400/5"
                                     }`}
@@ -601,7 +608,7 @@ export default function GeographyChallenge() {
                                     <Clock3
                                         size={21}
                                         className={
-                                            timeLeft <= 10
+                                            timeLeft <= 3
                                                 ? "text-rose-700 dark:text-rose-400"
                                                 : "text-cyan-700 dark:text-cyan-400"
                                         }
@@ -612,7 +619,7 @@ export default function GeographyChallenge() {
                                 </div>
 
                                 <span
-                                    className={`text-3xl font-black ${timeLeft <= 10
+                                    className={`text-3xl font-black ${timeLeft <= 3
                                             ? "text-rose-700 dark:text-rose-400"
                                             : "text-main"
                                         }`}
@@ -694,17 +701,7 @@ export default function GeographyChallenge() {
                                     </span>
                                 </div>
 
-                                {answer && (
-                                    <button
-                                        onClick={nextQuestion}
-                                        className="flex w-full items-center justify-center gap-3 rounded-xl bg-emerald-400 px-5 py-4 font-bold text-slate-950 transition hover:bg-emerald-300"
-                                    >
-                                        {index + 1 === questions.length
-                                            ? "Natijani ko‘rish"
-                                            : "Keyingi savol"}
-                                        <ArrowRight size={19} />
-                                    </button>
-                                )}
+                                {answer && <p className="text-center text-sm text-muted">{index + 1 === questions.length ? 'Natija avtomatik ochiladi…' : 'Keyingi savol avtomatik ochiladi…'}</p>}
 
                                 <button
                                     onClick={reset}

@@ -133,8 +133,11 @@ test('Uzbek search accepts keyboard apostrophes and translated capital names', a
   await expect(page.locator('.rsm-marker')).toHaveCount(1);
 });
 
-test('country challenge keeps question, timer, single attempt and next button in full map', async ({page}) => {
+test('country challenge keeps timer, single attempt and automatic advance in full map', async ({page}) => {
+  await page.clock.install({time:new Date('2026-01-01T00:00:00Z')});
   await page.goto('/geography/challenge');
+  await expect(page.getByRole('button', {name:/Osiyo.*Tanlash/})).toBeVisible();
+  await page.clock.pauseAt(await page.evaluate(() => Date.now() + 1000));
   await page.getByRole('button', {name:/Osiyo.*Tanlash/}).click();
   await page.getByRole('button', {name:/5 ta/}).click();
   await page.getByRole('button', {name:'Butun xarita',exact:true}).click();
@@ -147,7 +150,8 @@ test('country challenge keeps question, timer, single attempt and next button in
   expect(colors).toContain('#34d399');
   await page.getByRole('button', {name:'India',exact:true}).click();
   expect(await page.locator('.rsm-geography').evaluateAll(paths => paths.map(path => path.getAttribute('fill')))).toEqual(colors);
-  await controls.getByRole('button', {name:'Keyingi savol'}).click();
+  await expect(page.getByRole('button', {name:'Keyingi savol'})).toHaveCount(0);
+  await page.clock.runFor(2000);
   await expect(controls.getByText(/Savol 2\/5/)).toBeVisible();
   await expect(controls.getByRole('status')).toHaveCount(0);
 });
@@ -167,14 +171,28 @@ test('Time Atlas discloses snapshot date and supports full map', async ({page}) 
 });
 
 test('flag quiz supports 5, 10 and 20 questions and saves each mode separately', async ({page}) => {
+  await page.clock.install({time:new Date('2026-01-01T00:00:00Z')});
   await page.goto('/geography/flags');
+  await expect(page.getByRole('button', {name:'O‘yinni boshlash'})).toBeVisible();
+  await page.clock.pauseAt(await page.evaluate(() => Date.now() + 1000));
   for (const count of [5,10,20]) {
     await page.getByRole('button', {name:`${count} ta`,exact:true}).click();
     await page.getByRole('button', {name:'O‘yinni boshlash'}).click();
     for (let index = 0; index < count; index++) {
       await expect(page.getByText(`Savol ${index + 1}/${count}`,{exact:true})).toBeVisible();
-      await page.locator('section[aria-label="Bayroq o‘yini"] .grid > button').first().click();
-      await page.getByRole('button', {name:index + 1 === count ? 'Natijani ko‘rish' : 'Keyingi bayroq'}).click();
+      const help = page.getByRole('button', {name:/50\/50/});
+      const options = page.locator('[aria-label="Javob variantlari"] button');
+      if (index === 0) {
+        await expect(help).toBeEnabled();
+        await help.click();
+        await expect(options).toHaveCount(2);
+      } else {
+        await expect(help).toBeDisabled();
+        await expect(options).toHaveCount(4);
+      }
+      await options.first().click();
+      await expect(page.getByRole('status')).toBeVisible();
+      await page.clock.runFor(2000);
     }
     await expect(page.getByText('O‘yin yakunlandi!',{exact:true})).toBeVisible();
     await page.getByRole('button', {name:'Savollar sonini o‘zgartirish'}).click();

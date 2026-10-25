@@ -265,46 +265,7 @@ export default function Geography() {
       </section>
 
       
-<section className="mx-auto max-w-7xl px-6 pt-16">
-  <Link
-    to="/geography/time-atlas"
-    className="group relative block overflow-hidden rounded-[32px] border border-orange-300/25 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-orange-300/60 sm:p-10"
-  >
-    {/* Orqa fon rasmi */}
-    <img
-      src={historicalMapImage}
-      loading="lazy"
-      decoding="async"
-      alt="Tarixiy dunyo xaritasi"
-      className="absolute inset-0 z-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-    />
 
-    {/* Qoramtir gradient */}
-    <div className="absolute inset-0 z-0 bg-gradient-to-r from-slate-950/95 via-slate-950/75 to-slate-950/30" />
-
-    {/* Kontent */}
-    <div className="relative z-10 py-6">
-      <p className="mb-3 text-xs font-bold tracking-[.25em] text-orange-300">
-        TARIX BO‘YLAB SAYOHAT
-      </p>
-
-      <h2 className="text-3xl font-black text-white md:text-4xl">
-        Time Atlas
-      </h2>
-
-      <p className="mt-4 max-w-2xl leading-7 text-slate-200">
-        Xarita yilini o‘zgartiring. Davlatlar va
-        imperiyalar chegaralarini tarixiy xaritalarda
-        o‘rganing, oldingi davr bilan solishtiring.
-      </p>
-
-      <span className="mt-6 inline-flex items-center gap-3 rounded-xl bg-orange-300 px-6 py-3 font-bold text-slate-950 transition-all duration-300 group-hover:bg-orange-200">
-        Tarixiy xaritani ochish
-        <ArrowRight size={19} />
-      </span>
-    </div>
-  </Link>
-</section>
 
 
       {/* GEOGRAFIYA BO‘LIMLARI */}
@@ -409,7 +370,7 @@ export default function Geography() {
                   6 ta hududdan birini tanlang.
                   5, 10 yoki 20 ta tasodifiy savolga javob
                   bering. Har bir davlatni topish uchun
-                  30 soniya vaqtingiz bor!
+                  10 soniya vaqtingiz bor!
                 </p>
 
                 <span className="mt-8 inline-flex items-center gap-3 rounded-xl bg-emerald-400 px-6 py-3 font-bold text-slate-950 transition-all duration-300 group-hover:bg-emerald-300">
@@ -511,6 +472,46 @@ export default function Geography() {
           </div>
         </div>
       </section>
+<section className="mx-auto max-w-7xl px-6 pb-24">
+  <Link
+    to="/geography/time-atlas"
+    className="group relative block overflow-hidden rounded-[32px] border border-orange-300/25 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-orange-300/60 sm:p-10"
+  >
+    {/* Orqa fon rasmi */}
+    <img
+      src={historicalMapImage}
+      loading="lazy"
+      decoding="async"
+      alt="Tarixiy dunyo xaritasi"
+      className="absolute inset-0 z-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+    />
+
+    {/* Qoramtir gradient */}
+    <div className="absolute inset-0 z-0 bg-gradient-to-r from-slate-950/95 via-slate-950/75 to-slate-950/30" />
+
+    {/* Kontent */}
+    <div className="relative z-10 py-6">
+      <p className="mb-3 text-xs font-bold tracking-[.25em] text-orange-300">
+        TARIX BO‘YLAB SAYOHAT
+      </p>
+
+      <h2 className="text-3xl font-black text-white md:text-4xl">
+        Time Atlas
+      </h2>
+
+      <p className="mt-4 max-w-2xl leading-7 text-slate-200">
+        Xarita yilini o‘zgartiring. Davlatlar va
+        imperiyalar chegaralarini tarixiy xaritalarda
+        o‘rganing, oldingi davr bilan solishtiring.
+      </p>
+
+      <span className="mt-6 inline-flex items-center gap-3 rounded-xl bg-orange-300 px-6 py-3 font-bold text-slate-950 transition-all duration-300 group-hover:bg-orange-200">
+        Tarixiy xaritani ochish
+        <ArrowRight size={19} />
+      </span>
+    </div>
+  </Link>
+</section>
     </main>
   );
 }
