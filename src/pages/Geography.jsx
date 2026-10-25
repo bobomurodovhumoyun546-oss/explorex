@@ -1,4 +1,9 @@
 import { useSettings } from "../context/settings";
+import historicalMapImage from "../assets/pastmap.jpg";
+import worldMapImage from "../assets/map.jpg";
+import mapQuizImage from "../assets/mapquiz.jpg";
+import flagQuizImage from "../assets/flagquiz2.jpg";
+import earthRecordsImage from "../assets/rekords.jpg";
 
 import { Suspense, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
@@ -256,7 +261,7 @@ export default function Geography() {
   >
     {/* Orqa fon rasmi */}
     <img
-      src="src/assets/pastmap.jpg"
+      src={historicalMapImage}
       alt="Tarixiy dunyo xaritasi"
       className="absolute inset-0 z-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
     />
@@ -317,7 +322,7 @@ export default function Geography() {
               className="group relative block overflow-hidden rounded-[32px] border border-cyan-400/20 p-9"
             >
               <img
-                src="src/assets/map.jpg"
+                src={worldMapImage}
                 alt="Dunyo xaritasi"
                 className="absolute inset-0 z-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
@@ -361,7 +366,7 @@ export default function Geography() {
             >
               {/* Orqa fon rasmi */}
               <img
-                src="src/assets/mapquiz.jpg"
+                src={mapQuizImage}
                 alt="Davlatni top"
                 className="absolute inset-0 z-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
@@ -405,7 +410,7 @@ export default function Geography() {
 >
   {/* Orqa fon rasmi */}
   <img
-    src="src/assets/flagquiz2.jpg"
+    src={flagQuizImage}
     alt="Dunyo bayroqlari"
     className="absolute inset-0 z-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
   />
@@ -447,7 +452,7 @@ export default function Geography() {
 >
   {/* Orqa fon rasmi */}
   <img
-    src="src/assets/rekords.jpg"
+    src={earthRecordsImage}
     alt="Yer rekordlari"
     className="absolute inset-0 z-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
   />
