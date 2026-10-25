@@ -18,7 +18,7 @@ import { useSettings } from "../context/settings";
 
 // Logo faylingni src/assets/logo.jpg manzilida qoldir
 import logo from "../assets/logonewXwh.jpg";
-import logo2 from "../assets/logonewXbl.jpg"
+import logo2 from "../assets/logonewXbl2.jpg"
 
 const links = [
     { key: "home", path: "/", icon: Home },

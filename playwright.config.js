@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+import process from 'node:process';
 
 export default defineConfig({
   testDir: './tests/browser',
@@ -6,7 +7,7 @@ export default defineConfig({
   expect: { timeout: 30000 },
   workers: 1,
   reporter: [['list'], ['html', {open: 'never'}]],
-  use: { baseURL: 'http://127.0.0.1:4173', launchOptions: {args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader']}, trace: 'retain-on-failure', screenshot: 'only-on-failure' },
+  use: { baseURL: 'http://127.0.0.1:4173', launchOptions: {args: process.env.RUN_WEBGL_TESTS === '1' ? ['--use-angle=swiftshader', '--enable-unsafe-swiftshader'] : []}, trace: 'retain-on-failure', screenshot: 'only-on-failure' },
   projects: [
     { name: 'desktop', use: { ...devices['Desktop Chrome'], viewport: {width: 1280, height: 900} } },
     { name: 'mobile', use: { ...devices['Pixel 5'] } },
